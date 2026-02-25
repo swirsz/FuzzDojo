@@ -1,0 +1,13 @@
+--- build.sho	2024-06-01 01:40:54.209495715 +0000
++++ build.sh	2024-06-01 01:42:10.604407627 +0000
+@@ -27,6 +27,10 @@
+      $SRC/wavpack/fuzzing/fuzzer.cc -o $OUT/fuzzer \
+      $LIB_FUZZING_ENGINE $SRC/wavpack/src/.libs/libwavpack.a
+ 
++$CXX $CXXFLAGS -std=c++11 -I$SRC/wavpack/include -I$SRC/wavpack/cli \
++     $SRC/wavpack/fuzzing/newfuzzer.cc -o $OUT/newfuzzer \
++     $LIB_FUZZING_ENGINE $SRC/wavpack/src/.libs/libwavpack.a
++
+ # add seed corpus
+ cp $SRC/wavpack/fuzzing/*_seed_corpus.zip $OUT/
+ 

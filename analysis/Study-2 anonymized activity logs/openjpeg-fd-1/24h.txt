@@ -1,0 +1,35 @@
+newfuzzer
+loc count: 23271
+loc_covered: 10024
+loc_percent: 43.08 %
+functions count: 662
+functions_covered: 391
+functions_percent: 59.06 %
+
+opj_decompress_fuzzer_J2K
+loc count: 23186
+loc_covered: 9166
+loc_percent: 39.53 %
+functions count: 660
+functions_covered: 309
+functions_percent: 46.82 %
+
+opj_decompress_fuzzer_JP2
+loc count: 23186
+loc_covered: 9272
+loc_percent: 39.99 %
+functions count: 660
+functions_covered: 333
+functions_percent: 50.45 %
+
+Total
+loc count: 23457
+loc_covered: 13650
+loc_percent: 58.18 %
+functions count: 678
+functions_covered: 473
+functions_percent: 69.76 %
+
+        Initial:  5 %
+        Current:  58 %
+Needed for flag:  10 %

@@ -1,0 +1,29 @@
+uzz_burl
+loc count: 1280
+loc_covered: 451
+loc_percent: 35.23 %
+functions count: 111
+functions_covered: 32
+functions_percent: 28.83 %
+
+fuzz_new
+loc count: 1280
+loc_covered: 451
+loc_percent: 35.23 %
+functions count: 111
+functions_covered: 32
+functions_percent: 28.83 %
+
+Total
+loc count: 1307
+loc_covered: 474
+loc_percent: 36.27 %
+functions count: 113
+functions_covered: 34
+functions_percent: 30.09 %
+
+        Initial:  36 %
+        Current:  36 %
+Needed for flag:  41 %
+
+'report' to start web server to view the coverage report

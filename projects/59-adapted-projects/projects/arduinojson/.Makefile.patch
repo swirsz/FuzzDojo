@@ -1,0 +1,14 @@
+--- Makefile.o	2023-09-12 18:09:07.632671346 +0000
++++ Makefile	2023-09-12 18:11:21.429417831 +0000
+@@ -8,7 +8,10 @@
+ 	$(OUT)/json_fuzzer.options \
+ 	$(OUT)/msgpack_fuzzer \
+ 	$(OUT)/msgpack_fuzzer_seed_corpus.zip \
+-	$(OUT)/msgpack_fuzzer.options
++	$(OUT)/msgpack_fuzzer.options \
++        $(OUT)/new_fuzzer \
++        $(OUT)/new_fuzzer_seed_corpus.zip \
++        $(OUT)/new_fuzzer.options
+ 
+ $(OUT)/%_fuzzer: %_fuzzer.cpp $(shell find ../../src -type f)
+ 	$(CXX) $(CXXFLAGS) $< -o$@ $(LIB_FUZZING_ENGINE)

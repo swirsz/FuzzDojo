@@ -1,0 +1,32 @@
+
+opj_decompress_fuzzer_J2K
+loc count: 23186
+loc_covered: 1681
+loc_percent: 7.25 %
+functions count: 660
+functions_covered: 98
+functions_percent: 14.85 %
+
+opj_decompress_fuzzer_JP2
+loc count: 23186
+loc_covered: 781
+loc_percent: 3.37 %
+functions count: 660
+functions_covered: 62
+functions_percent: 9.39 %
+
+Total
+loc count: 23279
+loc_covered: 2047
+loc_percent: 8.79 %
+functions count: 668
+functions_covered: 115
+functions_percent: 17.22 %
+
+        Initial:  5 %
+        Current:  8 %
+Needed for flag:  10 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________
+

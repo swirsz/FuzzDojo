@@ -1,0 +1,12 @@
+--- build.sho	2024-05-14 00:53:51.939489483 +0000
++++ build.sh	2024-05-14 02:08:17.451280521 +0000
+@@ -23,6 +23,9 @@
+ 
+ $CC $CFLAGS -Isrc -Ibuild/src -c fuzz/cmark-fuzz.c -o cmark_fuzzer.o
+ $CXX $CXXFLAGS $LIB_FUZZING_ENGINE cmark_fuzzer.o build/src/libcmark.a -o $OUT/cmark_fuzzer
++
++$CC $CFLAGS -Isrc -Ibuild/src -c fuzz/cmark-newfuzz.c -o cmark_newfuzzer.o
++$CXX $CXXFLAGS $LIB_FUZZING_ENGINE cmark_newfuzzer.o build/src/libcmark.a -o $OUT/cmark_newfuzzer
+ cp $SRC/*.options $OUT/
+ cp fuzz/dictionary $OUT/cmark.dict
+ 

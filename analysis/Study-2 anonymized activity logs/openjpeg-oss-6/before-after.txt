@@ -1,0 +1,80 @@
+Previous LOC report:
+
+newfuzzer
+loc count: 23186
+loc_covered: 937
+loc_percent: 4.04 %
+functions count: 660
+functions_covered: 66
+functions_percent: 10.00 %
+
+opj_decompress_fuzzer_J2K
+loc count: 23186
+loc_covered: 937
+loc_percent: 4.04 %
+functions count: 660
+functions_covered: 66
+functions_percent: 10.00 %
+
+opj_decompress_fuzzer_JP2
+loc count: 23186
+loc_covered: 781
+loc_percent: 3.37 %
+functions count: 660
+functions_covered: 62
+functions_percent: 9.39 %
+
+Total
+loc count: 23372
+loc_covered: 1348
+loc_percent: 5.77 %
+functions count: 676
+functions_covered: 90
+functions_percent: 13.31 %
+
+        Initial:  5 %
+        Current:  5 %
+Needed for flag:  10 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________
+
+Current LOC report:
+
+newfuzzer
+loc count: 23211
+loc_covered: 823
+loc_percent: 3.55 %
+functions count: 659
+functions_covered: 59
+functions_percent: 8.95 %
+
+opj_decompress_fuzzer_J2K
+loc count: 23186
+loc_covered: 7630
+loc_percent: 32.91 %
+functions count: 660
+functions_covered: 283
+functions_percent: 42.88 %
+
+opj_decompress_fuzzer_JP2
+loc count: 23186
+loc_covered: 7008
+loc_percent: 30.23 %
+functions count: 660
+functions_covered: 289
+functions_percent: 43.79 %
+
+Total
+loc count: 23397
+loc_covered: 9591
+loc_percent: 41.00 %
+functions count: 675
+functions_covered: 350
+functions_percent: 51.85 %
+
+        Initial:  5 %
+        Current:  40 %
+Needed for flag:  10 %
+
+'report' to start web server to view the coverage report

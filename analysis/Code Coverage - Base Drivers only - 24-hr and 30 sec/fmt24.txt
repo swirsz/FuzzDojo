@@ -1,0 +1,69 @@
+chrono-duration-fuzzer
+loc count: 5058
+loc_covered: 2798
+loc_percent: 55.32 %
+functions count: 733
+functions_covered: 380
+functions_percent: 51.84 %
+
+chrono-timepoint-fuzzer
+loc count: 4923
+loc_covered: 1617
+loc_percent: 32.85 %
+functions count: 701
+functions_covered: 284
+functions_percent: 40.51 %
+
+float-fuzzer
+loc count: 3884
+loc_covered: 1522
+loc_percent: 39.19 %
+functions count: 520
+functions_covered: 211
+functions_percent: 40.58 %
+
+named-arg-fuzzer
+loc count: 4177
+loc_covered: 2958
+loc_percent: 70.82 %
+functions count: 617
+functions_covered: 353
+functions_percent: 57.21 %
+
+newfuzzer-fuzzer
+loc count: 4919
+loc_covered: 3753
+loc_percent: 76.30 %
+functions count: 704
+functions_covered: 483
+functions_percent: 68.61 %
+
+one-arg-fuzzer
+loc count: 4919
+loc_covered: 3753
+loc_percent: 76.30 %
+functions count: 704
+functions_covered: 483
+functions_percent: 68.61 %
+
+two-args-fuzzer
+loc count: 3965
+loc_covered: 2946
+loc_percent: 74.30 %
+functions count: 531
+functions_covered: 345
+functions_percent: 64.97 %
+
+Total
+loc count: 5825
+loc_covered: 4796
+loc_percent: 82.33 %
+functions count: 834
+functions_covered: 626
+functions_percent: 75.06 %
+
+        Initial:  75 %
+        Current:  82 %
+Needed for flag:  80 %
+
+'report' to start web server to view the coverage report

@@ -1,0 +1,20 @@
+--- build.sho	2025-09-25 20:42:03.172849474 +0000
++++ build.sh	2025-09-25 20:43:13.681391183 +0000
+@@ -1,8 +1,9 @@
+ #!/bin/bash -eu
+ 
+ pushd $SRC
+-mv people.xiph.org/*.ogg decode_corpus/
++cp people.xiph.org/*.ogg decode_corpus/
+ zip -r "$OUT/decode_fuzzer_seed_corpus.zip" decode_corpus/
++zip -r "$OUT/new_fuzzer_seed_corpus.zip" decode_corpus/
+ popd
+ 
+ pushd $SRC/ogg
+@@ -21,3 +22,6 @@
+ make install
+ 
+ $CXX $CXXFLAGS $SRC/vorbis/contrib/oss-fuzz/decode_fuzzer.cc -o $OUT/decode_fuzzer -L"$WORK/lib" -I"$WORK/include" $LIB_FUZZING_ENGINE -lvorbisfile -lvorbis -logg
++
++
++$CXX $CXXFLAGS $SRC/vorbis/contrib/oss-fuzz/new_fuzzer.cc -o $OUT/new_fuzzer -L"$WORK/lib" -I"$WORK/include" $LIB_FUZZING_ENGINE -lvorbisfile -lvorbis -logg

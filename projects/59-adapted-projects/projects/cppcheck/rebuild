@@ -1,0 +1,43 @@
+#!/opt/pwn.college/bash
+. /usr/local/sbin/e
+export LABEL=$1
+export PROJECT_NAME=cppcheck
+SANITIZER=$1
+if [ -z "$SANITIZER" ]; then
+    SANITIZER='none'
+    export LABEL='none'
+fi
+
+SRC=/src-$LABEL
+if [ -z "$(find /out -mindepth 1 -maxdepth 1)" ] || [ ! -d "$SRC" ]; then
+    echo "Run /challenge/build first"
+    rm /tmp/build.lck
+else 
+
+if [ "$LABEL" = "none" ]; then
+    FLAGS=""
+elif [ "$LABEL" = "address" ]; then
+    FLAGS=$SANITIZER_FLAGS_address
+elif [ "$LABEL" = "memory" ]; then
+    FLAGS=$SANITIZER_FLAGS_memory
+elif [ "$LABEL" = "undefined" ]; then
+    FLAGS=$SANITIZER_FLAGS_undefined
+elif [ "$LABEL" = "thread" ]; then
+    FLAGS=$SANITIZER_FLAGS_thread
+fi
+set -x
+#----------------------------------------------------------------------
+
+cp /home/hacker/fuzz-dojo/$PROJECT_NAME/*.cpp $SRC/$PROJECT_NAME/oss-fuzz
+cp /home/hacker/fuzz-dojo/$PROJECT_NAME/*.h $SRC/$PROJECT_NAME/oss-fuzz
+cp /home/hacker/fuzz-dojo/$PROJECT_NAME/Makefile $SRC/$PROJECT_NAME/oss-fuzz
+   
+cd $SRC/$PROJECT_NAME/oss-fuzz
+
+clang++ -fsanitize=fuzzer -std=c++11 -g -w -I../lib -isystem../externals/simplecpp -isystem../externals/tinyxml2 -isystem../externals/picojson -O1 -fno-omit-frame-pointer -gline-tables-only -DFUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION $FLAGS -fsanitize=fuzzer-no-link -stdlib=libc++ -c -o newfuzzer.o newfuzzer.cpp
+
+clang++ -std=c++11 -g -w -I../lib -isystem../externals/simplecpp -isystem../externals/tinyxml2 -isystem../externals/picojson -O1 -fno-omit-frame-pointer -gline-tables-only -DFUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION $FLAGS -fsanitize=fuzzer-no-link -stdlib=libc++ -o newfuzzer simplecpp.o tinyxml2.o build/valueflow.o build/tokenize.o build/symboldatabase.o build/addoninfo.o build/analyzerinfo.o build/astutils.o build/check.o build/check64bit.o build/checkassert.o build/checkautovariables.o build/checkbool.o build/checkbufferoverrun.o build/checkclass.o build/checkcondition.o build/checkers.o build/checkersidmapping.o build/checkersreport.o build/checkexceptionsafety.o build/checkfunctions.o build/checkinternal.o build/checkio.o build/checkleakautovar.o build/checkmemoryleak.o build/checknullpointer.o build/checkother.o build/checkpostfixoperator.o build/checksizeof.o build/checkstl.o build/checkstring.o build/checktype.o build/checkuninitvar.o build/checkunusedfunctions.o build/checkunusedvar.o build/checkvaarg.o build/clangimport.o build/color.o build/cppcheck.o build/ctu.o build/errorlogger.o build/errortypes.o build/findtoken.o build/forwardanalyzer.o build/fwdanalysis.o build/importproject.o build/infer.o build/keywords.o build/library.o build/mathlib.o build/path.o build/pathanalysis.o build/pathmatch.o build/platform.o build/preprocessor.o build/programmemory.o build/reverseanalyzer.o build/settings.o build/standards.o build/summaries.o build/suppressions.o build/templatesimplifier.o build/timer.o build/token.o build/tokenlist.o build/utils.o build/vf_analyzers.o build/vf_common.o build/vf_settokenvalue.o build/vfvalue.o newfuzzer.o type2.o -fsanitize=fuzzer
+
+#----------------------------------------------------------------------
+drivers
+fi

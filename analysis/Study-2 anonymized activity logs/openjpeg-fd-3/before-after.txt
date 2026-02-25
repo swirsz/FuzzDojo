@@ -1,0 +1,124 @@
+Previous LOC report:
+
+newfuzzer
+loc count: 23186
+loc_covered: 937
+loc_percent: 4.04 %
+functions count: 660
+functions_covered: 66
+functions_percent: 10.00 %
+
+opj_decompress_fuzzer_J2K
+loc count: 23186
+loc_covered: 937
+loc_percent: 4.04 %
+functions count: 660
+functions_covered: 66
+functions_percent: 10.00 %
+
+opj_decompress_fuzzer_JP2
+loc count: 23186
+loc_covered: 781
+loc_percent: 3.37 %
+functions count: 660
+functions_covered: 62
+functions_percent: 9.39 %
+
+Total
+loc count: 23372
+loc_covered: 1348
+loc_percent: 5.77 %
+functions count: 676
+functions_covered: 90
+functions_percent: 13.31 %
+
+        Initial:  5 %
+        Current:  5 %
+Needed for flag:  10 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________
+
+Current LOC report:
+
+newfuzzer
+loc count: 23186
+loc_covered: 937
+loc_percent: 4.04 %
+functions count: 660
+functions_covered: 66
+functions_percent: 10.00 %
+
+opj_decompress_fuzzer_J2K
+loc count: 23186
+loc_covered: 7486
+loc_percent: 32.29 %
+functions count: 660
+functions_covered: 283
+functions_percent: 42.88 %
+
+opj_decompress_fuzzer_JP2
+loc count: 23186
+loc_covered: 6905
+loc_percent: 29.78 %
+functions count: 660
+functions_covered: 288
+functions_percent: 43.64 %
+
+Total
+loc count: 23372
+loc_covered: 9107
+loc_percent: 38.97 %
+functions count: 676
+functions_covered: 338
+functions_percent: 50.00 %
+
+        Initial:  5 %
+        Current:  38 %
+Needed for flag:  10 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________
+
+
+Current LOC report:
+
+newfuzzer
+loc count: 23258
+loc_covered: 4654
+loc_percent: 20.01 %
+functions count: 660
+functions_covered: 236
+functions_percent: 35.76 %
+
+opj_decompress_fuzzer_J2K
+loc count: 23186
+loc_covered: 7523
+loc_percent: 32.45 %
+functions count: 660
+functions_covered: 283
+functions_percent: 42.88 %
+
+opj_decompress_fuzzer_JP2
+loc count: 23186
+loc_covered: 6893
+loc_percent: 29.73 %
+functions count: 660
+functions_covered: 288
+functions_percent: 43.64 %
+
+Total
+loc count: 23444
+loc_covered: 12453
+loc_percent: 53.12 %
+functions count: 676
+functions_covered: 468
+functions_percent: 69.23 %
+
+        Initial:  5 %
+        Current:  53 %
+Needed for flag:  10 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________
+

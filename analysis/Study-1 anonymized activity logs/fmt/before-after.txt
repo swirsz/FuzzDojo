@@ -1,0 +1,69 @@
+chrono-duration-fuzzer
+loc count: 5058
+loc_covered: 2087
+loc_percent: 41.26 %
+functions count: 733
+functions_covered: 273
+functions_percent: 37.24 %
+
+chrono-timepoint-fuzzer
+loc count: 4923
+loc_covered: 1610
+loc_percent: 32.70 %
+functions count: 701
+functions_covered: 283
+functions_percent: 40.37 %
+
+float-fuzzer
+loc count: 3884
+loc_covered: 1522
+loc_percent: 39.19 %
+functions count: 520
+functions_covered: 211
+functions_percent: 40.58 %
+
+named-arg-fuzzer
+loc count: 4177
+loc_covered: 2834
+loc_percent: 67.85 %
+functions count: 617
+functions_covered: 347
+functions_percent: 56.24 %
+
+newfuzzer-fuzzer
+loc count: 4919
+loc_covered: 3149
+loc_percent: 64.02 %
+functions count: 704
+functions_covered: 382
+functions_percent: 54.26 %
+
+one-arg-fuzzer
+loc count: 4919
+loc_covered: 3145
+loc_percent: 63.94 %
+functions count: 704
+functions_covered: 382
+functions_percent: 54.26 %
+
+two-args-fuzzer
+loc count: 3965
+loc_covered: 2401
+loc_percent: 60.55 %
+functions count: 531
+functions_covered: 310
+functions_percent: 58.38 %
+
+Total
+loc count: 5825
+loc_covered: 4473
+loc_percent: 76.79 %
+functions count: 834
+functions_covered: 560
+functions_percent: 67.15 %
+
+        Initial:  75 %
+        Current:  76 %
+Needed for flag:  80 %
+______________________________________________
+

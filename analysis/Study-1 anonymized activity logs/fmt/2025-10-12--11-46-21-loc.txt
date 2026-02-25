@@ -1,0 +1,95 @@
+chrono-duration-fuzzer
+loc count: 5058
+loc_covered: 2350
+loc_percent: 46.46 %
+functions count: 733
+functions_covered: 333
+functions_percent: 45.43 %
+
+chrono-timepoint-fuzzer
+loc count: 4923
+loc_covered: 1617
+loc_percent: 32.85 %
+functions count: 701
+functions_covered: 284
+functions_percent: 40.51 %
+
+float-fuzzer
+loc count: 3884
+loc_covered: 1522
+loc_percent: 39.19 %
+functions count: 520
+functions_covered: 211
+functions_percent: 40.58 %
+
+fuzz_copy_fill_from-fuzzer
+loc count: 3893
+loc_covered: 84
+loc_percent: 2.16 %
+functions count: 513
+functions_covered: 11
+functions_percent: 2.14 %
+
+fuzz_count_formatted_size-fuzzer
+loc count: 3937
+loc_covered: 1730
+loc_percent: 43.94 %
+functions count: 520
+functions_covered: 224
+functions_percent: 43.08 %
+
+fuzz_write_codecvt-fuzzer
+loc count: 4129
+loc_covered: 39
+loc_percent: 0.94 %
+functions count: 601
+functions_covered: 9
+functions_percent: 1.50 %
+
+fuzz_write_paths-fuzzer
+loc count: 3963
+loc_covered: 1874
+loc_percent: 47.29 %
+functions count: 534
+functions_covered: 250
+functions_percent: 46.82 %
+
+named-arg-fuzzer
+loc count: 4177
+loc_covered: 2856
+loc_percent: 68.37 %
+functions count: 617
+functions_covered: 347
+functions_percent: 56.24 %
+
+one-arg-fuzzer
+loc count: 4919
+loc_covered: 2856
+loc_percent: 58.06 %
+functions count: 704
+functions_covered: 362
+functions_percent: 51.42 %
+
+two-args-fuzzer
+loc count: 3965
+loc_covered: 2701
+loc_percent: 68.12 %
+functions count: 531
+functions_covered: 324
+functions_percent: 61.02 %
+
+Total
+loc count: 6039
+loc_covered: 4832
+loc_percent: 80.01 %
+functions count: 860
+functions_covered: 642
+functions_percent: 74.65 %
+
+        Initial:  75 %
+        Current:  80 %
+Needed for flag:  80 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________
+

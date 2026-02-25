@@ -1,0 +1,111 @@
+
+checksum_fuzzer
+loc count: 407
+loc_covered: 293
+loc_percent: 71.99 %
+functions count: 19
+functions_covered: 15
+functions_percent: 78.95 %
+
+compress_fuzzer
+loc count: 3472
+loc_covered: 1982
+loc_percent: 57.09 %
+functions count: 106
+functions_covered: 60
+functions_percent: 56.60 %
+
+example_dict_fuzzer
+loc count: 3422
+loc_covered: 2002
+loc_percent: 58.50 %
+functions count: 100
+functions_covered: 58
+functions_percent: 58.00 %
+
+example_flush_fuzzer
+loc count: 3442
+loc_covered: 1759
+loc_percent: 51.10 %
+functions count: 103
+functions_covered: 55
+functions_percent: 53.40 %
+
+example_large_fuzzer
+loc count: 3416
+loc_covered: 1783
+loc_percent: 52.20 %
+functions count: 100
+functions_covered: 55
+functions_percent: 55.00 %
+
+example_small_fuzzer
+loc count: 3443
+loc_covered: 1540
+loc_percent: 44.73 %
+functions count: 103
+functions_covered: 53
+functions_percent: 51.46 %
+
+gzio_fuzzer
+loc count: 4633
+loc_covered: 2246
+loc_percent: 48.48 %
+functions count: 145
+functions_covered: 94
+functions_percent: 64.83 %
+
+minigzip_fuzzer
+loc count: 4585
+loc_covered: 2453
+loc_percent: 53.50 %
+functions count: 150
+functions_covered: 73
+functions_percent: 48.67 %
+
+new_fuzzer
+loc count: 3472
+loc_covered: 1979
+loc_percent: 57.00 %
+functions count: 106
+functions_covered: 60
+functions_percent: 56.60 %
+
+zlib_uncompress2_fuzzer
+loc count: 1811
+loc_covered: 975
+loc_percent: 53.84 %
+functions count: 50
+functions_covered: 18
+functions_percent: 36.00 %
+
+zlib_uncompress3_fuzzer
+loc count: 1814
+loc_covered: 984
+loc_percent: 54.24 %
+functions count: 50
+functions_covered: 18
+functions_percent: 36.00 %
+
+zlib_uncompress_fuzzer
+loc count: 1813
+loc_covered: 980
+loc_percent: 54.05 %
+functions count: 50
+functions_covered: 19
+functions_percent: 38.00 %
+
+Total
+loc count: 5341
+loc_covered: 4257
+loc_percent: 79.70 %
+functions count: 180
+functions_covered: 154
+functions_percent: 85.56 %
+
+        Initial:  72 %
+        Current:  79 %
+Needed for flag:  77 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________

@@ -1,0 +1,67 @@
+_______________________
+
+Current LOC report:
+
+newfuzzer
+loc count: 23186
+loc_covered: 8549
+loc_percent: 36.87 %
+functions count: 660
+functions_covered: 300
+functions_percent: 45.45 %
+
+opj_decompress_fuzzer_J2K
+loc count: 23186
+loc_covered: 8752
+loc_percent: 37.75 %
+functions count: 660
+functions_covered: 304
+functions_percent: 46.06 %
+
+opj_decompress_fuzzer_JP2
+loc count: 23186
+loc_covered: 9183
+loc_percent: 39.61 %
+functions count: 660
+functions_covered: 324
+functions_percent: 49.09 %
+
+Total
+loc count: 23372
+loc_covered: 10589
+loc_percent: 45.31 %
+functions count: 676
+functions_covered: 355
+functions_percent: 52.51 %
+
+        Initial:  5 %
+        Current:  45 %
+Needed for flag:  10 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________
+
+
+Congratulations! Additional code coverage detected!
+pwn.college{practice}
+
+hacker@practice~projects~openjpeg-complex-22939-loc-5-4-2-min:/out$ ll /out
+bash: ll: command not found
+hacker@practice~projects~openjpeg-complex-22939-loc-5-4-2-min:/out$ ls -al /out
+total 128572
+drwxrwxrwx 1 hacker hacker     4096 Dec 21 06:04 .
+drwxr-xr-x 1 root   root       4096 Dec 21 06:02 ..
+drwxr-xr-x 3 hacker hacker     4096 Dec 21 06:04 dumps
+drwxr-xr-x 2 hacker hacker     4096 Dec 21 06:04 fuzzer_stats
+-rwxr-xr-x 1 hacker hacker  6888520 Dec 21 06:01 llvm-symbolizer
+drwxr-xr-x 2 hacker hacker     4096 Dec 21 06:02 logs
+drwxr-xr-x 2 hacker hacker     4096 Dec 21 06:02 merged_coverage
+-rwxr-xr-x 1 hacker hacker  4420184 Dec 21 06:02 newfuzzer
+-rw-r--r-- 1 hacker hacker 27860771 Dec 20 05:44 newfuzzer_seed_corpus.zip
+-rwxr-xr-x 1 hacker hacker  4420248 Dec 21 06:02 opj_decompress_fuzzer_J2K
+-rw-r--r-- 1 hacker hacker 27860771 Dec 20 05:43 opj_decompress_fuzzer_J2K_seed_corpus.zip
+-rwxr-xr-x 1 hacker hacker  4420248 Dec 21 06:02 opj_decompress_fuzzer_JP2
+-rw-r--r-- 1 hacker hacker 27860771 Dec 20 05:43 opj_decompress_fuzzer_JP2_seed_corpus.zip
+-rw-r--r-- 1 hacker hacker 27860771 Dec 21 06:02 opj_decompress_fuzzer_seed_corpus.zip
+drwxr-xr-x 6 hacker hacker     4096 Dec 21 06:04 report
+drwxr-xr-x 5 hacker hacker     4096 Dec 21 06:04 report_

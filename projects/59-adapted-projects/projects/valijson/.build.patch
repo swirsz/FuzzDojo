@@ -1,0 +1,23 @@
+--- build.sho	2025-02-10 04:23:35.147808641 +0000
++++ build.sh	2025-02-10 04:32:06.769032381 +0000
+@@ -30,3 +30,20 @@
+ done
+ 
+ zip -j -r "${OUT}/fuzzer_seed_corpus.zip" seed_corpus
++
++"$CXX" $CXXFLAGS -DVALIJSON_USE_EXCEPTIONS=1 \
++        -I/src/valijson/thirdparty/rapidjson/include \
++        -I/src/valijson/thirdparty/rapidjson/include/rapidjson \
++        -I/src/valijson/include \
++        -I/src/valijson/include/valijson \
++        -I/src/valijson/include/valijson/adapters \
++        -c newfuzzer.cpp -o newfuzzer.o
++
++"$CXX" $CXXFLAGS "$LIB_FUZZING_ENGINE" \
++    -DVALIJSON_USE_EXCEPTIONS=1 \
++        -I/src/valijson/thirdparty/rapidjson/include \
++        -I/src/valijson/include \
++        newfuzzer.cpp -o "${OUT}/newfuzzer"
++
++zip "${OUT}/newfuzzer_seed_corpus.zip" seed_corpus
++

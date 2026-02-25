@@ -1,0 +1,51 @@
+#!/opt/pwn.college/bash
+. /usr/local/sbin/e
+export LABEL=$1
+export PROJECT_NAME=unrar
+SANITIZER=$1
+if [ -z "$SANITIZER" ]; then
+    SANITIZER='none'
+    export LABEL='none'
+fi
+
+SRC=/src-$LABEL
+if [ -z "$(find /out -mindepth 1 -maxdepth 1)" ] || [ ! -d "$SRC" ]; then
+    echo "Run /challenge/build first"
+    rm /tmp/build.lck
+else 
+
+if [ "$LABEL" = "none" ]; then
+    FLAGS=""
+elif [ "$LABEL" = "address" ]; then
+    FLAGS=$SANITIZER_FLAGS_address
+elif [ "$LABEL" = "memory" ]; then
+    FLAGS=$SANITIZER_FLAGS_memory
+elif [ "$LABEL" = "undefined" ]; then
+    FLAGS=$SANITIZER_FLAGS_undefined
+elif [ "$LABEL" = "thread" ]; then
+    FLAGS=$SANITIZER_FLAGS_thread
+fi
+set -x
+#----------------------------------------------------------------------
+
+cp /home/hacker/fuzz-dojo/$PROJECT_NAME/* $SRC/$PROJECT_NAME
+
+cd $SRC/$PROJECT_NAME
+
+LDFLAGS=""
+UNRAR_DEFINES="-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DRAR_SMP -DRARDLL -DSILENT -DNOVOLUME"
+UNRAR_WNOS="-Wno-logical-op-parentheses -Wno-switch -Wno-dangling-else"
+UNRAR_SRC_DIR="$SRC/unrar"
+
+# See: https://crbug.com/oss-fuzz/19333#c3
+CFLAGS="$CFLAGS -fno-sanitize=enum"
+CXXFLAGS="$CXXFLAGS -fno-sanitize=enum"
+
+$CXX $CXXFLAGS -I. $UNRAR_SRC_DIR/new_fuzzer.cc -o $OUT/new_fuzzer \
+     $UNRAR_DEFINES $LIB_FUZZING_ENGINE -L$UNRAR_SRC_DIR -lunrar -pthread
+     
+#clang++ -O1 -fno-omit-frame-pointer -gline-tables-only -DFUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION $FLAGS -fsanitize=fuzzer-no-link -stdlib=libc++ -fno-sanitize=enum -I. $SRC/unrar/new_fuzzer.cc -o /out/new_fuzzer -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DRAR_SMP
+
+#----------------------------------------------------------------------
+drivers
+fi

@@ -1,0 +1,9 @@
+--- build.sho	2024-05-29 02:05:56.038141946 +0000
++++ build.sh	2024-05-29 02:08:05.870234426 +0000
+@@ -24,3 +24,6 @@
+ 
+ $CXX $CXXFLAGS -I${INSTALL_DIR}/include data_context_fuzzer.cc \
+   $LIB_FUZZING_ENGINE -o $OUT/data_context_fuzzer ${INSTALL_DIR}/lib/libsass.a
++
++$CXX $CXXFLAGS -I${INSTALL_DIR}/include new_fuzzer.cc \
++  $LIB_FUZZING_ENGINE -o $OUT/new_fuzzer ${INSTALL_DIR}/lib/libsass.a

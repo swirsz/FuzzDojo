@@ -1,0 +1,8 @@
+--- build.sh.o	2023-09-10 20:03:55.193293296 +0000
++++ build.sh	2023-09-10 20:04:50.717587077 +0000
+@@ -19,3 +19,5 @@
+ make -j$(nproc)
+ $CC $CFLAGS -c $SRC/wasm3/platforms/app_fuzz/fuzzer.c -o fuzzer.o -I/src/wasm3/source
+ $CXX $CXXFLAGS $LIB_FUZZING_ENGINE -o $OUT/fuzzer fuzzer.o /src/wasm3/build/source/libm3.a
++$CC $CFLAGS -c $SRC/wasm3/platforms/app_fuzz/newfuzzer.c -o newfuzzer.o -I/src/wasm3/source
++$CXX $CXXFLAGS $LIB_FUZZING_ENGINE -o $OUT/newfuzzer newfuzzer.o /src/wasm3/build/source/libm3.a

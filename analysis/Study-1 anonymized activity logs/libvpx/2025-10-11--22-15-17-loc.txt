@@ -1,0 +1,112 @@
+
+newfuzzer
+loc count: 27229
+loc_covered: 14462
+loc_percent: 53.11 %
+functions count: 1232
+functions_covered: 672
+functions_percent: 54.55 %
+
+newfuzzer2
+loc count: 27412
+loc_covered: 5118
+loc_percent: 18.67 %
+functions count: 1238
+functions_covered: 308
+functions_percent: 24.88 %
+
+newfuzzer3
+loc count: 20455
+loc_covered: 3465
+loc_percent: 16.94 %
+functions count: 943
+functions_covered: 174
+functions_percent: 18.45 %
+
+newfuzzer4
+loc count: 14399
+loc_covered: 507
+loc_percent: 3.52 %
+functions count: 649
+functions_covered: 27
+functions_percent: 4.16 %
+
+newfuzzer5
+loc count: 27301
+loc_covered: 1704
+loc_percent: 6.24 %
+functions count: 1236
+functions_covered: 124
+functions_percent: 10.03 %
+
+newfuzzer6
+loc count: 27310
+loc_covered: 895
+loc_percent: 3.28 %
+functions count: 1240
+functions_covered: 72
+functions_percent: 5.81 %
+
+newfuzzer7
+loc count: 27310
+loc_covered: 991
+loc_percent: 3.63 %
+functions count: 1240
+functions_covered: 75
+functions_percent: 6.05 %
+
+newfuzzer8
+loc count: 27444
+loc_covered: 1121
+loc_percent: 4.08 %
+functions count: 1247
+functions_covered: 86
+functions_percent: 6.90 %
+
+newfuzzer9_vp8
+loc count: 33098
+loc_covered: 2080
+loc_percent: 6.28 %
+functions count: 1470
+functions_covered: 139
+functions_percent: 9.46 %
+
+newfuzzer9_vp9
+loc count: 33098
+loc_covered: 1264
+loc_percent: 3.82 %
+functions count: 1470
+functions_covered: 93
+functions_percent: 6.33 %
+
+vpx_dec_fuzzer_vp8
+loc count: 20542
+loc_covered: 4083
+loc_percent: 19.88 %
+functions count: 960
+functions_covered: 185
+functions_percent: 19.27 %
+
+vpx_dec_fuzzer_vp9
+loc count: 27204
+loc_covered: 14047
+loc_percent: 51.64 %
+functions count: 1231
+functions_covered: 655
+functions_percent: 53.21 %
+
+Total
+loc count: 34214
+loc_covered: 19885
+loc_percent: 58.12 %
+functions count: 1536
+functions_covered: 929
+functions_percent: 60.48 %
+
+        Initial:  53 %
+        Current:  58 %
+Needed for flag:  58 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________
+

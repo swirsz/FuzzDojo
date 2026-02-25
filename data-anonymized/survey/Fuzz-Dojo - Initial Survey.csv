@@ -1,0 +1,78 @@
+Timestamp,What is your current occupation?,How many years have you been working with fuzzing tools and/or fuzz driver development? ,How do you rate your experience with writing fuzz drivers?,"How do you rate your experience using OSS-Fuzz, Libfuzzer, and AFL?",How familiar are you with reading and understanding a large program in the following languages? [C],How familiar are you with reading and understanding a large program in the following languages? [C++],"How familiar are you with writing a program from start to finish in the following languages? (1=Not familiar, 2=Slightly familiar, 3=Somewhat familiar, 4=Very familiar, 5=Extremely familiar) [C]","How familiar are you with writing a program from start to finish in the following languages? (1=Not familiar, 2=Slightly familiar, 3=Somewhat familiar, 4=Very familiar, 5=Extremely familiar) [C++]","How familiar are you with modifying a large program in the following languages?  (1=Not familiar, 2=Slightly familiar, 3=Somewhat familiar, 4=Very familiar, 5=Extremely familiar)  [C]","How familiar are you with modifying a large program in the following languages?  (1=Not familiar, 2=Slightly familiar, 3=Somewhat familiar, 4=Very familiar, 5=Extremely familiar)  [C++]",Which country do you live in?,What type of software you develop/test?,How many years of experience you have with software development?,How did you gain your development skills?,"If you are a student, what university are you enrolled, and what is your subject?",Do you have a university degree?
+2025/02/24 2:01:58 PM MST,Researcher / Academics,3-5 years,Expert,Advanced,5,5,5,4,5,4,0,Desktop applications;Embedded software;Enterprise applications,8,University;On-the-job;Self-taught,"Arizona State University, Computer Science Undergrad",No
+2025/03/06 4:11:45 PM MST,Researcher / Academics,<3 years,Experienced,Advanced,5,4,4,3,4,4,United States,Desktop applications,8,University;Self-taught,"ASU, 3rd year PhD",Yes
+2025/04/09 9:00:35 PM MDT,Researcher / Academics,3-5 years,Novice,Beginner,4,2,,,4,2,United States,cli tools and libraries,7,University;On-the-job;Free online courses;Self-taught,"ASU, Computer Science",Yes
+2025/04/18 3:05:00 PM MDT,Researcher / Academics,<3 years,No experience,No experience,5,4,5,3,3,3,USA,Desktop applications,,University,ASU cybersecurity PhD,Yes
+2025/07/21 2:16:25 PM MDT,Researcher / Academics,<3 years,No experience,Beginner,4,3,3,2,3,2,United States,Desktop applications,4,University;Self-taught,"Arizona State University, Computer Science and Mathematics",No
+2025/07/22 2:01:14 PM MDT,Researcher / Academics,<3 years,No experience,No experience,4,3,3,2,3,2,United States,Desktop applications;Web applications;Mobile applications,10,University;On-the-job;Free online courses;Self-taught,UCLA Physics,No
+2025/07/23 12:32:25 PM MDT,Researcher / Academics,<3 years,Experienced,Intermediate,4,4,4,4,4,4,,Desktop applications;Embedded software,,University;Self-taught,"UIUC, CS + Math",No
+2025/08/22 3:49:15 AM MDT,Hobbyist,<3 years,Novice,Beginner,3,2,3,2,3,2,,Desktop applications,,University,,No
+2025/08/25 7:17:21 AM MDT,Security Expert,<3 years,No experience,Beginner,3,1,1,1,1,1,Turkey,Desktop applications;Web applications;Mobile applications,2,Self-taught,no,No
+2025/08/25 11:40:57 PM MDT,Student,<3 years,Novice,Beginner,3,2,3,1,3,1,United States Of America,Embedded software;Enterprise applications;Web3 validator,1,University;Self-taught,"Arizona State University, Bachelor of Science in Computer Science (Cybersecurity)",No
+2025/08/27 5:46:46 AM MDT,Researcher / Academics,<3 years,No experience,No experience,2,2,2,2,3,3,Viet Nam,Desktop applications;,2 years,University,Network and cyber security,No
+2025/09/01 1:35:46 AM MDT,Developer,<3 years,No experience,Beginner,5,3,5,3,5,3,China,Embedded software;Enterprise applications,12,University;On-the-job;Self-taught,I am not a student now,Yes
+2025/09/08 5:49:21 AM MDT,Researcher / Academics,<3 years,No experience,No experience,1,1,1,1,1,1,anywhrer,Desktop applications,1,On-the-job,,
+2025/09/16 3:36:06 AM MDT,Researcher / Academics,<3 years,Novice,Intermediate,5,4,5,4,5,4,India,Desktop applications,0,University,,Yes
+2025/09/17 2:35:05 PM MDT,Hobbyist,<3 years,Novice,Beginner,5,2,4,2,5,1,United Kingdom,Desktop applications,8,University;On-the-job,,Yes
+2025/09/17 4:57:52 PM MDT,Gnarp,Space,Spaceships,Expert,1,1,5,5,3,3,Mars (Ablo-Gleep Region),Desktop applications;Web applications;Mobile applications;Embedded software;Enterprise applications;Malware,The instruction contains a paradox: it requests both an answer and the absence of an answer. This contradiction cannot be resolved directly.,Aliens,Ph.D of,Yes
+2025/09/24 2:58:37 AM MDT,Researcher / Academics,<3 years,No experience,No experience,3,1,2,1,2,1,Italy,Desktop applications,1,University;Self-taught,"Università degli studi di Milano, Computer Science",Yes
+2025/09/25 8:34:24 PM MDT,Student,<3 years,No experience,No experience,4,4,4,4,4,4,United States,Desktop applications,6,University;Free online courses;Self-taught,"Arizona State University, Computer Science",No
+2025/09/26 6:52:21 AM MDT,Developer,<3 years,No experience,No experience,4,2,3,2,4,2,UK,Web applications;Enterprise applications,6,Self-taught,N/A,Yes
+2025/10/03 2:26:38 PM MDT,Researcher / Academics,<3 years,No experience,No experience,3,3,3,3,3,3,USA,,,University;Self-taught,ASU Computer Science,Yes
+2025/10/05 12:30:26 PM MDT,Technical Lead,<3 years,Novice,Beginner,4,3,4,3,4,2,Italy,Desktop applications;Web applications;Embedded software,5,University;On-the-job;Free online courses;Self-taught,,Yes
+2025/10/05 1:38:58 PM MDT,Researcher / Academics,Less than a month. Started with this dojo,No experience,No experience,4,3,4,4,4,4,United States,Desktop applications,2,University;Self-taught,"Arizona State University, Computer Science",Yes
+2025/10/07 10:31:59 AM MDT,Student,<3 years,No experience,No experience,2,1,2,1,2,1,,Desktop applications;Web applications,maybe 1 or 2,University;Self-taught,,Yes
+2025/10/09 3:48:29 PM MDT,Hobbyist,never did it,No experience,No experience,2,1,3,1,2,1,Spain,I don't,0,Self-taught,,No
+2025/10/16 3:28:21 AM MDT,Security Expert,<3 years,No experience,No experience,5,3,5,3,4,2,Italy,Embedded software;Enterprise applications,3,University;On-the-job;Free online courses;Self-taught,,Yes
+2025/10/16 1:06:33 PM MDT,,<3 years,No experience,Beginner,4,3,4,3,3,3,US,,,University;Self-taught,Arizona State University,Yes
+2025/10/17 3:57:53 AM MDT,Hobbyist,<3 years,Novice,Beginner,3,2,3,2,4,2,Algeria,Desktop applications;CLI tools,,,"Masters in Computer Engineering University of Ibn Khaldoun, Tiaret, Algeria",Yes
+2025/10/19 1:54:25 AM MDT,Hobbyist,<3 years,No experience,No experience,3,1,2,1,2,1,Republic of Korea,Web applications,7,Self-taught,"Arizona State University, Computer Science",No
+2025/10/19 6:32:43 PM MDT,"unemployed / not in education, disabled",<3 years,No experience,No experience,2,1,3,1,2,1,AMERICA,Desktop applications,a little here and there but nothing serious,Self-taught,,No
+2025/10/21 1:29:56 AM MDT,Researcher / Academics,<3 years,No experience,No experience,5,5,4,4,5,5,,Desktop applications;Web applications,3,University;On-the-job;Self-taught,"ASU, CS",Yes
+2025/10/21 2:51:44 PM MDT,Student,<3 years,Novice,Intermediate,5,5,5,5,5,5,United States (F1),Web applications;Mobile applications;Embedded software,2,On-the-job;Self-taught,Arizona State University MS Computer Science,Yes
+2025/10/21 2:53:05 PM MDT,Researcher / Academics,<3 years,No experience,No experience,4,2,4,2,4,2,US,Desktop applications;Web applications;Mobile applications;Embedded software;Enterprise applications,,University;Self-taught,"ASU, SEFCOM",Yes
+2025/10/21 6:45:07 PM MDT,Developer,<3 years,No experience,Beginner,5,1,5,1,5,1,United States of America,Desktop applications;Web applications;Mobile applications;Embedded software,7,University,,Yes
+2025/10/22 12:24:42 AM MDT,Security Expert,3-5 years,Experienced,Advanced,4,3,4,3,4,3,china,Desktop applications;Embedded software;Enterprise applications,7,University,cs,Yes
+2025/10/22 9:25:27 AM MDT,Bug Hunter,<3 years,No experience,No experience,3,3,3,3,3,3,,,,Free online courses;Self-taught,Master of Computer Application,Yes
+2025/10/22 9:43:32 AM MDT,Student,<3 years,Experienced,Advanced,4,3,3,2,4,3,United States of America,Desktop applications,4,University,"University of Utah, Computer Science",Yes
+2025/10/26 3:35:40 PM MDT,Hobbyist,<3 years,No experience,No experience,3,2,3,2,3,2,Poland,,,University;Self-taught,,No
+2025/10/31 9:14:36 AM MDT,Researcher / Academics,<3 years,No experience,No experience,3,1,3,1,3,1,Brasil,Desktop applications,1,University;Free online courses;Paid online courses;Self-taught,,Yes
+2025/11/09 1:33:20 AM MST,Application Administrator,<3 years,No experience,No experience,4,4,5,4,4,4,USA,,,,"ASU, Computer Science",No
+2025/11/09 4:55:58 PM MST,student,<3 years,No experience,Beginner,5,3,5,4,3,3,Canada,Web applications;scripts and command-line applications,5,University;Free online courses;Paid online courses;Self-taught,Université de montréal in mathematics and computer science,No
+2025/11/09 5:56:00 PM MST,Security Expert,<3 years,No experience,No experience,5,2,4,1,5,2,United States,Desktop applications;Enterprise applications,2,University;On-the-job,,Yes
+2025/11/09 9:30:21 PM MST,Researcher / Academics,3-5 years,Experienced,Advanced,5,4,5,4,5,4,United States of America ,Desktop applications;Embedded software,7-May,University,"Arizona State University, Computer Science ",Yes
+2025/11/11 4:16:14 PM MST,Researcher / Academics,<3 years,Novice,Beginner,5,5,5,5,5,5,Italy,Desktop applications;Mobile applications;Embedded software,5,Self-taught,,Yes
+2025/11/13 3:36:47 PM MST,Student,<3 years,No experience,No experience,3,3,3,3,3,3,United States of america,Web applications,2-Jan,University;Free online courses;Self-taught,"University of California, Irvine. Major in Computer Science",No
+2025/11/14 1:52:53 AM MST,Researcher / Academics,<3 years,No experience,Beginner,2,1,2,1,2,1,United States,Desktop applications;Web applications,1,University;On-the-job,"University of California, Irvine; Software Engineering",Yes
+2025/11/17 11:47:31 AM MST,Researcher / Academics,<3 years,Novice,Beginner,3,3,2,1,4,3,Spain,Communication Protocols,3,University;On-the-job;Self-taught,"Universidad Politecnica de Madrid (UPM), PhD Cybersecurity",Yes
+2025/11/17 10:56:41 PM MST,Developer,<3 years,No experience,No experience,3,3,3,3,3,3,Bangladesh,Web applications,1.5,University;On-the-job,,Yes
+2025/11/19 5:43:53 AM MST,Developer,<3 years,Experienced,Intermediate,3,4,3,4,4,4,USA,Web applications,2,University;On-the-job,Not a student ,Yes
+2025/11/20 10:38:43 AM MST,Technical Lead,<3 years,No experience,No experience,4,4,4,3,4,3,Nigeria,Web applications;Mobile applications;Embedded software,4,University;On-the-job,,Yes
+2025/11/20 3:51:05 PM MST,Researcher / Academics,<3 years,Novice,Beginner,3,4,4,5,4,5,Austria,Desktop applications,4,University;Free online courses;Self-taught,TU Wien - Visual Computing Master,Yes
+2025/11/21 5:20:19 PM MST,Researcher / Academics,<3 years,Novice,Intermediate,3,3,3,3,3,3,the United States,Web applications;Embedded software,5,University,Arizona State University,Yes
+2025/11/22 3:02:07 PM MST,Researcher / Academics,3-5 years,Experienced,Beginner,4,3,4,2,4,4,Poland,Desktop applications;Web applications;Embedded software,3,University;On-the-job;Free online courses;Paid online courses;Self-taught,-,Yes
+2025/11/22 9:54:22 PM MST,Bug Hunter,<3 years,No experience,Beginner,4,4,4,4,4,4,United States,Desktop applications;Web applications;Mobile applications,6,University;On-the-job;Self-taught;Building and shipping constantly,,Yes
+2025/11/22 10:40:07 PM MST,Researcher / Academics,0,No experience,No experience,5,5,5,4,4,4,United States,,5,Self-taught,"NYU, computer engineering",No
+2025/11/25 12:07:22 AM MST,,,,,,,,,,,,,,,,
+2025/11/26 3:07:52 AM MST,Hobbyist,<3 years,No experience,No experience,3,3,4,4,3,3,India,Desktop applications;Web applications;Mobile applications;Enterprise applications,1,University;Self-taught,,Yes
+2025/11/26 10:53:00 PM MST,Researcher / Academics,<3 years,Novice,Beginner,1,1,1,1,1,1,Iman,Desktop applications;Embedded software,2,On-the-job;Paid online courses,I’m teacher,Yes
+2025/11/29 11:52:44 PM MST,Researcher / Academics,<3 years,Novice,No experience,5,4,5,4,5,4,US,Desktop applications,,University,,Yes
+2025/11/30 10:02:20 AM MST,Security Expert,<3 years,No experience,Beginner,4,4,4,4,4,4,France,Mobile applications;Embedded software,10,University;On-the-job;Free online courses;Self-taught,,Yes
+2025/12/01 10:24:15 AM MST,Researcher / Academics,<3 years,Novice,Intermediate,4,4,4,3,5,4,United States of America,Embedded software,"Formal Job experience: 0 years, Informal: 4 years",University,Arizona State University - PhD Computer Science,Yes
+2025/12/02 7:31:36 AM MST,Researcher / Academics,<3 years,No experience,No experience,4,3,3,3,2,2,USA,,,University,,Yes
+2025/12/03 5:01:48 PM MST,Developer,3-5 years,Experienced,Beginner,5,2,5,2,5,2,United Kingdom,Embedded software;Enterprise applications,20,University;On-the-job;Self-taught,Not currently a student,Yes
+2025/12/08 5:25:16 PM MST,Student,<3 years,No experience,No experience,4,3,5,3,5,3,,,,,,
+2025/12/09 8:40:08 AM MST,PhD Student.  Former Software Engineer.,<3 years,Novice,Beginner,5,5,5,5,5,5,United States,Desktop applications;Web applications;Enterprise applications,4,University;On-the-job;Self-taught,University of Maryland.  Database Systems,Yes
+2025/12/11 1:49:03 PM MST,Researcher / Academics,<3 years,Novice,Intermediate,4,2,4,2,4,1,United States,Desktop applications,5,University,Arizona State University Computer Science,Yes
+2025/12/11 8:11:08 PM MST,Researcher / Academics,<3 years,Novice,Intermediate,4,4,4,4,4,4,China,Mobile applications,2,University,SDZU,Yes
+2025/12/11 10:17:46 PM MST,Student,<3 years,Novice,Beginner,5,5,5,5,4,4,US,Desktop applications;Embedded software,2,University,ASU; Majoring in CS & Math,Yes
+2025/12/16 5:50:05 PM MST,,<3 years,No experience,No experience,4,3,3,1,3,1,,,,,,
+2025/12/19 2:50:05 AM MST,Hobbyist,<3 years,No experience,No experience,1,3,1,3,1,1,Germany,Web applications,2,University;On-the-job;Self-taught,TH Nürnberg - Data Science,No
+2025/12/21 5:47:59 AM MST,Researcher / Academics,<3 years,Novice,Beginner,3,3,3,3,3,3,Bangladesh,Web applications,1,University;Self-taught,,Yes
+2025/12/26 7:19:07 PM MST,Developer,<3 years,No experience,No experience,2,2,3,2,3,2,Canada,Web applications,10 years,University;On-the-job;Free online courses,,Yes
+2026/01/05 11:46:36 PM MST,Hobbyist,<3 years,Novice,No experience,3,3,3,3,,,Malaysia,Desktop applications,2,University,"Universiti Teknikal Malaysia Melaka, (Computer Security)",Yes
+2026/01/09 12:15:01 AM MST,Developer,3-5 years,Novice,Beginner,3,3,3,3,3,3,Tunisia,Desktop applications;Command Line Tools,2,University;Free online courses,Computer Science Student,No
+2026/01/09 6:25:32 AM MST,Researcher / Academics,<3 years,Novice,Beginner,3,3,3,3,3,3,Mauritania,Web applications,3,University;Free online courses,Not student,Yes
+2026/01/09 6:59:57 AM MST,Gamer works with modding,<3 years,Novice,Beginner,2,3,2,3,3,3,Algeria,Desktop applications;Web applications,3,University;On-the-job;Free online courses;Paid online courses;Modding games,,No
+2026/01/09 7:26:11 AM MST,Hobbyist,<3 years,Novice,Beginner,3,3,2,2,3,3,,Desktop applications,1,University;Free online courses;Paid online courses,,No
+2026/02/21 9:38:01 AM MST,Hobbyist,<3 years,No experience,No experience,3,2,2,2,2,2,,Web applications,4,Free online courses;Self-taught,,No

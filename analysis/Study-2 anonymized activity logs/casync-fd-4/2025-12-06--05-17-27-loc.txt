@@ -1,0 +1,33 @@
+
+
+fuzz-compress
+loc count: 1678
+loc_covered: 162
+loc_percent: 9.65 %
+functions count: 126
+functions_covered: 11
+functions_percent: 8.73 %
+
+fuzz-new
+loc count: 1685
+loc_covered: 220
+loc_percent: 13.06 %
+functions count: 126
+functions_covered: 13
+functions_percent: 10.32 %
+
+Total
+loc count: 1720
+loc_covered: 248
+loc_percent: 14.42 %
+functions count: 127
+functions_covered: 14
+functions_percent: 11.02 %
+
+        Initial:  9 %
+        Current:  14 %
+Needed for flag:  14 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________
+

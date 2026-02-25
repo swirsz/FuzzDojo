@@ -1,0 +1,61 @@
+fuzz_newfuzzer
+loc count: 5698
+loc_covered: 4482
+loc_percent: 78.66 %
+functions count: 300
+functions_covered: 229
+functions_percent: 76.33 %
+
+guetzli_fuzzer
+loc count: 5698
+loc_covered: 4479
+loc_percent: 78.61 %
+functions count: 300
+functions_covered: 229
+functions_percent: 76.33 %
+
+Total
+loc count: 5713
+loc_covered: 4500
+loc_percent: 78.77 %
+functions count: 301
+functions_covered: 230
+functions_percent: 76.41 %
+
+        Initial:  78 %
+        Current:  78 %
+Needed for flag:  83 %
+
+---------------------------------
+
+
+fuzz_newfuzzer
+loc count: 5741
+loc_covered: 4625
+loc_percent: 80.56 %
+functions count: 300
+functions_covered: 235
+functions_percent: 78.33 %
+
+guetzli_fuzzer
+loc count: 5698
+loc_covered: 4488
+loc_percent: 78.76 %
+functions count: 300
+functions_covered: 229
+functions_percent: 76.33 %
+
+Total
+loc count: 5756
+loc_covered: 4709
+loc_percent: 81.81 %
+functions count: 301
+functions_covered: 240
+functions_percent: 79.73 %
+
+        Initial:  78 %
+        Current:  81 %
+Needed for flag:  83 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________

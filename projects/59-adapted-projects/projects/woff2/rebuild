@@ -1,0 +1,42 @@
+#!/opt/pwn.college/bash
+. /usr/local/sbin/e
+export LABEL=$1
+export PROJECT_NAME=woff2
+SANITIZER=$1
+if [ -z "$SANITIZER" ]; then
+    SANITIZER='none'
+    export LABEL='none'
+fi
+
+SRC=/src-$LABEL
+if [ -z "$(find /out -mindepth 1 -maxdepth 1)" ] || [ ! -d "$SRC" ]; then
+    echo "Run /challenge/build first"
+    rm /tmp/build.lck
+else 
+
+if [ "$LABEL" = "none" ]; then
+    FLAGS=""
+elif [ "$LABEL" = "address" ]; then
+    FLAGS=$SANITIZER_FLAGS_address
+elif [ "$LABEL" = "memory" ]; then
+    FLAGS=$SANITIZER_FLAGS_memory
+elif [ "$LABEL" = "undefined" ]; then
+    FLAGS=$SANITIZER_FLAGS_undefined
+elif [ "$LABEL" = "thread" ]; then
+    FLAGS=$SANITIZER_FLAGS_thread
+fi
+set -x
+#----------------------------------------------------------------------
+
+cp /home/hacker/fuzz-dojo/$PROJECT_NAME/*.cc $SRC/$PROJECT_NAME/src
+
+
+cd $SRC/$PROJECT_NAME
+
+clang++ -O1 -fno-omit-frame-pointer -gline-tables-only -DFUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION $FLAGS -fsanitize=fuzzer-no-link -stdlib=libc++ -O1 -fno-omit-frame-pointer -gline-tables-only -DFUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION  -fsanitize=fuzzer-no-link -stdlib=libc++ -fno-omit-frame-pointer   -D __STDC_FORMAT_MACROS -fno-tree-vrp -std=c++11 -I./brotli/c/include/ -I.$SRC -I./include  -c -o src/convert_woff2ttf_fuzzer_new_entry.o src/convert_woff2ttf_fuzzer_new_entry.cc
+clang++ -O1 -fno-omit-frame-pointer -gline-tables-only -DFUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION $FLAGS -fsanitize=fuzzer-no-link -stdlib=libc++ -fsanitize=fuzzer src/convert_woff2ttf_fuzzer_new_entry.a -o /out/convert_woff2ttf_fuzzer_new_entry
+
+
+#----------------------------------------------------------------------
+drivers
+fi

@@ -1,0 +1,78 @@
+#!/opt/pwn.college/bash
+. /usr/local/sbin/e
+if [ "$?" -gt 0 ]; then
+    exit 1
+fi
+export LABEL=$1
+export PROJECT_NAME=sqlite3
+export SANITIZER=$1
+if [ -z "$SANITIZER" ]; then
+    export SANITIZER='none'
+    export LABEL='none'$LABEL
+fi
+
+if [ ! -d "/src-orig" ]; then
+#----------------------------------------------------------------------
+    echo Installing pre-reqs for $PROJECT_NAME
+    echo
+    sleep 2
+    #rm -rf $PROJECT_NAME
+    #apt-get update && apt-get install -y make autoconf automake libtool curl tcl zlib1g-dev
+
+    # We won't be able to poll fossil for changes, so this will build
+    # only once a day.
+    #mkdir $SRC/sqlite3 && \
+        #cd $SRC/sqlite3 && \
+        #cp -r /downloads/sqlite3.tar.gz $SRC/sqlite3 && \
+        #tar xzf sqlite3.tar.gz
+        #curl 'https://www.sqlite.org$SRC/tarball?uuid=trunk' -o sqlite3.tar.gz && \
+        #tar xzf sqlite3.tar.gz
+    #cp -rf /downloads/sqlite3/. $SRC/sqlite3
+    mkdir -p $SRC/sqlite3
+    cd $SRC/sqlite3
+    tar xzf /challenge/sqlite3.tar.gz
+    
+    find $SRC/sqlite3 -name "*.test" | xargs zip $SRC/ossfuzz_seed_corpus.zip
+    cd /
+    cp /opt/oss-fuzz/projects/$PROJECT_NAME/*.dict $SRC/
+    cp /opt/oss-fuzz/projects/$PROJECT_NAME/*.options $SRC/
+    cp /opt/oss-fuzz/projects/$PROJECT_NAME/build.sh $SRC/
+    cp $SRC/sqlite3/test/ossfuzz.c $SRC/sqlite3/test/newfuzzer.c
+    cp $SRC/sqlite3/test/ossfuzz.options $SRC/sqlite3/test/newfuzzer.options
+    cp $SRC/sqlite3/test/ossfuzz_seed_corpus.zip $SRC/sqlite3/test/newfuzzer_seed_corpus.zip
+
+    patch -tuN $SRC/build.sh -i /challenge/.build.patch -r -
+#----------------------------------------------------------------------
+    build-cleanup
+fi
+build-srcfolders
+mv /src-$LABEL /src
+rm -rf $SRC/$PROJECT_NAME/bld
+
+cd $SRC/$PROJECT_NAME
+#----------------------------------------------------------------------
+if [ ! -d "/home/hacker/fuzz-dojo/$PROJECT_NAME" ]; then
+   mkdir -p /home/hacker/fuzz-dojo/$PROJECT_NAME
+   cp $SRC/sqlite3/test/*.c /home/hacker/fuzz-dojo/$PROJECT_NAME
+   cp $SRC/sqlite3/test/*.options /home/hacker/fuzz-dojo/$PROJECT_NAME
+   cp $SRC/sqlite3/test/*.zip /home/hacker/fuzz-dojo/$PROJECT_NAME
+   cp $SRC/sqlite3/main.mk  /home/hacker/fuzz-dojo/$PROJECT_NAME
+   cp $SRC/build.sh /home/hacker/fuzz-dojo/$PROJECT_NAME
+else
+   cp /home/hacker/fuzz-dojo/$PROJECT_NAME/*.zip $SRC/sqlite3/test
+   cp /home/hacker/fuzz-dojo/$PROJECT_NAME/*.options $SRC/sqlite3/test
+   cp /home/hacker/fuzz-dojo/$PROJECT_NAME/*.c $SRC/sqlite3/test
+   cp /home/hacker/fuzz-dojo/$PROJECT_NAME/main.mk  $SRC/sqlite3/
+   cp /home/hacker/fuzz-dojo/$PROJECT_NAME/build.sh $SRC
+fi
+#----------------------------------------------------------------------
+if [ "$4" = "understanding" ]; then
+    understanding $2 $3
+elif [ "$4" = "planning" ]; then
+    planning $2 $3
+else
+    fuzzlog
+    compile
+    drivers
+fi
+mv /src /src-$LABEL

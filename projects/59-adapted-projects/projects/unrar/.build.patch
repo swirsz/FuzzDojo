@@ -1,0 +1,9 @@
+--- build.sh	2023-09-11 21:15:23.105945337 +0000
++++ build.sh	2023-09-11 21:19:46.947206606 +0000
+@@ -44,3 +44,6 @@
+ # build fuzzer
+ $CXX $CXXFLAGS -I. $UNRAR_SRC_DIR/unrar_fuzzer.cc -o $OUT/unrar_fuzzer \
+      $UNRAR_DEFINES $LIB_FUZZING_ENGINE -L$UNRAR_SRC_DIR -lunrar
++
++$CXX $CXXFLAGS -I. $UNRAR_SRC_DIR/new_fuzzer.cc -o $OUT/new_fuzzer \
++     $UNRAR_DEFINES $LIB_FUZZING_ENGINE -L$UNRAR_SRC_DIR -lunrar

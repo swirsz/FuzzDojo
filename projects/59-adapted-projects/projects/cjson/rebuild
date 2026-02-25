@@ -1,0 +1,49 @@
+#!/opt/pwn.college/bash
+. /usr/local/sbin/e
+export LABEL=$1
+export PROJECT_NAME=cjson
+SANITIZER=$1
+if [ -z "$SANITIZER" ]; then
+    SANITIZER='none'
+    export LABEL='none'
+fi
+
+SRC=/src-$LABEL
+if [ -z "$(find /out -mindepth 1 -maxdepth 1)" ] || [ ! -d "$SRC" ]; then
+    echo "Run /challenge/build first"
+    rm /tmp/build.lck
+else 
+
+if [ "$LABEL" = "none" ]; then
+    FLAGS=""
+elif [ "$LABEL" = "address" ]; then
+    FLAGS=$SANITIZER_FLAGS_address
+elif [ "$LABEL" = "memory" ]; then
+    FLAGS=$SANITIZER_FLAGS_memory
+elif [ "$LABEL" = "undefined" ]; then
+    FLAGS=$SANITIZER_FLAGS_undefined
+elif [ "$LABEL" = "thread" ]; then
+    FLAGS=$SANITIZER_FLAGS_thread
+fi
+set -x
+#----------------------------------------------------------------------
+
+cp -r /home/hacker/fuzz-dojo/$PROJECT_NAME/* $SRC/$PROJECT_NAME/fuzzing
+cp /home/hacker/fuzz-dojo/$PROJECT_NAME/build.sh $SRC
+mv $SRC /src
+
+cd /src/$PROJECT_NAME/
+
+$CXX $CXXFLAGS /src/cjson/fuzzing/cjson_read_fuzzer.c -I. \
+    -o $OUT/cjson_read_fuzzer \
+    $LIB_FUZZING_ENGINE /src/cjson/build/libcjson.a -pthreads
+
+$CXX $CXXFLAGS /src/cjson/fuzzing/newfuzzer.c -I. \
+    -o $OUT/newfuzzer \
+    $LIB_FUZZING_ENGINE /src/cjson/build/libcjson.a -pthreads
+
+cd
+mv /src $SRC
+#----------------------------------------------------------------------
+drivers
+fi

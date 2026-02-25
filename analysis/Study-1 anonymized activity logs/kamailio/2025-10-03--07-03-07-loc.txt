@@ -1,0 +1,104 @@
+
+do_action
+loc count: 83319
+loc_covered: 361
+loc_percent: 0.43 %
+functions count: 2484
+functions_covered: 19
+functions_percent: 0.76 %
+
+fix_actions
+loc count: 83137
+loc_covered: 337
+loc_percent: 0.41 %
+functions count: 2476
+functions_covered: 21
+functions_percent: 0.85 %
+
+fuzz_dns
+loc count: 83147
+loc_covered: 572
+loc_percent: 0.69 %
+functions count: 2486
+functions_covered: 44
+functions_percent: 1.77 %
+
+fuzz_kemi
+loc count: 83015
+loc_covered: 3139
+loc_percent: 3.78 %
+functions count: 2487
+functions_covered: 150
+functions_percent: 6.03 %
+
+fuzz_main_parsers
+loc count: 83126
+loc_covered: 228
+loc_percent: 0.27 %
+functions count: 2479
+functions_covered: 8
+functions_percent: 0.32 %
+
+fuzz_parse_msg
+loc count: 85155
+loc_covered: 2896
+loc_percent: 3.40 %
+functions count: 2539
+functions_covered: 85
+functions_percent: 3.35 %
+
+fuzz_udp
+loc count: 83113
+loc_covered: 113
+loc_percent: 0.14 %
+functions count: 2479
+functions_covered: 8
+functions_percent: 0.32 %
+
+fuzz_uri
+loc count: 83094
+loc_covered: 988
+loc_percent: 1.19 %
+functions count: 2479
+functions_covered: 6
+functions_percent: 0.24 %
+
+newfuzzer
+loc count: 83246
+loc_covered: 15
+loc_percent: 0.02 %
+functions count: 2487
+functions_covered: 1
+functions_percent: 0.04 %
+
+ppcfg
+loc count: 82805
+loc_covered: 910
+loc_percent: 1.10 %
+functions count: 2474
+functions_covered: 45
+functions_percent: 1.82 %
+
+rvalue2
+loc count: 83185
+loc_covered: 1107
+loc_percent: 1.33 %
+functions count: 2483
+functions_covered: 48
+functions_percent: 1.93 %
+
+Total
+loc count: 85912
+loc_covered: 8493
+loc_percent: 9.89 %
+functions count: 2573
+functions_covered: 334
+functions_percent: 12.98 %
+
+        Initial:  4 %
+        Current:  9 %
+Needed for flag:  9 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________
+

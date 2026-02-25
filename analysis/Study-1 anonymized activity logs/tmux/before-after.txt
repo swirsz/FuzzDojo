@@ -1,0 +1,61 @@
+input-fuzzer
+loc count: 52808
+loc_covered: 7260
+loc_percent: 13.75 %
+functions count: 2315
+functions_covered: 563
+functions_percent: 24.32 %
+
+new-fuzzer
+loc count: 52808
+loc_covered: 6398
+loc_percent: 12.12 %
+functions count: 2315
+functions_covered: 526
+functions_percent: 22.72 %
+
+Total
+loc count: 52857
+loc_covered: 7356
+loc_percent: 13.92 %
+functions count: 2317
+functions_covered: 568
+functions_percent: 24.51 %
+
+        Initial:  12 %
+        Current:  13 %
+Needed for flag:  17 %
+
+_________________________________________________________
+
+Current LOC report:
+
+input-fuzzer
+loc count: 52869
+loc_covered: 7254
+loc_percent: 13.72 %
+functions count: 2319
+functions_covered: 562
+functions_percent: 24.23 %
+
+new-fuzzer
+loc count: 53411
+loc_covered: 4780
+loc_percent: 8.95 %
+functions count: 2335
+functions_covered: 480
+functions_percent: 20.56 %
+
+Total
+loc count: 53460
+loc_covered: 8104
+loc_percent: 15.16 %
+functions count: 2337
+functions_covered: 606
+functions_percent: 25.93 %
+
+        Initial:  12 %
+        Current:  15 %
+Needed for flag:  17 %
+
+'report' to start web server to view the coverage report

@@ -1,0 +1,60 @@
+#!/opt/pwn.college/bash
+. /usr/local/sbin/e
+if [ "$?" -gt 0 ]; then
+    exit 1
+fi
+export LABEL=$1
+export PROJECT_NAME=cppcheck
+export SANITIZER=$1
+if [ -z "$SANITIZER" ]; then
+    export SANITIZER='none'
+    export LABEL='none'$LABEL
+fi
+
+if [ ! -d "/src-orig" ]; then
+#----------------------------------------------------------------------
+    rm -rf $SRC/$PROJECT_NAME
+    #git clone https://github.com/danmar/cppcheck.git
+    cp -r /downloads/cppcheck $SRC/
+
+    # This is to fix Fuzz Introspector build by using LLVM old pass manager
+    # re https://github.com/ossf/fuzz-introspector/issues/305
+    export OLD_LLVMPASS=1
+
+    cp /opt/oss-fuzz/projects/$PROJECT_NAME/build.sh $SRC
+
+    cp $SRC/$PROJECT_NAME/oss-fuzz/main.cpp $SRC/$PROJECT_NAME/oss-fuzz/newfuzzer.cpp
+    patch -tuN $SRC/build.sh -i /challenge/.build.patch -r -
+    patch -tuN $SRC/$PROJECT_NAME/oss-fuzz/Makefile -i /challenge/.Makefile.patch -r -
+
+#----------------------------------------------------------------------
+    build-cleanup
+fi
+build-srcfolders
+mv /src-$LABEL /src
+
+cd $SRC/$PROJECT_NAME
+#----------------------------------------------------------------------
+if [ ! -d "/home/hacker/fuzz-dojo/$PROJECT_NAME" ]; then
+   mkdir -p /home/hacker/fuzz-dojo/$PROJECT_NAME
+   cp $SRC/$PROJECT_NAME/oss-fuzz/*.cpp /home/hacker/fuzz-dojo/$PROJECT_NAME
+   cp $SRC/$PROJECT_NAME/oss-fuzz/*.h /home/hacker/fuzz-dojo/$PROJECT_NAME
+   cp $SRC/$PROJECT_NAME/oss-fuzz/Makefile /home/hacker/fuzz-dojo/$PROJECT_NAME
+   cp $SRC/build.sh /home/hacker/fuzz-dojo/$PROJECT_NAME
+else
+   cp /home/hacker/fuzz-dojo/$PROJECT_NAME/*.cpp $SRC/$PROJECT_NAME/oss-fuzz
+   cp /home/hacker/fuzz-dojo/$PROJECT_NAME/*.h $SRC/$PROJECT_NAME/oss-fuzz
+   cp /home/hacker/fuzz-dojo/$PROJECT_NAME/Makefile $SRC/$PROJECT_NAME/oss-fuzz
+   cp /home/hacker/fuzz-dojo/$PROJECT_NAME/build.sh $SRC
+fi
+#----------------------------------------------------------------------
+if [ "$4" = "understanding" ]; then
+    understanding $2 $3
+elif [ "$4" = "planning" ]; then
+    planning $2 $3
+else
+    fuzzlog
+    compile
+    drivers
+fi
+mv /src /src-$LABEL

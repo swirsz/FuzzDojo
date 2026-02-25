@@ -1,0 +1,134 @@
+boost_datetime_fuzzer
+loc count: 1811
+loc_covered: 555
+loc_percent: 30.65 %
+functions count: 359
+functions_covered: 101
+functions_percent: 28.13 %
+
+boost_filesystem_fuzzer
+loc count: 3323
+loc_covered: 539
+loc_percent: 16.22 %
+functions count: 654
+functions_covered: 74
+functions_percent: 11.31 %
+
+boost_graph_graphml_fuzzer
+loc count: 4247
+loc_covered: 1981
+loc_percent: 46.64 %
+functions count: 818
+functions_covered: 372
+functions_percent: 45.48 %
+
+boost_graph_graphviz_fuzzer
+loc count: 11373
+loc_covered: 4259
+loc_percent: 37.45 %
+functions count: 1086
+functions_covered: 481
+functions_percent: 44.29 %
+
+boost_new_fuzzer
+loc count: 7930
+loc_covered: 5501
+loc_percent: 69.37 %
+functions count: 406
+functions_covered: 308
+functions_percent: 75.86 %
+
+boost_programoptions_fuzzer
+loc count: 3451
+loc_covered: 1075
+loc_percent: 31.15 %
+functions count: 509
+functions_covered: 196
+functions_percent: 38.51 %
+
+boost_ptree_inforead_fuzzer
+loc count: 1473
+loc_covered: 841
+loc_percent: 57.09 %
+functions count: 319
+functions_covered: 185
+functions_percent: 57.99 %
+
+boost_ptree_iniread_fuzzer
+loc count: 1443
+loc_covered: 799
+loc_percent: 55.37 %
+functions count: 318
+functions_covered: 192
+functions_percent: 60.38 %
+
+boost_ptree_jsonread_fuzzer
+loc count: 1770
+loc_covered: 1123
+loc_percent: 63.45 %
+functions count: 450
+functions_covered: 280
+functions_percent: 62.22 %
+
+boost_ptree_xmlread_fuzzer
+loc count: 2146
+loc_covered: 1348
+loc_percent: 62.81 %
+functions count: 349
+functions_covered: 214
+functions_percent: 61.32 %
+
+boost_regex_fuzzer
+loc count: 8448
+loc_covered: 5080
+loc_percent: 60.13 %
+functions count: 448
+functions_covered: 301
+functions_percent: 67.19 %
+
+boost_regex_pattern_fuzzer
+loc count: 8454
+loc_covered: 4932
+loc_percent: 58.34 %
+functions count: 447
+functions_covered: 294
+functions_percent: 65.77 %
+
+boost_regex_replace_fuzzer
+loc count: 9086
+loc_covered: 2686
+loc_percent: 29.56 %
+functions count: 483
+functions_covered: 249
+functions_percent: 51.55 %
+
+boost_stralg_fuzzer
+loc count: 1014
+loc_covered: 715
+loc_percent: 70.51 %
+functions count: 213
+functions_covered: 143
+functions_percent: 67.14 %
+
+boost_uuid_fuzzer
+loc count: 1150
+loc_covered: 384
+loc_percent: 33.39 %
+functions count: 148
+functions_covered: 59
+functions_percent: 39.86 %
+
+Total
+loc count: 24924
+loc_covered: 13738
+loc_percent: 55.12 %
+functions count: 3184
+functions_covered: 1552
+functions_percent: 48.74 %
+
+        Initial:  42 %
+        Current:  55 %
+Needed for flag:  47 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________

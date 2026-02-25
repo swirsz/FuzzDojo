@@ -1,0 +1,132 @@
+Here:
+
+`encode_fuzzer.cpp`
+
+
+```cpp
+#include <stddef.h>
+#include <stdint.h>
+#include <string.h>
+#include <stdlib.h>
+#include "openjpeg.h"
+
+typedef struct {
+    uint8_t* data;
+    size_t size;
+    size_t offset;
+} MemStream;
+
+static OPJ_SIZE_T mem_write(void* buffer, OPJ_SIZE_T size, void* user_data) {
+    MemStream* stream = (MemStream*)user_data;
+    if (stream->offset + size > stream->size) {
+        return 0;
+    }
+    memcpy(stream->data + stream->offset, buffer, size);
+    stream->offset += size;
+    return size;
+}
+
+static OPJ_OFF_T mem_skip(OPJ_OFF_T size, void* user_data) {
+    MemStream* stream = (MemStream*)user_data;
+    stream->offset += size;
+    return size;
+}
+
+static OPJ_BOOL mem_seek(OPJ_OFF_T size, void* user_data) {
+    MemStream* stream = (MemStream*)user_data;
+    stream->offset = size;
+    return OPJ_TRUE;
+}
+
+extern "C" int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size) {
+    if (size < 20) return 0;
+    
+    uint32_t width = (data[0] % 32) + 1;  // 1-32
+    uint32_t height = (data[1] % 32) + 1; // 1-32
+    uint32_t num_comps = (data[2] % 3) + 1; // 1-3 components
+    
+    opj_cparameters_t parameters;
+    opj_set_default_encoder_parameters(&parameters);
+    
+    opj_image_cmptparm_t cmptparm[3];
+    memset(&cmptparm[0], 0, sizeof(cmptparm));
+    
+    for (uint32_t i = 0; i < num_comps; i++) {
+        cmptparm[i].dx = 1;
+        cmptparm[i].dy = 1;
+        cmptparm[i].w = width;
+        cmptparm[i].h = height;
+        cmptparm[i].x0 = 0;
+        cmptparm[i].y0 = 0;
+        cmptparm[i].prec = 8;
+        cmptparm[i].bpp = 8;
+        cmptparm[i].sgnd = 0;
+    }
+    
+    opj_image_t *image = opj_image_create(num_comps, &cmptparm[0], 
+                                          num_comps >= 3 ? OPJ_CLRSPC_SRGB : OPJ_CLRSPC_GRAY);
+    if (!image) return 0;
+    
+    image->x0 = 0;
+    image->y0 = 0;
+    image->x1 = width;
+    image->y1 = height;
+    
+    size_t offset = 10;
+    for (uint32_t c = 0; c < num_comps; c++) {
+        if (!image->comps[c].data) continue;
+        for (uint32_t i = 0; i < width * height && offset < size; i++, offset++) {
+            image->comps[c].data[i] = data[offset];
+        }
+    }
+    
+    if (size > 3) parameters.tcp_numlayers = (data[3] % 3) + 1;
+    if (size > 4) parameters.numresolution = (data[4] % 4) + 1;
+    
+    opj_codec_t* codec = opj_create_compress(OPJ_CODEC_J2K);
+    if (!codec) {
+        opj_image_destroy(image);
+        return 0;
+    }
+    
+    opj_set_error_handler(codec, NULL, NULL);
+    opj_set_warning_handler(codec, NULL, NULL);
+    opj_set_info_handler(codec, NULL, NULL);
+    
+    if (!opj_setup_encoder(codec, &parameters, image)) {
+        opj_destroy_codec(codec);
+        opj_image_destroy(image);
+        return 0;
+    }
+    
+    uint8_t output[65536];
+    MemStream mem_stream;
+    mem_stream.data = output;
+    mem_stream.size = sizeof(output);
+    mem_stream.offset = 0;
+    
+    opj_stream_t *stream = opj_stream_create(4096, OPJ_FALSE);
+    if (!stream) {
+        opj_destroy_codec(codec);
+        opj_image_destroy(image);
+        return 0;
+    }
+    
+    opj_stream_set_write_function(stream, mem_write);
+    opj_stream_set_skip_function(stream, mem_skip);
+    opj_stream_set_seek_function(stream, mem_seek);
+    opj_stream_set_user_data(stream, &mem_stream, NULL);
+    opj_stream_set_user_data_length(stream, sizeof(output));
+    
+    if (opj_start_compress(codec, image, stream)) {
+        opj_encode(codec, stream);
+        opj_end_compress(codec, stream);
+    }
+    
+    opj_stream_destroy(stream);
+    opj_destroy_codec(codec);
+    opj_image_destroy(image);
+    
+    return 0;
+}
+```

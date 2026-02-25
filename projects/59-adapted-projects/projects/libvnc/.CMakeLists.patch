@@ -1,0 +1,16 @@
+--- CMakeLists.txt.o	2023-09-16 04:06:00.156731394 +0000
++++ CMakeLists.txt	2023-09-16 04:08:07.401424753 +0000
+@@ -675,6 +675,13 @@
+   target_link_libraries(fuzz_server vncserver ${CMAKE_THREAD_LIBS_INIT} ${CARBON_LIBRARY} ${IOKIT_LIBRARY} ${IOSURFACE_LIBRARY} $ENV{LIB_FUZZING_ENGINE})
+ endif()
+ 
++# First fuzzing
++if(DEFINED ENV{LIB_FUZZING_ENGINE})
++  add_executable(fuzz_new ${TESTS_DIR}/fuzz_new.c)
++  target_link_libraries(fuzz_new vncserver ${CMAKE_THREAD_LIBS_INIT} ${CARBON_LIBRARY} ${IOKIT_LIBRARY} ${IOSURFACE_LIBRARY} $ENV{LIB_FUZZING_ENGINE})
++endif()
++
++
+ if(UNIX)
+     set(ADDITIONAL_TEST_LIBS m)
+ endif(UNIX)

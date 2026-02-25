@@ -1,0 +1,27 @@
+
+fuzz-chunker-new
+loc count: 1653
+loc_covered: 137
+loc_percent: 8.29 %
+functions count: 136
+functions_covered: 11
+functions_percent: 8.09 %
+
+fuzz-compress
+loc count: 1678
+loc_covered: 162
+loc_percent: 9.65 %
+functions count: 126
+functions_covered: 11
+functions_percent: 8.73 %
+
+Total
+loc count: 1949
+loc_covered: 278
+loc_percent: 14.26 %
+functions count: 145
+functions_covered: 18
+functions_percent: 12.41 %
+
+
+        

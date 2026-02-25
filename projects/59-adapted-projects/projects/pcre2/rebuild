@@ -1,0 +1,44 @@
+#!/opt/pwn.college/bash
+. /usr/local/sbin/e
+export LABEL=$1
+export PROJECT_NAME=pcre2
+SANITIZER=$1
+if [ -z "$SANITIZER" ]; then
+    SANITIZER='none'
+    export LABEL='none'
+fi
+
+SRC=/src-$LABEL
+if [ -z "$(find /out -mindepth 1 -maxdepth 1)" ] || [ ! -d "$SRC" ]; then
+    echo "Run /challenge/build first"
+    rm /tmp/build.lck
+else 
+
+if [ "$LABEL" = "none" ]; then
+    FLAGS=""
+elif [ "$LABEL" = "address" ]; then
+    FLAGS=$SANITIZER_FLAGS_address
+elif [ "$LABEL" = "memory" ]; then
+    FLAGS=$SANITIZER_FLAGS_memory
+elif [ "$LABEL" = "undefined" ]; then
+    FLAGS=$SANITIZER_FLAGS_undefined
+elif [ "$LABEL" = "thread" ]; then
+    FLAGS=$SANITIZER_FLAGS_thread
+fi
+set -x
+#----------------------------------------------------------------------
+
+cp /home/hacker/fuzz-dojo/$PROJECT_NAME/pcre2_fuzzsupport.c $SRC/$PROJECT_NAME/src
+
+mv $SRC /src
+
+cd /src/$PROJECT_NAME
+
+make -j$(nproc) all
+
+cd
+mv /src $SRC
+
+#----------------------------------------------------------------------
+drivers
+fi

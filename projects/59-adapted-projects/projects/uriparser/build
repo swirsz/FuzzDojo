@@ -1,0 +1,56 @@
+#!/opt/pwn.college/bash
+. /usr/local/sbin/e
+if [ "$?" -gt 0 ]; then
+    exit 1
+fi
+export LABEL=$1
+export PROJECT_NAME=uriparser
+export SANITIZER=$1
+if [ -z "$SANITIZER" ]; then
+    export SANITIZER='none'
+    export LABEL='none'$LABEL
+fi
+
+if [ ! -d "/src-orig" ]; then
+#----------------------------------------------------------------------
+    rm -rf uriparser
+    #apt-get update && apt-get install -y make autoconf automake wget sudo libtool cmake
+    #git clone --depth 1 https://github.com/uriparser/uriparser uriparser
+    cp -r /downloads/$PROJECT_NAME $SRC
+
+    #cp /opt/oss-fuzz/projects/*.cc $SRC/
+    cp /opt/oss-fuzz/projects/$PROJECT_NAME/build.sh $SRC/
+    cp $SRC/$PROJECT_NAME/fuzz/ParseFuzzer.cpp $SRC/$PROJECT_NAME/fuzz/NewFuzzer.cpp 
+    patch -tuN $SRC/$PROJECT_NAME/CMakeLists.txt -i /challenge/.CMakeLists.patch -r -
+    #cp $SRC/uri_parse_fuzzer.cc $SRC/new_fuzzer.cc
+    #cp -r $SRC/$PROJECT_NAME/build/CMakeFiles/uri_parse_fuzzer.dir /$SRC/$PROJECT_NAME/build/CMakeFiles/new_fuzzer.dir 
+
+    #patch -tuN $SRC/build.sh -i /challenge/.build.patch -r -
+#----------------------------------------------------------------------
+    build-cleanup
+fi
+build-srcfolders
+mv /src-$LABEL /src
+
+cd $SRC/$PROJECT_NAME
+#----------------------------------------------------------------------
+if [ ! -d "/home/hacker/fuzz-dojo/$PROJECT_NAME" ]; then
+   mkdir -p /home/hacker/fuzz-dojo/$PROJECT_NAME
+   cp $SRC/$PROJECT_NAME/fuzz/* /home/hacker/fuzz-dojo/$PROJECT_NAME
+   cp $SRC/build.sh /home/hacker/fuzz-dojo/$PROJECT_NAME
+else
+   cp /home/hacker/fuzz-dojo/$PROJECT_NAME/*.h $SRC/$PROJECT_NAME/fuzz
+   cp /home/hacker/fuzz-dojo/$PROJECT_NAME/*.cpp $SRC/$PROJECT_NAME/fuzz
+   cp /home/hacker/fuzz-dojo/$PROJECT_NAME/build.sh $SRC
+fi
+#----------------------------------------------------------------------
+if [ "$4" = "understanding" ]; then
+    understanding $2 $3
+elif [ "$4" = "planning" ]; then
+    planning $2 $3
+else
+    fuzzlog
+    compile
+    drivers
+fi
+mv /src /src-$LABEL

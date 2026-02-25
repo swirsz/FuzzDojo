@@ -1,0 +1,31 @@
+
+new_fuzzer
+loc count: 13194
+loc_covered: 1013
+loc_percent: 7.68 %
+functions count: 734
+functions_covered: 130
+functions_percent: 17.71 %
+
+unrar_fuzzer
+loc count: 13194
+loc_covered: 6122
+loc_percent: 46.40 %
+functions count: 734
+functions_covered: 404
+functions_percent: 55.04 %
+
+Total
+loc count: 13229
+loc_covered: 6157
+loc_percent: 46.54 %
+functions count: 735
+functions_covered: 405
+functions_percent: 55.10 %
+
+        Initial:  8 %
+        Current:  46 %
+Needed for flag:  13 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________

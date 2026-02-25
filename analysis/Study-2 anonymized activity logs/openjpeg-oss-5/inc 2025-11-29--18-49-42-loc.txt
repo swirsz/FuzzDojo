@@ -1,0 +1,40 @@
+
+GPT5_fuzzer
+loc count: 23291
+loc_covered: 1537
+loc_percent: 6.60 %
+functions count: 661
+functions_covered: 90
+functions_percent: 13.62 %
+
+opj_decompress_fuzzer_J2K
+loc count: 23186
+loc_covered: 937
+loc_percent: 4.04 %
+functions count: 660
+functions_covered: 66
+functions_percent: 10.00 %
+
+opj_decompress_fuzzer_JP2
+loc count: 23186
+loc_covered: 781
+loc_percent: 3.37 %
+functions count: 660
+functions_covered: 62
+functions_percent: 9.39 %
+
+Total
+loc count: 23477
+loc_covered: 1748
+loc_percent: 7.45 %
+functions count: 677
+functions_covered: 102
+functions_percent: 15.07 %
+
+        Initial:  5 %
+        Current:  7 %
+Needed for flag:  10 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________
+

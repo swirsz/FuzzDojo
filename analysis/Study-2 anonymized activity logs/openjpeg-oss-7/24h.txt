@@ -1,0 +1,43 @@
+Current LOC report:
+
+newfuzzer
+loc count: 23214
+loc_covered: 8573
+loc_percent: 36.93 %
+functions count: 660
+functions_covered: 302
+functions_percent: 45.76 %
+
+opj_decompress_fuzzer_J2K
+loc count: 23186
+loc_covered: 7400
+loc_percent: 31.92 %
+functions count: 660
+functions_covered: 285
+functions_percent: 43.18 %
+
+opj_decompress_fuzzer_JP2
+loc count: 23186
+loc_covered: 9499
+loc_percent: 40.97 %
+functions count: 660
+functions_covered: 329
+functions_percent: 49.85 %
+
+Total
+loc count: 23400
+loc_covered: 10942
+loc_percent: 46.76 %
+functions count: 676
+functions_covered: 365
+functions_percent: 53.99 %
+
+        Initial:  5 %
+        Current:  46 %
+Needed for flag:  10 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________
+
+
+Congratulations! Additional code coverage detected!

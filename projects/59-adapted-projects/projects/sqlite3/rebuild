@@ -1,0 +1,42 @@
+#!/opt/pwn.college/bash
+. /usr/local/sbin/e
+export LABEL=$1
+export PROJECT_NAME=sqlite3
+SANITIZER=$1
+if [ -z "$SANITIZER" ]; then
+    SANITIZER='none'
+    export LABEL='none'
+fi
+
+SRC=/src-$LABEL
+if [ -z "$(find /out -mindepth 1 -maxdepth 1)" ] || [ ! -d "$SRC" ]; then
+    echo "Run /challenge/build first"
+    rm /tmp/build.lck
+else 
+
+if [ "$LABEL" = "none" ]; then
+    FLAGS=""
+elif [ "$LABEL" = "address" ]; then
+    FLAGS=$SANITIZER_FLAGS_address
+elif [ "$LABEL" = "memory" ]; then
+    FLAGS=$SANITIZER_FLAGS_memory
+elif [ "$LABEL" = "undefined" ]; then
+    FLAGS=$SANITIZER_FLAGS_undefined
+elif [ "$LABEL" = "thread" ]; then
+    FLAGS=$SANITIZER_FLAGS_thread
+fi
+set -x
+#----------------------------------------------------------------------
+
+cp /home/hacker/fuzz-dojo/$PROJECT_NAME/*.zip $SRC/sqlite3/test
+cp /home/hacker/fuzz-dojo/$PROJECT_NAME/*.options $SRC/sqlite3/test
+cp /home/hacker/fuzz-dojo/$PROJECT_NAME/*.c $SRC/sqlite3/test
+cp /home/hacker/fuzz-dojo/$PROJECT_NAME/main.mk  $SRC/sqlite3/
+
+cd $SRC/$PROJECT_NAME
+
+clang -O1 -fno-omit-frame-pointer -gline-tables-only -DFUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION $FLAGS -fsanitize=fuzzer-no-link -DSQLITE_MAX_LENGTH=128000000 -DSQLITE_MAX_SQL_LENGTH=128000000 -DSQLITE_MAX_MEMORY=25000000 -DSQLITE_PRINTF_PRECISION_LIMIT=1048576 -DSQLITE_DEBUG=1 -DSQLITE_MAX_PAGE_COUNT=16384 -I. -c $SRC/sqlite3/test/newfuzzer.c -o $SRC/sqlite3/test/newfuzzer.o
+
+#----------------------------------------------------------------------
+drivers
+fi

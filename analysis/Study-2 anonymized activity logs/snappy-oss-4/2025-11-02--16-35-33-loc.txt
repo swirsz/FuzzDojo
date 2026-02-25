@@ -1,0 +1,32 @@
+
+snappy_compress_fuzzer
+loc count: 1727
+loc_covered: 1320
+loc_percent: 76.43 %
+functions count: 172
+functions_covered: 124
+functions_percent: 72.09 %
+
+snappy_uncompress_fuzzer
+loc count: 1704
+loc_covered: 548
+loc_percent: 32.16 %
+functions count: 172
+functions_covered: 51
+functions_percent: 29.65 %
+
+Total
+loc count: 1741
+loc_covered: 1364
+loc_percent: 78.35 %
+functions count: 173
+functions_covered: 125
+functions_percent: 72.25 %
+
+        Initial:  67 %
+        Current:  78 %
+Needed for flag:  72 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________
+

@@ -1,0 +1,213 @@
+id: fuzz
+
+name: Fuzz Dojo Projects
+award:
+  emoji: 🐇
+
+image: stevenwirsz/fuzz-base:latest
+
+description: |
+
+        Forum link: https://discord.com/channels/750635557666816031/1409993436328759328
+
+        Fuzzing is a powerful technique used in both academia and industry to automate software testing.  It has also become the standard approach for discovering zero-day vulnerabilities.  Google considers fuzzing to be their first line of defense, and has built an open source version of their fuzzing platform, known as OSS-Fuzz, to continually test popular open source software.  OSS-Fuzz has been used successfully in over a thousand projects.  However, due to its limitations, only about 30% of the code typically gets tested, leaving 70% unevaluated.
+
+modules:
+
+  - id: projects
+    name: All Projects
+    
+    challenges:
+
+      - id: casync
+        name: CASYNC - medium 1678 loc 11%-10%-14% - 1 min
+
+      - id: guetzli
+        name: GUETZLI - simple 5648 loc 79%-80%-72% - 1 min
+
+      - id: openjpeg
+        name: OPENJPEG - complex 22939 loc 5%--%-4% - 2 min
+
+      - id: snappy
+        name: SNAPPY - simple 1502 loc 67%-67%-61% - 1 min
+
+      - id: unrar
+        name: UNRAR - medium 13209 loc 8%-58%-86% - 1.5 min
+
+      - id: 0ss-casync
+        name: OSS-CASYNC - medium 1678 loc 11%-10%-14% - 1 min
+
+      - id: 0ss-guetzli
+        name: OSS-GUETZLI - simple 5648 loc 79%-80%-72% - 1 min
+
+      - id: 0ss-openjpeg
+        name: OSS-OPENJPEG - complex 22939 loc 5%--%-4% - 2 min
+
+      - id: 0ss-snappy
+        name: OSS-SNAPPY - simple 1502 loc 67%-67%-61% - 1 min
+
+      - id: 0ss-unrar
+        name: OSS-UNRAR - medium 13209 loc 8%-58%-86% - 1.5 min
+
+      - id: alembic
+        name: ALEMBIC - medium 12569 loc 1%-9%-0% - 1 min (slow FI)
+
+      - id: apache-httpd
+        name: APACHE-HTTPD - medium 48312 loc 12%-14%-6% - 5.5 min
+
+      - id: arduinojson
+        name: (D) ARDUINOJSON - simple 3599 loc 99%-99%-99% - 1 min
+
+      - id: args
+        name: ARGS - simple 1796 loc 22%-22%-47% - 3 min
+
+      - id: aspell
+        name: ASPELL - complex 14390 loc 58%-67%-26% - 2 min
+
+      - id: astc-encoder
+        name: ASTC-ENCODER - simple 2941 loc - 50%-50%-74% - 1.5 min
+
+      - id: avahi
+        name: (D) AVAHI - simple 2566 loc 73%-76%-81% - 2 min
+
+      - id: boost
+        name: BOOST - medium 11995 loc 43%-57%--% - 10 min (no FI)
+
+      - id: bzip2
+        name: (D) BZIP2 - medium 2661 loc 74%-92%-99% - 1 min
+
+      - id: c-ares
+        name: C-ARES - medium 5676 loc 35%-39%-72% - 2.5 min
+
+      - id: cjson
+        name: (D) CJSON - simple 2304 loc 43%-43%-46% - 1 min
+
+      - id: cmark
+        name: (D) CMARK - medium 14688 loc 81%-95%-82% - 1 min
+
+      - id: cppcheck
+        name: (D) CPPCHECK - complex 79321 loc 20%-24%-24% (--broken on oss-fuzz) - 1.5 min
+
+      - id: elfutils
+        name: ELFUTILS - simple 31383 loc 9%-26%-40% - 2.5 min
+
+      - id: example
+        name: (D) EXAMPLE - simple 20 loc 100% - 1 min
+        description: Sample OSS-Fuzz project
+
+      - id: exiv2
+        name: EXIV2 - simple 34282 loc 10%-54%-1% - 1 min
+ 
+      - id: fmt
+        name: FMT - complex 5904 loc 77%-81%-13% - 4 min (slow FI)
+
+      - id: gfwx
+        name: (D) GFWX - medium 1087 loc 88%-85%--% - 1.75 min
+
+      - id: haproxy
+        name: (D) HAPROXY - simple 106108 loc 1%-1%-2% - 7 min (broken on OSS-Fuzz)
+
+      - id: igraph
+        name: IGRAPH - complex 57124 loc 20%-62%-44% - 4 min (slow FI)
+        
+      - id: janus-gateway
+        name: JANUS-GATEWAY - complex 6131 loc 36%-37%-34% - 1.5 min
+
+      - id: json
+        name: JSON - simple 8008 loc 68%-74%-94% - 1 min
+
+      - id: kamailio
+        name: KAMAILIO - simple 83091 loc 4%-10%-11% (no FI) - 5 min
+
+      - id: lame
+        name: (D) LAME - complex 23539 loc 40% (broken on OSS-Fuzz)
+
+      - id: liblouis
+        name: (D) LIBLOUIS - medium 10478 loc 36%-60%-92% - 4 min (broken on OSS-Fuzz)
+        
+      - id: libpng
+        name: LIBPNG - medium 13217 loc 40%-43%-57% - 1.5 min
+
+      - id: libsass
+        name: LIBSASS - simple 19723 loc 29%-26%-4% (no FI) - 1 min
+
+      - id: libsodium
+        name: LIBSODIUM - simple 8403 loc 18%-19%-12% - 2 min
+
+      - id: libssh2
+        name: LIBSSH2 - medium 12632 loc 9%-20%-26% - 2 min
+
+      - id: libvnc
+        name: LIBVNC - medium 10793 loc 16%-19%-22% - 3.5 min
+
+      - id: libvpx
+        name: LIBVPX - medium 32885 loc 54%-60%-0% - 2.5 min
+ 
+      - id: lighttpd
+        name: LIGHTTPD - simple 1310 loc 36%-35%-47% - 2 min
+
+      - id: miniz
+        name: MINIZ - medium 5423 loc 56%-60%-74% - 1 min
+
+      - id: minizip
+        name: MINIZIP - medium 3639 loc 75%-76%-64% - 45 sec
+        
+      - id: mpg123
+        name: MPG123 - medium 9826 loc 39%-52%-43% - 2 min
+
+      - id: mupdf
+        name: MUPDF - medium 289131 loc 25%-36%--% (no FI) - 12 min
+
+      - id: opensips
+        name: OPENSIPS - medium 62114 loc 10%-13%-17% - 4 min (slow FI)
+
+      - id: pcre2
+        name: (D) PCRE2 - medium 33249 loc 57%-80%-96% - 11 min (slow FI)
+
+      - id: pycryptodome
+        name: (D) PYCRYPTODOME - simple 1398 loc 80%-80%-79% - 1 min
+
+      - id: speex
+        name: (D) SPEEX - complex 5867 loc 80%--%--% - 4.5 min
+
+      - id: sqlite3
+        name: (D) SQLITE3 - complex 80385 loc 33%-75%-76% - 5 min (slow FI)  (broken on OSS-Fuzz)
+
+      - id: tmux
+        name: TMUX - medium 48752 loc 12%-12%-31% - 1.5 min
+
+      - id: uriparser
+        name: (D) URIPARSER - medium 4606 loc 72%-81%-93% - 45 sec
+
+      - id: valijson
+        name: VALIJSON - simple 3566 loc 68%-72%-52% - 1.5 min (slow FI)
+
+      - id: vorbis
+        name: VORBIS - simple 8745 loc 31%-35%-36% - 2.5 min
+
+      - id: w3m
+        name: W3M - simple 6400 loc 66%-70%-30% - 1 min
+
+      - id: wasm3
+        name: WASM3 - simple 4107 loc 34%-65%-22% - 1 min
+
+      - id: wavpack
+        name: (D) WAVPACK - complex 4172 loc 73%-84%-96% - 1.5 min
+
+      - id: woff2
+        name: (D) WOFF2 - simple 3985 loc 71%-87%-89% - 3 min
+
+      - id: xvid
+        name: XVID - medium 13782 loc 10%-33%-- - 1.5 min
+        
+      - id: xz
+        name: XZ - simple 3414 loc 69%-71%-12% - 2 min
+
+      - id: yara
+        name: YARA - simple 30443 loc 49%-63%-43% - 3 min
+
+      - id: zlib
+        name: ZLIB - complex 5055 loc 78%-79%-87% - 1 min
+
+      - id: zopfli
+        name: (D) ZOPFLI - simple 2221 loc 77%-94%-99% - 1 min

@@ -1,0 +1,42 @@
+#!/opt/pwn.college/bash
+. /usr/local/sbin/e
+export LABEL=$1
+export PROJECT_NAME=arduinojson
+SANITIZER=$1
+if [ -z "$SANITIZER" ]; then
+    SANITIZER='none'
+    export LABEL='none'
+fi
+
+SRC=/src-$LABEL
+if [ -z "$(find /out -mindepth 1 -maxdepth 1)" ] || [ ! -d "$SRC" ]; then
+    echo "Run /challenge/build first"
+    rm /tmp/build.lck
+else 
+
+if [ "$LABEL" = "none" ]; then
+    FLAGS=""
+elif [ "$LABEL" = "address" ]; then
+    FLAGS=$SANITIZER_FLAGS_address
+elif [ "$LABEL" = "memory" ]; then
+    FLAGS=$SANITIZER_FLAGS_memory
+elif [ "$LABEL" = "undefined" ]; then
+    FLAGS=$SANITIZER_FLAGS_undefined
+elif [ "$LABEL" = "thread" ]; then
+    FLAGS=$SANITIZER_FLAGS_thread
+fi
+set -x
+#----------------------------------------------------------------------
+
+cp /home/hacker/fuzz-dojo/$PROJECT_NAME/*.cpp $SRC/$PROJECT_NAME/extras/fuzzing
+cp /home/hacker/fuzz-dojo/$PROJECT_NAME/CMakeLists.txt $SRC/$PROJECT_NAME/extras/fuzzing
+cp /home/hacker/fuzz-dojo/$PROJECT_NAME/Makefile $SRC/$PROJECT_NAME/extras/fuzzing
+cp /home/hacker/fuzz-dojo/$PROJECT_NAME/build.sh $SRC
+
+cd $SRC/$PROJECT_NAME/extras/fuzzing
+
+clang++ -O1 -fno-omit-frame-pointer -gline-tables-only -DFUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION $FLAGS -fsanitize=fuzzer-no-link -stdlib=libc++ -I../../src -DARDUINOJSON_DEBUG=1 -std=c++11 new_fuzzer.cpp -o/out/new_fuzzer -fsanitize=fuzzer
+
+#----------------------------------------------------------------------
+drivers
+fi

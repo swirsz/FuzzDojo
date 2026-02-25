@@ -1,0 +1,10 @@
+--- CMakeLists.txto	2025-03-18 20:03:20.328611249 +0000
++++ CMakeLists.txt	2025-03-18 20:15:11.005320903 +0000
+@@ -394,6 +394,7 @@
+     add_ansi_and_unicode_fuzzer(uri_dissect_query_malloc fuzz/DissectQueryMallocFuzzer.cpp)
+     add_ansi_and_unicode_fuzzer(uri_free fuzz/FreeFuzzer.cpp)
+     add_ansi_and_unicode_fuzzer(uri_parse fuzz/ParseFuzzer.cpp)
++    add_ansi_and_unicode_fuzzer(newfuzzer fuzz/NewFuzzer.cpp)
+ else()
+     if(URIPARSER_OSSFUZZ_BUILD)
+         message(SEND_ERROR

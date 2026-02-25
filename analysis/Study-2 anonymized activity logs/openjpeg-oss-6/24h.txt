@@ -1,0 +1,39 @@
+
+newfuzzer
+loc count: 23211
+loc_covered: 823
+loc_percent: 3.55 %
+functions count: 659
+functions_covered: 59
+functions_percent: 8.95 %
+
+opj_decompress_fuzzer_J2K
+loc count: 23186
+loc_covered: 9152
+loc_percent: 39.47 %
+functions count: 660
+functions_covered: 309
+functions_percent: 46.82 %
+
+opj_decompress_fuzzer_JP2
+loc count: 23186
+loc_covered: 9359
+loc_percent: 40.36 %
+functions count: 660
+functions_covered: 330
+functions_percent: 50.00 %
+
+Total
+loc count: 23397
+loc_covered: 11027
+loc_percent: 47.13 %
+functions count: 675
+functions_covered: 367
+functions_percent: 54.37 %
+
+        Initial:  5 %
+        Current:  47 %
+Needed for flag:  10 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________

@@ -1,0 +1,37 @@
+
+
+new_fuzzer
+loc count: 1712
+loc_covered: 1115
+loc_percent: 65.13 %
+functions count: 172
+functions_covered: 99
+functions_percent: 57.56 %
+
+snappy_compress_fuzzer
+loc count: 1712
+loc_covered: 1115
+loc_percent: 65.13 %
+functions count: 172
+functions_covered: 99
+functions_percent: 57.56 %
+
+snappy_uncompress_fuzzer
+loc count: 1704
+loc_covered: 548
+loc_percent: 32.16 %
+functions count: 172
+functions_covered: 51
+functions_percent: 29.65 %
+
+Total
+loc count: 1748
+loc_covered: 1181
+loc_percent: 67.56 %
+functions count: 174
+functions_covered: 101
+functions_percent: 58.05 %
+
+        Initial:  67 %
+        Current:  67 %
+Needed for flag:  72 %

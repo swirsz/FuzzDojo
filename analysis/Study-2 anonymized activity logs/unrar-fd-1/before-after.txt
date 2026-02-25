@@ -1,0 +1,61 @@
+
+unrar_fuzzer
+loc count: 13194
+loc_covered: 1056
+loc_percent: 8.00 %
+functions count: 734
+functions_covered: 136
+functions_percent: 18.53 %
+
+Total
+loc count: 13194
+loc_covered: 1056
+loc_percent: 8.00 %
+functions count: 734
+functions_covered: 136
+functions_percent: 18.53 %
+
+        Initial:  8 %
+        Current:  8 %
+Needed for flag:  13 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________
+
+
+Current LOC report:
+
+GPT5_fuzzer
+loc count: 13254
+loc_covered: 1634
+loc_percent: 12.33 %
+functions count: 736
+functions_covered: 112
+functions_percent: 15.22 %
+
+unrar_fuzzer
+loc count: 13194
+loc_covered: 1056
+loc_percent: 8.00 %
+functions count: 734
+functions_covered: 136
+functions_percent: 18.53 %
+
+Total
+loc count: 13289
+loc_covered: 2232
+loc_percent: 16.80 %
+functions count: 737
+functions_covered: 185
+functions_percent: 25.10 %
+
+        Initial:  8 %
+        Current:  16 %
+Needed for flag:  13 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________
+
+
+Congratulations! Additional code coverage detected!
+pwn.college{M-

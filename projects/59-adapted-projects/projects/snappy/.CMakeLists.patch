@@ -1,0 +1,16 @@
+@@ -385,6 +385,15 @@
+     PROPERTIES LINK_FLAGS "-fsanitize=fuzzer"
+   )
+ 
++  add_executable(new_fuzzer "")
++  target_sources(new_fuzzer
++    PRIVATE "new_fuzzer.cc"
++  )
++  target_link_libraries(new_fuzzer snappy)
++  set_target_properties(new_fuzzer
++    PROPERTIES LINK_FLAGS "-fsanitize=fuzzer"
++  )
++
+   add_executable(snappy_uncompress_fuzzer "")
+   target_sources(snappy_uncompress_fuzzer
+     PRIVATE "snappy_uncompress_fuzzer.cc"

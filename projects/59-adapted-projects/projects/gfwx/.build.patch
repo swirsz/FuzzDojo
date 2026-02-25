@@ -1,0 +1,8 @@
+@@ -27,3 +27,7 @@
+ 
+ cp fuzzer-decoder $OUT/
+ cp fuzzer-decoder_seed_corpus.zip $OUT/
++
++cp newfuzzer $OUT/
++cp newfuzzer_seed_corpus.zip $OUT/
++

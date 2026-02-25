@@ -1,0 +1,42 @@
+
+new_fuzzer
+loc count: 1909
+loc_covered: 1502
+loc_percent: 78.68 %
+functions count: 181
+functions_covered: 133
+functions_percent: 73.48 %
+
+snappy_compress_fuzzer
+loc count: 1712
+loc_covered: 1115
+loc_percent: 65.13 %
+functions count: 172
+functions_covered: 99
+functions_percent: 57.56 %
+
+snappy_uncompress_fuzzer
+loc count: 1704
+loc_covered: 548
+loc_percent: 32.16 %
+functions count: 172
+functions_covered: 51
+functions_percent: 29.65 %
+
+Total
+loc count: 1945
+loc_covered: 1568
+loc_percent: 80.62 %
+functions count: 183
+functions_covered: 135
+functions_percent: 73.77 %
+
+        Initial:  67 %
+        Current:  80 %
+Needed for flag:  72 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________
+
+
+Congratulations! Additional code coverage detected!

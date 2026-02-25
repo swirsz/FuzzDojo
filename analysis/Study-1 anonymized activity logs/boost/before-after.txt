@@ -1,0 +1,273 @@
+boost_datetime_fuzzer
+loc count: 1811
+loc_covered: 555
+loc_percent: 30.65 %
+functions count: 359
+functions_covered: 101
+functions_percent: 28.13 %
+
+boost_filesystem_fuzzer
+loc count: 3323
+loc_covered: 539
+loc_percent: 16.22 %
+functions count: 654
+functions_covered: 74
+functions_percent: 11.31 %
+
+boost_graph_graphml_fuzzer
+loc count: 4253
+loc_covered: 1432
+loc_percent: 33.67 %
+functions count: 819
+functions_covered: 280
+functions_percent: 34.19 %
+
+boost_graph_graphviz_fuzzer
+loc count: 11382
+loc_covered: 3332
+loc_percent: 29.27 %
+functions count: 1087
+functions_covered: 358
+functions_percent: 32.93 %
+
+boost_new_fuzzer
+loc count: 7930
+loc_covered: 4369
+loc_percent: 55.09 %
+functions count: 406
+functions_covered: 287
+functions_percent: 70.69 %
+
+boost_programoptions_fuzzer
+loc count: 3457
+loc_covered: 1005
+loc_percent: 29.07 %
+functions count: 510
+functions_covered: 190
+functions_percent: 37.25 %
+
+boost_ptree_inforead_fuzzer
+loc count: 1473
+loc_covered: 784
+loc_percent: 53.22 %
+functions count: 319
+functions_covered: 161
+functions_percent: 50.47 %
+
+boost_ptree_iniread_fuzzer
+loc count: 1443
+loc_covered: 799
+loc_percent: 55.37 %
+functions count: 318
+functions_covered: 192
+functions_percent: 60.38 %
+
+boost_ptree_jsonread_fuzzer
+loc count: 1770
+loc_covered: 1052
+loc_percent: 59.44 %
+functions count: 450
+functions_covered: 269
+functions_percent: 59.78 %
+
+boost_ptree_xmlread_fuzzer
+loc count: 2146
+loc_covered: 1103
+loc_percent: 51.40 %
+functions count: 349
+functions_covered: 205
+functions_percent: 58.74 %
+
+boost_regex_fuzzer
+loc count: 8448
+loc_covered: 3985
+loc_percent: 47.17 %
+functions count: 448
+functions_covered: 271
+functions_percent: 60.49 %
+
+boost_regex_pattern_fuzzer
+loc count: 8454
+loc_covered: 3986
+loc_percent: 47.15 %
+functions count: 447
+functions_covered: 270
+functions_percent: 60.40 %
+
+boost_regex_replace_fuzzer
+loc count: 9086
+loc_covered: 2399
+loc_percent: 26.40 %
+functions count: 483
+functions_covered: 244
+functions_percent: 50.52 %
+
+boost_stralg_fuzzer
+loc count: 1014
+loc_covered: 715
+loc_percent: 70.51 %
+functions count: 213
+functions_covered: 143
+functions_percent: 67.14 %
+
+boost_uuid_fuzzer
+loc count: 1150
+loc_covered: 384
+loc_percent: 33.39 %
+functions count: 148
+functions_covered: 59
+functions_percent: 39.86 %
+
+Total
+loc count: 25035
+loc_covered: 10592
+loc_percent: 42.31 %
+functions count: 3185
+functions_covered: 1360
+functions_percent: 42.70 %
+
+        Initial:  42 %
+        Current:  42 %
+Needed for flag:  47 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________
+
+boost_datetime_fuzzer
+loc count: 1811
+loc_covered: 555
+loc_percent: 30.65 %
+functions count: 359
+functions_covered: 101
+functions_percent: 28.13 %
+
+boost_filesystem_fuzzer
+loc count: 3323
+loc_covered: 539
+loc_percent: 16.22 %
+functions count: 654
+functions_covered: 74
+functions_percent: 11.31 %
+
+boost_graph_graphml_fuzzer
+loc count: 4253
+loc_covered: 2393
+loc_percent: 56.27 %
+functions count: 819
+functions_covered: 485
+functions_percent: 59.22 %
+
+boost_graph_graphviz_fuzzer
+loc count: 11382
+loc_covered: 4002
+loc_percent: 35.16 %
+functions count: 1087
+functions_covered: 477
+functions_percent: 43.88 %
+
+boost_new_fuzzer
+loc count: 7930
+loc_covered: 4369
+loc_percent: 55.09 %
+functions count: 406
+functions_covered: 287
+functions_percent: 70.69 %
+
+boost_programoptions_fuzzer
+loc count: 3457
+loc_covered: 1005
+loc_percent: 29.07 %
+functions count: 510
+functions_covered: 190
+functions_percent: 37.25 %
+
+boost_ptree_inforead_fuzzer
+loc count: 1473
+loc_covered: 773
+loc_percent: 52.48 %
+functions count: 319
+functions_covered: 161
+functions_percent: 50.47 %
+
+boost_ptree_iniread_fuzzer
+loc count: 1443
+loc_covered: 799
+loc_percent: 55.37 %
+functions count: 318
+functions_covered: 192
+functions_percent: 60.38 %
+
+boost_ptree_jsonread_fuzzer
+loc count: 1770
+loc_covered: 1052
+loc_percent: 59.44 %
+functions count: 450
+functions_covered: 269
+functions_percent: 59.78 %
+
+boost_ptree_xmlread_fuzzer
+loc count: 2146
+loc_covered: 1101
+loc_percent: 51.30 %
+functions count: 349
+functions_covered: 205
+functions_percent: 58.74 %
+
+boost_regex_fuzzer
+loc count: 8448
+loc_covered: 4464
+loc_percent: 52.84 %
+functions count: 448
+functions_covered: 278
+functions_percent: 62.05 %
+
+boost_regex_pattern_fuzzer
+loc count: 8454
+loc_covered: 3971
+loc_percent: 46.97 %
+functions count: 447
+functions_covered: 270
+functions_percent: 60.40 %
+
+boost_regex_replace_fuzzer
+loc count: 9086
+loc_covered: 2399
+loc_percent: 26.40 %
+functions count: 483
+functions_covered: 244
+functions_percent: 50.52 %
+
+boost_stralg_fuzzer
+loc count: 1014
+loc_covered: 715
+loc_percent: 70.51 %
+functions count: 213
+functions_covered: 143
+functions_percent: 67.14 %
+
+boost_uuid_fuzzer
+loc count: 1150
+loc_covered: 384
+loc_percent: 33.39 %
+functions count: 148
+functions_covered: 59
+functions_percent: 39.86 %
+
+Total
+loc count: 25036
+loc_covered: 11839
+loc_percent: 47.29 %
+functions count: 3185
+functions_covered: 1538
+functions_percent: 48.29 %
+
+        Initial:  42 %
+        Current:  47 %
+Needed for flag:  47 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________
+
+
+Congratulations! Additional code coverage detected!
+pwn.college{

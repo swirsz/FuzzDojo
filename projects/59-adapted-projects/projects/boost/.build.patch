@@ -1,0 +1,11 @@
+--- build.sho	2023-09-18 20:53:30.879610968 +0000
++++ build.sh	2023-09-18 20:54:20.023830568 +0000
+@@ -30,6 +30,8 @@
+ $CXX $CXXFLAGS -I . ../boost_ptree_iniread_fuzzer.cc  $LIB_FUZZING_ENGINE -o boost_ptree_iniread_fuzzer
+ $CXX $CXXFLAGS -I . ../boost_ptree_inforead_fuzzer.cc $LIB_FUZZING_ENGINE -o boost_ptree_inforead_fuzzer
+ 
++$CXX $CXXFLAGS -I . ../boost_new_fuzzer.cc $LIB_FUZZING_ENGINE -o boost_new_fuzzer
++
+ # Copy the fuzzer executables, zip-ed corpora, option and dictionary files to $OUT
+ find . -name '*_fuzzer' -exec cp -v '{}' $OUT ';'
+ # find . -name '*_fuzzer.dict' -exec cp -v '{}' $OUT ';'     # If you have dictionaries.

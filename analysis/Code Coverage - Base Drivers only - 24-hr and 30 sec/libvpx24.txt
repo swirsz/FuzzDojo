@@ -1,0 +1,41 @@
+newfuzzer
+loc count: 27351
+loc_covered: 15694
+loc_percent: 57.38 %
+functions count: 1245
+functions_covered: 734
+functions_percent: 58.96 %
+
+vpx_dec_fuzzer_vp8
+loc count: 20689
+loc_covered: 4286
+loc_percent: 20.72 %
+functions count: 974
+functions_covered: 194
+functions_percent: 19.92 %
+
+vpx_dec_fuzzer_vp9
+loc count: 27351
+loc_covered: 15677
+loc_percent: 57.32 %
+functions count: 1245
+functions_covered: 734
+functions_percent: 58.96 %
+
+Total
+loc count: 33052
+loc_covered: 19479
+loc_percent: 58.93 %
+functions count: 1475
+functions_covered: 891
+functions_percent: 60.41 %
+
+        Initial:  53 %
+        Current:  58 %
+Needed for flag:  58 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________
+
+
+Congratulations! Additional code coverage detected!

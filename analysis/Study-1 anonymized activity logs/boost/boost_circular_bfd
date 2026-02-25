@@ -1,0 +1,65 @@
+/* Copyright 2021 Google LLC
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+      http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+// From https://svn.boost.org/trac10/ticket/12818
+// This fuzz target can likely be enhanced to exercise more code.
+// The ideal place for this fuzz target is the boost repository.
+#ifdef DEBUG
+#include <iostream>
+#endif
+
+#include <boost/circular_buffer.hpp>
+#include <fuzzer/FuzzedDataProvider.h>
+
+extern "C" int LLVMFuzzerTestOneInput(const uint8_t *Data, size_t Size) {
+  FuzzedDataProvider fuzzed_data(Data, Size);
+  // First value is length of the buffer
+  size_t buffer_capacity = fuzzed_data.ConsumeIntegral<size_t>();
+  if (buffer_capacity < 3) return 0;
+
+  try {
+	  // Create a circular buffer with a capacity for 3 integers.
+	boost::circular_buffer<int> cb(buffer_capacity);
+
+	// Insert three elements into the buffer.
+	for(int i=0; i<buffer_capacity; i++) {
+		int x = fuzzed_data.ConsumeIntegral<int>();
+		cb.push_back(x);
+	}
+
+	int a = cb[0];  // a == 1
+	int b = cb[1];  // b == 2
+	int c = cb[2];  // c == 3
+
+	// The buffer is full now, so pushing subsequent
+	// elements will overwrite the front-most elements.
+
+	int x = fuzzed_data.ConsumeIntegral<int>();
+	cb.push_back(x);  // Overwrite 1 with 4.
+	cb.push_back(5);  // Overwrite 2 with 5.
+
+	// The buffer now contains 3, 4 and 5.
+	a = cb[0];  // a == 3
+	b = cb[1];  // b == 4
+	c = cb[2];  // c == 5
+
+	// Elements can be popped from either the front or the back.
+	cb.pop_back();  // 5 is removed.
+	cb.pop_front(); // 3 is removed.
+
+	// Leaving only one element with value = 4.
+	int d = cb[0];  // d == 4
+		
+  }
+  catch (const std::runtime_error &) {
+  }
+  return 0;
+}

@@ -1,0 +1,70 @@
+
+snappy_compress_fuzzer
+loc count: 1712
+loc_covered: 1115
+loc_percent: 65.13 %
+functions count: 172
+functions_covered: 99
+functions_percent: 57.56 %
+
+snappy_uncompress_fuzzer
+loc count: 1704
+loc_covered: 548
+loc_percent: 32.16 %
+functions count: 172
+functions_covered: 51
+functions_percent: 29.65 %
+
+Total
+loc count: 1726
+loc_covered: 1159
+loc_percent: 67.15 %
+functions count: 173
+functions_covered: 100
+functions_percent: 57.80 %
+
+        Initial:  67 %
+        Current:  67 %
+Needed for flag:  72 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________
+
+
+snappy_compress_fuzzer
+loc count: 1712
+loc_covered: 1115
+loc_percent: 65.13 %
+functions count: 172
+functions_covered: 99
+functions_percent: 57.56 %
+
+snappy_meow_fuzzer
+loc count: 1726
+loc_covered: 1072
+loc_percent: 62.11 %
+functions count: 172
+functions_covered: 113
+functions_percent: 65.70 %
+
+snappy_uncompress_fuzzer
+loc count: 1704
+loc_covered: 548
+loc_percent: 32.16 %
+functions count: 172
+functions_covered: 51
+functions_percent: 29.65 %
+
+Total
+loc count: 1752
+loc_covered: 1354
+loc_percent: 77.28 %
+functions count: 174
+functions_covered: 128
+functions_percent: 73.56 %
+
+        Initial:  67 %
+        Current:  77 %
+Needed for flag:  72 %
+
+'report' to start web server to view the coverage report

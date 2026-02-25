@@ -1,0 +1,51 @@
+#!/opt/pwn.college/bash
+. /usr/local/sbin/e
+if [ "$?" -gt 0 ]; then
+    exit 1
+fi
+export LABEL=$1
+export PROJECT_NAME=woff2
+export SANITIZER=$1
+if [ -z "$SANITIZER" ]; then
+    export SANITIZER='none'
+    export LABEL='none'$LABEL
+fi
+
+if [ ! -d "/src-orig" ]; then
+#----------------------------------------------------------------------
+    #apt-get update && apt-get install -y make autoconf automake libtool
+
+    rm -rf $SRC/$PROJECT_NAME
+    #git clone --depth 1 --recursive https://github.com/google/woff2
+    cp -r /downloads/woff2 $SRC
+
+    cp /opt/oss-fuzz/projects/$PROJECT_NAME/*.options $SRC
+    cp /opt/oss-fuzz/projects/$PROJECT_NAME/build.sh $SRC
+    cp -r /opt/oss-fuzz/projects/$PROJECT_NAME/corpus $SRC
+    patch -tuN $SRC/build.sh -i /challenge/.build.patch -r -
+
+#----------------------------------------------------------------------
+    build-cleanup
+fi
+build-srcfolders
+mv /src-$LABEL /src
+
+cd $SRC/$PROJECT_NAME
+#----------------------------------------------------------------------
+if [ ! -d "/home/hacker/fuzz-dojo/$PROJECT_NAME" ]; then
+   mkdir -p /home/hacker/fuzz-dojo/$PROJECT_NAME
+   cp $SRC/$PROJECT_NAME/src/*.cc /home/hacker/fuzz-dojo/$PROJECT_NAME
+else
+   cp /home/hacker/fuzz-dojo/$PROJECT_NAME/*.cc $SRC/$PROJECT_NAME/src
+fi
+#----------------------------------------------------------------------
+if [ "$4" = "understanding" ]; then
+    understanding $2 $3
+elif [ "$4" = "planning" ]; then
+    planning $2 $3
+else
+    fuzzlog
+    compile
+    drivers
+fi
+mv /src /src-$LABEL

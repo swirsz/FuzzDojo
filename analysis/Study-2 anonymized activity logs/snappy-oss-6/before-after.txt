@@ -1,0 +1,83 @@
+new_fuzzer
+loc count: 1710
+loc_covered: 1113
+loc_percent: 65.09 %
+functions count: 172
+functions_covered: 99
+functions_percent: 57.56 %
+
+snappy_compress_fuzzer
+loc count: 1710
+loc_covered: 1113
+loc_percent: 65.09 %
+functions count: 172
+functions_covered: 99
+functions_percent: 57.56 %
+
+snappy_uncompress_fuzzer
+loc count: 1702
+loc_covered: 547
+loc_percent: 32.14 %
+functions count: 172
+functions_covered: 51
+functions_percent: 29.65 %
+
+Total
+loc count: 1746
+loc_covered: 1179
+loc_percent: 67.53 %
+functions count: 174
+functions_covered: 101
+functions_percent: 58.05 %
+
+        Initial:  67 %
+        Current:  67 %
+Needed for flag:  72 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________
+
+Current LOC report:
+
+new_fuzzer
+loc count: 1879
+loc_covered: 1621
+loc_percent: 86.27 %
+functions count: 180
+functions_covered: 147
+functions_percent: 81.67 %
+
+snappy_compress_fuzzer
+loc count: 1711
+loc_covered: 1114
+loc_percent: 65.11 %
+functions count: 172
+functions_covered: 99
+functions_percent: 57.56 %
+
+snappy_uncompress_fuzzer
+loc count: 1703
+loc_covered: 547
+loc_percent: 32.12 %
+functions count: 172
+functions_covered: 51
+functions_percent: 29.65 %
+
+Total
+loc count: 1915
+loc_covered: 1660
+loc_percent: 86.68 %
+functions count: 182
+functions_covered: 152
+functions_percent: 83.52 %
+
+        Initial:  67 %
+        Current:  86 %
+Needed for flag:  72 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________
+
+
+Congratulations! Additional code coverage detected!
+pwn.college{E

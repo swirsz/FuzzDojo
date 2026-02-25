@@ -1,0 +1,36 @@
+
+fuzz-compress
+loc count: 1678
+loc_covered: 162
+loc_percent: 9.65 %
+functions count: 126
+functions_covered: 11
+functions_percent: 8.73 %
+
+fuzz-new
+loc count: 1653
+loc_covered: 183
+loc_percent: 11.07 %
+functions count: 136
+functions_covered: 12
+functions_percent: 8.82 %
+
+Total
+loc count: 1949
+loc_covered: 324
+loc_percent: 16.62 %
+functions count: 145
+functions_covered: 19
+functions_percent: 13.10 %
+
+        Initial:  11 %
+        Current:  16 %
+Needed for flag:  16 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________
+
+cat: /tmp/loc: No such file or directory
+cp: cannot stat '/tmp/loc': No such file or directory
+
+Congratulations! Additional code coverage detected!

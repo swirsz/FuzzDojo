@@ -1,0 +1,53 @@
+#!/opt/pwn.college/bash
+. /usr/local/sbin/e
+if [ "$?" -gt 0 ]; then
+    exit 1
+fi
+export LABEL=$1
+export PROJECT_NAME=libvnc
+export SANITIZER=$1
+if [ -z "$SANITIZER" ]; then
+    export SANITIZER='none'
+    export LABEL='none'$LABEL
+fi
+
+if [ ! -d "/src-orig" ]; then
+#----------------------------------------------------------------------
+    #apt-get update && apt-get install -y cmake zlib1g-dev
+    #git clone --depth 1 https://github.com/LibVNC/libvncserver.git
+    cp -r /downloads/libvncserver $SRC
+
+    cp /opt/oss-fuzz/projects/$PROJECT_NAME/build.sh $SRC/
+    cp $SRC/libvncserver/test/fuzz_server.c $SRC/libvncserver/test/fuzz_new.c
+    patch -tuN $SRC/build.sh -i /challenge/.build.patch -r -
+    patch -tuN $SRC/libvncserver/CMakeLists.txt -i /challenge/.CMakeLists.patch -r -
+#----------------------------------------------------------------------
+    build-cleanup
+fi
+build-srcfolders
+mv /src-$LABEL /src
+rm -rf $SRC/libvncserver/build
+
+cd $SRC/libvncserver
+#----------------------------------------------------------------------
+if [ ! -d "/home/hacker/fuzz-dojo/$PROJECT_NAME" ]; then
+   mkdir -p /home/hacker/fuzz-dojo/$PROJECT_NAME
+   cp $SRC/libvncserver/test/*.c /home/hacker/fuzz-dojo/$PROJECT_NAME
+   cp $SRC/libvncserver/CMakeLists.txt /home/hacker/fuzz-dojo/$PROJECT_NAME
+   cp $SRC/build.sh /home/hacker/fuzz-dojo/$PROJECT_NAME
+else
+   cp /home/hacker/fuzz-dojo/$PROJECT_NAME/*.c $SRC/libvncserver/test
+   cp /home/hacker/fuzz-dojo/$PROJECT_NAME/CMakeLists.txt $SRC/libvncserver
+   cp /home/hacker/fuzz-dojo/$PROJECT_NAME/build.sh $SRC
+fi
+#----------------------------------------------------------------------
+if [ "$4" = "understanding" ]; then
+    understanding $2 $3
+elif [ "$4" = "planning" ]; then
+    planning $2 $3
+else
+    fuzzlog
+    compile
+    drivers
+fi
+mv /src /src-$LABEL

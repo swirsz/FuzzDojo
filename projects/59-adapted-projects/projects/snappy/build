@@ -1,0 +1,52 @@
+#!/opt/pwn.college/bash
+. /usr/local/sbin/e
+if [ "$?" -gt 0 ]; then
+    exit 1
+fi
+export LABEL=$1
+export PROJECT_NAME=snappy
+export SANITIZER=$1
+if [ -z "$SANITIZER" ]; then
+    export SANITIZER='none'
+    export LABEL='none'$LABEL
+fi
+
+if [ ! -d "/src-orig" ]; then
+#----------------------------------------------------------------------
+    rm -rf $SRC/$PROJECT_NAME
+    #apt-get update && apt-get install -y make autoconf automake libtool gettext pkg-config build-essential
+    #git clone --recurse-submodules https://github.com/google/snappy
+    cp -r /downloads/snappy $SRC
+
+    cp /opt/oss-fuzz/projects/$PROJECT_NAME/build.sh $SRC/
+
+    patch -tuN $SRC/snappy/CMakeLists.txt -i /challenge/.CMakeLists.patch -r -
+    cp $SRC/$PROJECT_NAME/snappy_compress_fuzzer.cc $SRC/$PROJECT_NAME/new_fuzzer.cc
+
+#----------------------------------------------------------------------
+    build-cleanup
+fi
+build-srcfolders
+mv /src-$LABEL /src
+
+cd $SRC/
+#----------------------------------------------------------------------
+if [ ! -d "/home/hacker/fuzz-dojo/$PROJECT_NAME" ]; then
+   mkdir -p /home/hacker/fuzz-dojo/$PROJECT_NAME
+   cp $SRC/$PROJECT_NAME/*.cc /home/hacker/fuzz-dojo/$PROJECT_NAME
+   cp $SRC/build.sh /home/hacker/fuzz-dojo/$PROJECT_NAME
+else
+   cp /home/hacker/fuzz-dojo/$PROJECT_NAME/*.cc $SRC/$PROJECT_NAME
+   cp /home/hacker/fuzz-dojo/$PROJECT_NAME/build.sh $SRC
+fi
+#----------------------------------------------------------------------
+if [ "$4" = "understanding" ]; then
+    understanding $2 $3
+elif [ "$4" = "planning" ]; then
+    planning $2 $3
+else
+    fuzzlog
+    compile
+    drivers
+fi
+mv /src /src-$LABEL

@@ -1,0 +1,40 @@
+
+new_fuzzer
+loc count: 1730
+loc_covered: 466
+loc_percent: 26.94 %
+functions count: 172
+functions_covered: 42
+functions_percent: 24.42 %
+
+snappy_compress_fuzzer
+loc count: 1712
+loc_covered: 1115
+loc_percent: 65.13 %
+functions count: 172
+functions_covered: 99
+functions_percent: 57.56 %
+
+snappy_uncompress_fuzzer
+loc count: 1704
+loc_covered: 548
+loc_percent: 32.16 %
+functions count: 172
+functions_covered: 51
+functions_percent: 29.65 %
+
+Total
+loc count: 1766
+loc_covered: 1321
+loc_percent: 74.80 %
+functions count: 174
+functions_covered: 115
+functions_percent: 66.09 %
+
+        Initial:  67 %
+        Current:  74 %
+Needed for flag:  72 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________
+

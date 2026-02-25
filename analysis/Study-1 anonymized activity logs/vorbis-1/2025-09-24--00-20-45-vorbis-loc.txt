@@ -1,0 +1,32 @@
+
+decode_fuzzer
+loc count: 8783
+loc_covered: 0
+loc_percent: 0.00 %
+functions count: 339
+functions_covered: 0
+functions_percent: 0.00 %
+
+new_fuzzer
+loc count: 8780
+loc_covered: 3427
+loc_percent: 39.03 %
+functions count: 341
+functions_covered: 148
+functions_percent: 43.40 %
+
+Total
+loc count: 8838
+loc_covered: 3427
+loc_percent: 38.78 %
+functions count: 344
+functions_covered: 148
+functions_percent: 43.02 %
+
+        Initial:  31 %
+        Current:  38 %
+Needed for flag:  36 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________
+

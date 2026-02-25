@@ -1,0 +1,41 @@
+#!/opt/pwn.college/bash
+. /usr/local/sbin/e
+export LABEL=$1
+export PROJECT_NAME=libssh2
+SANITIZER=$1
+if [ -z "$SANITIZER" ]; then
+    SANITIZER='none'
+    export LABEL='none'
+fi
+
+SRC=/src-$LABEL
+if [ -z "$(find /out -mindepth 1 -maxdepth 1)" ] || [ ! -d "$SRC" ]; then
+    echo "Run /challenge/build first"
+    rm /tmp/build.lck
+else 
+
+if [ "$LABEL" = "none" ]; then
+    FLAGS=""
+elif [ "$LABEL" = "address" ]; then
+    FLAGS=$SANITIZER_FLAGS_address
+elif [ "$LABEL" = "memory" ]; then
+    FLAGS=$SANITIZER_FLAGS_memory
+elif [ "$LABEL" = "undefined" ]; then
+    FLAGS=$SANITIZER_FLAGS_undefined
+elif [ "$LABEL" = "thread" ]; then
+    FLAGS=$SANITIZER_FLAGS_thread
+fi
+set -x
+#----------------------------------------------------------------------
+
+cp /home/hacker/fuzz-dojo/$PROJECT_NAME/*.cc $SRC/$PROJECT_NAME/tests/ossfuzz
+cp /home/hacker/fuzz-dojo/$PROJECT_NAME/Makefile.am $SRC/$PROJECT_NAME/tests/ossfuzz
+
+cd $SRC/$PROJECT_NAME/tests/ossfuzz
+
+clang++ -DHAVE_CONFIG_H -I. -I../../src  -I../../include -DLIBSSH2DEBUG  -fsanitize=fuzzer -O1 -fno-omit-frame-pointer -gline-tables-only -DFUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION $FLAGS -fsanitize=fuzzer-no-link -stdlib=libc++ -MT new_fuzzer-new_fuzzer.o -MD -MP -MF .deps/new_fuzzer-new_fuzzer.Tpo -c -o new_fuzzer-new_fuzzer.o `test -f 'new_fuzzer.cc' || echo './'`new_fuzzer.cc
+clang++ -fsanitize=fuzzer -O1 -fno-omit-frame-pointer -gline-tables-only -DFUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION $FLAGS -fsanitize=fuzzer-no-link -stdlib=libc++ -o new_fuzzer new_fuzzer-new_fuzzer.o  ../../src/.libs/libssh2.a -lssl -lcrypto -lz
+
+#----------------------------------------------------------------------
+drivers
+fi

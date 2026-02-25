@@ -1,0 +1,18 @@
+--- generate-samples.sho	2025-02-10 19:34:02.683832946 +0000
++++ generate-samples.sh	2025-02-10 19:38:58.817565538 +0000
+@@ -12,11 +12,13 @@
+ 
+ samples="${MALE_SAMPLE} ${FEMALE_SAMPLE} ${WB_MALE_SAMPLE}"
+ for sample in $samples; do
+-    wget --no-clobber https://www.speex.org/samples/audio/${sample}
++    #wget --no-clobber https://www.speex.org/samples/audio/${sample}
++    cp  /downloads/${sample} .
+ done
+ 
+ # FIXME: move to speex.org
+-wget --no-clobber https://people.xiph.org/~tterribe/speex/${UWB_MALE_SAMPLE}
++#wget --no-clobber https://people.xiph.org/~tterribe/speex/${UWB_MALE_SAMPLE}
++cp  /downloads/${UWB_MALE_SAMPLE} .
+ 
+ bitrates="4 8 11 15"
+ for b in $bitrates; do

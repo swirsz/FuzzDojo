@@ -1,0 +1,152 @@
+newfuzzer
+loc count: 27204
+loc_covered: 14077
+loc_percent: 51.75 %
+functions count: 1231
+functions_covered: 655
+functions_percent: 53.21 %
+
+vpx_dec_fuzzer_vp8
+loc count: 20542
+loc_covered: 4185
+loc_percent: 20.37 %
+functions count: 960
+functions_covered: 187
+functions_percent: 19.48 %
+
+vpx_dec_fuzzer_vp9
+loc count: 27204
+loc_covered: 14077
+loc_percent: 51.75 %
+functions count: 1231
+functions_covered: 655
+functions_percent: 53.21 %
+
+Total
+loc count: 32902
+loc_covered: 17801
+loc_percent: 54.10 %
+functions count: 1461
+functions_covered: 812
+functions_percent: 55.58 %
+
+        Initial:  53 %
+        Current:  54 %
+Needed for flag:  58 %
+
+___________________________________________________________
+
+Previous LOC report:
+
+newfuzzer
+Missing /out/report_target/newfuzzer/linux/summary.json
+
+Please compile a project first
+
+
+newfuzzer2
+Missing /out/report_target/newfuzzer2/linux/summary.json
+
+Please compile a project first
+
+
+newfuzzer3
+Missing /out/report_target/newfuzzer3/linux/summary.json
+
+Please compile a project first
+
+
+newfuzzer4
+Missing /out/report_target/newfuzzer4/linux/summary.json
+
+Please compile a project first
+
+
+newfuzzer5
+Missing /out/report_target/newfuzzer5/linux/summary.json
+
+Please compile a project first
+
+
+vpx_dec_fuzzer_vp8
+Missing /out/report_target/vpx_dec_fuzzer_vp8/linux/summary.json
+
+Please compile a project first
+
+
+vpx_dec_fuzzer_vp9
+Missing /out/report_target/vpx_dec_fuzzer_vp9/linux/summary.json
+
+Please compile a project first
+
+
+Total
+loc count: 33505
+loc_covered: 19232
+loc_percent: 57.40 %
+functions count: 1494
+functions_covered: 882
+functions_percent: 59.04 %
+
+        Initial:  53 %
+        Current:  57 %
+Needed for flag:  58 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________
+
+Current LOC report:
+
+newfuzzer
+Missing /out/report_target/newfuzzer/linux/summary.json
+
+Please compile a project first
+
+
+newfuzzer2
+Missing /out/report_target/newfuzzer2/linux/summary.json
+
+Please compile a project first
+
+
+newfuzzer3
+Missing /out/report_target/newfuzzer3/linux/summary.json
+
+Please compile a project first
+
+
+newfuzzer4
+Missing /out/report_target/newfuzzer4/linux/summary.json
+
+Please compile a project first
+
+
+newfuzzer5
+Missing /out/report_target/newfuzzer5/linux/summary.json
+
+Please compile a project first
+
+
+vpx_dec_fuzzer_vp8
+Missing /out/report_target/vpx_dec_fuzzer_vp8/linux/summary.json
+
+Please compile a project first
+
+
+vpx_dec_fuzzer_vp9
+Missing /out/report_target/vpx_dec_fuzzer_vp9/linux/summary.json
+
+Please compile a project first
+
+
+Total
+loc count: 33505
+loc_covered: 19232
+loc_percent: 57.40 %
+functions count: 1494
+functions_covered: 882
+functions_percent: 59.04 %
+
+        Initial:  53 %
+        Current:  57 %
+Needed for flag:  58 %

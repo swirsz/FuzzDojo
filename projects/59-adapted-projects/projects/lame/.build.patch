@@ -1,0 +1,11 @@
+--- build.sh.o	2023-09-12 03:18:48.291963224 +0000
++++ build.sh	2023-09-12 03:23:19.661655371 +0000
+@@ -38,3 +38,8 @@
+ $CXX -std=c++17 -Wall -Wextra -Werror $CXXFLAGS -I fuzzing-headers/include/ -I $SRC/lame/include/ fuzzer-encoder.cpp $LIB_FUZZING_ENGINE $SRC/lame/libmp3lame/.libs/libmp3lame.a /usr/local/lib/libmpg123.a -lm -o $OUT/fuzzer-encoder
+ cp fuzzer-encoder_seed_corpus.zip $OUT/
+ cp fuzzer-encoder.dict $OUT/
++
++$CXX -std=c++17 -Wall -Wextra -Werror $CXXFLAGS -I fuzzing-headers/include/ -I $SRC/lame/include/ fuzzer-new.cpp $LIB_FUZZING_ENGINE $SRC/lame/libmp3lame/.libs/libmp3lame.a /usr/local/lib/libmpg123.a -lm -o $OUT/fuzzer-new
++cp fuzzer-new_seed_corpus.zip $OUT/
++cp fuzzer-new.dict $OUT/
++

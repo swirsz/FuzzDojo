@@ -1,0 +1,20 @@
+--- build.sho	2024-05-29 18:21:26.195932484 +0000
++++ build.sh	2024-05-29 18:24:35.695297800 +0000
+@@ -61,3 +61,17 @@
+   cp $SRC/vpx_fuzzer_seed_corpus.zip $OUT/${fuzzer_name}_seed_corpus.zip
+   cp $SRC/vpx_dec_fuzzer.dict $OUT/${fuzzer_name}.dict
+ done
++
++  $CXX $CXXFLAGS -std=c++11 \
++    -DDECODER=vp9 \
++    -I$SRC/libvpx \
++    -I${build_dir} \
++    -Wl,--start-group \
++    $LIB_FUZZING_ENGINE \
++    $SRC/libvpx/examples/newfuzzer.cc -o $OUT/newfuzzer \
++    ${build_dir}/libvpx.a \
++    -Wl,--end-group
++  cp $SRC/vpx_fuzzer_seed_corpus.zip $OUT/newfuzzer_seed_corpus.zip
++  cp $SRC/vpx_dec_fuzzer.dict $OUT/newfuzzer.dict
++
++

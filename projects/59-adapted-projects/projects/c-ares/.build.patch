@@ -1,0 +1,12 @@
+--- build.sh	2023-07-10 21:13:15.072434872 +0000
++++ build.shh	2023-07-10 21:14:23.964493786 +0000
+@@ -33,6 +33,9 @@
+     -o $OUT/ares_create_query_fuzzer \
+     $LIB_FUZZING_ENGINE $SRC/c-ares/src/lib/.libs/libcares.a
+ 
++$CC $CFLAGS -Iinclude -Isrc/lib -c $SRC/c-ares/test/newfuzzer.c -o $WORK/newfuzzer.o
++$CXX $CXXFLAGS -std=c++11 $WORK/newfuzzer.o -o $OUT/newfuzzer $LIB_FUZZING_ENGINE $SRC/c-ares/src/lib/.libs/libcares.a
++
+ # Archive and copy to $OUT seed corpus if the build succeeded.
+ zip -j $OUT/ares_parse_reply_fuzzer_seed_corpus.zip $SRC/c-ares/test/fuzzinput/*
+ zip -j $OUT/ares_create_query_fuzzer_seed_corpus.zip \

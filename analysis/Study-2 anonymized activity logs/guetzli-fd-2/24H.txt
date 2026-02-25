@@ -1,0 +1,35 @@
+Current LOC report:
+
+fuzz_newfuzzer
+loc count: 5741
+loc_covered: 4686
+loc_percent: 81.62 %
+functions count: 300
+functions_covered: 236
+functions_percent: 78.67 %
+
+guetzli_fuzzer
+loc count: 5698
+loc_covered: 4557
+loc_percent: 79.98 %
+functions count: 300
+functions_covered: 230
+functions_percent: 76.67 %
+
+Total
+loc count: 5756
+loc_covered: 4780
+loc_percent: 83.04 %
+functions count: 301
+functions_covered: 241
+functions_percent: 80.07 %
+
+        Initial:  78 %
+        Current:  83 %
+Needed for flag:  83 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________
+
+
+Congratulations! Additional code coverage detected!

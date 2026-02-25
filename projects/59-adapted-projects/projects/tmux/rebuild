@@ -1,0 +1,41 @@
+#!/opt/pwn.college/bash
+. /usr/local/sbin/e
+export LABEL=$1
+export PROJECT_NAME=tmux
+SANITIZER=$1
+if [ -z "$SANITIZER" ]; then
+    SANITIZER='none'
+    export LABEL='none'
+fi
+
+SRC=/src-$LABEL
+if [ -z "$(find /out -mindepth 1 -maxdepth 1)" ] || [ ! -d "$SRC" ]; then
+    echo "Run /challenge/build first"
+    rm /tmp/build.lck
+else 
+
+if [ "$LABEL" = "none" ]; then
+    FLAGS=""
+elif [ "$LABEL" = "address" ]; then
+    FLAGS=$SANITIZER_FLAGS_address
+elif [ "$LABEL" = "memory" ]; then
+    FLAGS=$SANITIZER_FLAGS_memory
+elif [ "$LABEL" = "undefined" ]; then
+    FLAGS=$SANITIZER_FLAGS_undefined
+elif [ "$LABEL" = "thread" ]; then
+    FLAGS=$SANITIZER_FLAGS_thread
+fi
+set -x
+#----------------------------------------------------------------------
+
+cp /home/hacker/fuzz-dojo/$PROJECT_NAME/*.c $SRC/$PROJECT_NAME/fuzz
+cp /home/hacker/fuzz-dojo/$PROJECT_NAME/*.dict $SRC/$PROJECT_NAME/fuzz
+cp /home/hacker/fuzz-dojo/$PROJECT_NAME/Makefile.am $SRC/$PROJECT_NAME
+
+cd $SRC/$PROJECT_NAME
+
+clang -DPACKAGE_NAME=\"tmux\" -DPACKAGE_TARNAME=\"tmux\" -DPACKAGE_VERSION=\"next-3.6\" -DPACKAGE_STRING=\"tmux\ next-3.6\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"tmux\" -DVERSION=\"next-3.6\" -DNEED_FUZZING=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -D__EXTENSIONS__=1 -D_ALL_SOURCE=1 -D_GNU_SOURCE=1 -D_POSIX_PTHREAD_SEMANTICS=1 -D_TANDEM_SOURCE=1 -DHAVE_DIRENT_H=1 -DHAVE_FCNTL_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_PATHS_H=1 -DHAVE_PTY_H=1 -DHAVE_STDINT_H=1 -DHAVE_SYS_DIR_H=1 -DHAVE_LIBM=1 -DHAVE_DIRFD=1 -DHAVE_FLOCK=1 -DHAVE_PRCTL=1 -DHAVE_SYSCONF=1 -DHAVE_ASPRINTF=1 -DHAVE_CFMAKERAW=1 -DHAVE_CLOCK_GETTIME=1 -DHAVE_EXPLICIT_BZERO=1 -DHAVE_GETDTABLESIZE=1 -DHAVE_GETLINE=1 -DHAVE_MEMMEM=1 -DHAVE_SETENV=1 -DHAVE_STRCASESTR=1 -DHAVE_STRNDUP=1 -DHAVE_STRSEP=1 -DHAVE_EVENT2_EVENT_H=1 -DHAVE_NCURSES_H=1 -DHAVE_TIPARM=1 -DHAVE_B64_NTOP=1 -DHAVE_MALLOC_TRIM=1 -DHAVE_DAEMON=1 -DHAVE_FORKPTY=1 -DHAVE___PROGNAME=1 -DHAVE_PROGRAM_INVOCATION_SHORT_NAME=1 -DHAVE_PR_SET_NAME=1 -DHAVE_SO_PEERCRED=1 -DHAVE_PROC_PID=1 -I.  -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -I/usr/local/include -DTMUX_VERSION='"next-3.6"' -DTMUX_CONF='"/etc/tmux.conf:~/.tmux.conf:$XDG_CONFIG_HOME/tmux/tmux.conf:~/.config/tmux/tmux.conf"' -DTMUX_LOCK_CMD='"lock -np"' -DTMUX_TERM='"tmux-256color"'              -O1 -fno-omit-frame-pointer -gline-tables-only -DFUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION $FLAGS -fsanitize=fuzzer-no-link -MT fuzz/new-fuzzer.o -MD -MP -MF $depbase.Tpo -c -o fuzz/new-fuzzer.o fuzz/new-fuzzer.c
+
+#----------------------------------------------------------------------
+drivers
+fi

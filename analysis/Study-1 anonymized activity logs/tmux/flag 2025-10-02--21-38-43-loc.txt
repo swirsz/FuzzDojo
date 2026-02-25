@@ -1,0 +1,24 @@
+
+input-fuzzer
+loc count: 52900
+loc_covered: 9026
+loc_percent: 17.06 %
+functions count: 2314
+functions_covered: 711
+functions_percent: 30.73 %
+
+Total
+loc count: 52900
+loc_covered: 9026
+loc_percent: 17.06 %
+functions count: 2314
+functions_covered: 711
+functions_percent: 30.73 %
+
+        Initial:  12 %
+        Current:  17 %
+Needed for flag:  17 %
+
+'report' to start web server to view the coverage report
+_________________________________________________________
+
