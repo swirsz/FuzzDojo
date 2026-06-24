@@ -1,0 +1,23 @@
+--- Makefile.am	2023-09-17 03:23:13.167746972 +0000
++++ Makefile.am	2023-09-17 03:25:26.248582530 +0000
+@@ -18,7 +18,8 @@
+ 
+ if USE_OSSFUZZERS
+ noinst_PROGRAMS += \
+-  ssh2_client_fuzzer
++  ssh2_client_fuzzer new_fuzzer
++
+ 
+ noinst_LIBRARIES += \
+   libstandaloneengine.a
+@@ -28,6 +29,10 @@
+ ssh2_client_fuzzer_CXXFLAGS = $(AM_CXXFLAGS) $(FUZZ_FLAG)
+ ssh2_client_fuzzer_LDFLAGS = $(AM_LDFLAGS) -static
+ 
++new_fuzzer_SOURCES = new_fuzzer.cc testinput.h
++new_fuzzer_CXXFLAGS = $(AM_CXXFLAGS) $(FUZZ_FLAG)
++new_fuzzer_LDFLAGS = $(AM_LDFLAGS) -static
++
+ libstandaloneengine_a_SOURCES = standaloneengine.cc
+ libstandaloneengine_a_CXXFLAGS = $(AM_CXXFLAGS)
+ 

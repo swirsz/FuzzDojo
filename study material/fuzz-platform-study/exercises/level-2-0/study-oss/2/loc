@@ -1,0 +1,4 @@
+#!/bin/bash
+INITIAL=5
+TARGET=10
+/usr/local/sbin/loc_count_oss $INITIAL $TARGET $@

@@ -1,0 +1,40 @@
+--- 2/fuzz_report.html	2024-05-05 18:47:56.762349489 +0000
++++ 1/fuzz_report.html	2024-05-05 19:28:57.172617652 +0000
+@@ -1,26 +1,9 @@
+ <html>
+  <head>
+-  <!-- Google tag (gtag.js) -->
+-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-8WTFM1Y62J">
+-  </script>
+-  <script>
+-   window.dataLayer = window.dataLayer || [];
+-                  function gtag(){dataLayer.push(arguments);}
+-                  gtag('js', new Date());
+-
+-                  gtag('config', 'G-8WTFM1Y62J');
+-  </script>
+   <link href="prism.css" rel="stylesheet"/>
+-  <link href="https://unpkg.com/dracula-prism/dist/css/dracula-prism.css" rel="stylesheet"/>
+  </head>
+  <body>
+-  <script crossorigin="anonymous" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" src="https://code.jquery.com/jquery-3.6.0.min.js">
+-  </script>
+-  <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js">
+-  </script>
+-  <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet"/>
+   <link href="styles.css" rel="stylesheet"/>
+-  <link href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css" rel="stylesheet"/>
+   <div class="top-navbar">
+    <div class="top-navbar-title-wrapper">
+     <div class="top-navbar-title" style="margin-bottom: 10px; font-size:25px">
+@@ -5637,10 +5620,6 @@
+   </script>
+   <script src="fuzzer_table_data.js">
+   </script>
+-  <script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js">
+-  </script>
+-  <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.colVis.min.js">
+-  </script>
+   <script>
+    var tableIds = ['myTable0', 'fuzzers_overview_table', 'myTable2', 'myTable3', 'myTable4', 'myTable5', 'myTable6', 'myTable7', 'myTable8', 'myTable9', 'myTable10', 'remaining_optimal_interesting_functions', 'myTable12', 'all_functions_overview_table', 'myTable14', 'myTable15', 'myTable16', 'myTable17'];
+   </script>

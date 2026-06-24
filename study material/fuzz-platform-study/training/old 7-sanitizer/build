@@ -1,0 +1,47 @@
+#!/bin/bash
+. /usr/local/sbin/e
+export LABEL=$1
+export PROJECT_NAME=bzip2
+export SANITIZER=$1
+if [ -z "$SANITIZER" ]; then
+    export SANITIZER='none'
+    export LABEL='none'$LABEL
+fi
+
+if [ ! -d "/src-orig" ]; then
+#----------------------------------------------------------------------
+    rm -rf $SRC/$PROJECT_NAME
+    rm -rf $SRC/$PROJECT_NAME-tests
+    #apt-get update && apt-get install -y make autoconf automake libtool wget
+    #git clone https://github.com/anon/bzip2
+    #git clone git://sourceware.org/git/bzip2-tests.git
+    cp -r /downloads/swbzip2 $SRC/bzip2
+    cp -r /downloads/bzip2-tests $SRC
+
+    cp /challenge/newfuzzer.c $SRC/newfuzzer.c
+
+    cp /opt/oss-fuzz/projects/$PROJECT_NAME/build.sh $SRC/
+    cp /opt/oss-fuzz/projects/$PROJECT_NAME/*.c $SRC/
+
+#----------------------------------------------------------------------
+    build-cleanup
+fi
+build-srcfolders
+mv /src-$LABEL /src
+
+cd $SRC
+#----------------------------------------------------------------------
+if [ ! -d "/home/hacker/fuzz-platform/training-correct-sanitizer" ]; then
+   mkdir -p /home/hacker/fuzz-platform/training-correct-sanitizer
+   cp $SRC/*.c /home/hacker/fuzz-platform/training-correct-sanitizer
+   cp $SRC/build.sh /home/hacker/fuzz-platform/training-correct-sanitizer
+else
+   cp /home/hacker/fuzz-platform/training-correct-sanitizer/*.c $SRC
+   cp /home/hacker/fuzz-platform/training-correct-sanitizer/build.sh $SRC
+fi
+export PROJECT_NAME=training-correct-sanitizer
+#----------------------------------------------------------------------
+fuzzlog
+compile
+drivers
+mv /src /src-$LABEL

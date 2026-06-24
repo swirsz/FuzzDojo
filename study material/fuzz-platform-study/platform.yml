@@ -1,0 +1,177 @@
+id: fuzz
+
+name: Fuzz Platform
+type: public
+award:
+  emoji: 🐇
+
+image: anon/fuzz-Platform:latest
+
+description: |
+
+        Forum link: https://discord.com/channels/750635557666816031/1409993436328759328
+
+        * Jan 12, 2025 update: 30 individuals have completed the study, and there are no remaining gift cards available.
+
+        * Dec 5, 2025 update: 20 individuals have completed the study, and 10 gift cards ($50) are still available.
+
+        Fuzzing is a powerful automated technique that feeds a program many unexpected or malformed inputs and monitors it for crashes, hangs, or other anomalous behavior.  The Fuzz Platform is a training program developed by an Anon PhD student to help you design and implement fuzz drivers via an online platform that streamlines the process. This program is part of a research study examining the effectiveness of these teaching tools. You’ll also gain hands-on experience with OSS-Fuzz, Google’s large-scale continuous fuzzing infrastructure for open-source software, giving you direct insight into real-world bug-finding workflows. OSS-Fuzz has been used successfully in over a thousand projects.  However, due to its limitations, only about 30% of the code is typically tested, leaving 70% unevaluated, which presents a significant opportunity for improvement.
+
+        The Platform is built around 11 optional training challenges designed to help you become comfortable with the platform and fuzz-driver workflow. While these are optional, they’re strongly recommended.  You should be comfortable reading and navigating C++ code. You’ll be assigned two open-source projects (roughly 1,500 to 22,000 LOC) and will search their codebases for suitable functions to fuzz and build fuzz drivers around. New fuzz drivers should increase the overall project code coverage by 5% or more. You also have the option to submit your work to Google for a monetary compensation of up to $10,000, as described in the training slides.
+
+        This is a programming challenge. Fuzz drivers for these real-world challenges are typically between 30 to 200 LOC.  The Real-World Fuzzing module consists of four challenges:
+        
+        * 2 practice tasks (with full coding solutions included in the training slides)
+        * 2 real-world-style tasks where you’ll write new fuzz drivers
+        
+        The first 30 participants to will be rewarded with a $50 Amazon gift card upon completion of the study.  Valid contact information required.  Limit 1 submission per person.
+        
+        Minimum requirements for the $50 award are:
+        
+        1) Consent Form Challenge
+        2) Initial Survey - https://forms.gle/FWF1iEn9pLpkRMGq9 
+        3) Completion of all (4) Real-World Fuzzing Challenges (2 demo, 2 real)
+        4) Exit Survey https://forms.gle/uG8yik8pXFRXQHSGA  
+        
+        To see how many people have completed the study, open the "Real World Fuzzing" module below and check on the "All-Time" scoreboard how many people have a score of 4.  
+        
+        In the interest of this study's integrity, please refrain from exploiting any bugs or vulnerabilities in the platform discovered during testing.
+
+modules:
+
+  - id: consent
+    name: Consent Form
+    description: Contribute by allowing your anonymous, non-personalized work in this module to be used for research
+
+    challenges:
+
+      - id: consent
+        name: Consent
+        description:  Run /challenge/run in Terminal to start.
+
+  - id: training
+    name: Introduction to Fuzzing
+    description: |
+
+        Important Resources:
+        - [LibFuzzer Documentation](https://llvm.org/docs/LibFuzzer.html)
+        - [More libfuzzer tips](https://chromium.googlesource.com/chromium/src/+/main/testing/libfuzzer/getting_started_with_libfuzzer.md)
+        - [Efficient Fuzzing Guide](https://chromium.googlesource.com/chromium/src/+/main/testing/libfuzzer/efficient_fuzzing.md)
+        - [**OSS-Fuzz**: Fuzzing Introspection](https://introspector.oss-fuzz.com/projects-overview)
+        - [**OSS-Fuzz**: OSS-Fuzz - Setting up a new project](https://google.github.io/oss-fuzz/getting-started/new-project-guide/)
+        - [**OSS-Fuzz**: Ideal integration](https://google.github.io/oss-fuzz/advanced-topics/ideal-integration/)
+        - [**OSS-Fuzz**: Interesting fuzz driver creation case studies](https://github.com/ossf/fuzz-introspector/blob/main/doc/CaseStudies.md)
+        - [**GITHUB**: How to contribute to a project through forking](https://docs.github.com/en/get-started/quickstart/contributing-to-projects)
+        - [Keyword Search all OSS-Fuzz fuzz drivers](https://github.com/search?q=repo%3Agoogle%2Foss-fuzz+path%3A%2F%5Eprojects%5C%2F%2F++AND+%28language%3AC%2B%2B+OR+language%3AC%29&type=code)
+
+    resources:
+        
+      - name: "anon.college - Getting Started"
+        type: lecture
+        video: DJO1A2neZ6Y
+
+      - name: "Introduction to Fuzzing"
+        type: lecture
+        video: K_2DAo5pPQQ
+
+      - name: "Fuzz Platform only: Building and Running Reports"
+        type: lecture
+        video: u7GrifELIjU
+        slides: 1-JxZd7rNU8JBiCdbyfg37YrJM0w70jOx3-2vAZg0hx0
+
+      - name: "OSS Fuzz only: Building and Running Reports"
+        type: lecture
+        video: gvA0cXxG4cg
+        slides: 1eJ7y0pYSBVFg9cT353-IPF8FHI0AWGfpTh0vKcrlLk8
+
+      - name: "Investigating a Project & Picking Functions to Fuzz"
+        type: lecture
+        video: OP22mPweQbU
+        slides: 1nJ82sezXrM9U0TWRJmCKyhaX38ySCO2v34q3kxyxZTA
+
+      - name: "AVAHI: Understanding Existing Fuzz Drivers"
+        type: lecture
+        video: AtjkUvYOGJw
+
+      - name: "AVAHI: New Fuzz Driver Creation"
+        type: lecture
+        video: 11fxFrOOLJ0
+
+      - name: "BZIP2: Case Study Extending 62% Static Code Coverage to 92%"
+        type: lecture
+        video: LRpm2kd9vQI
+
+      - name: "cJSON: Case Study extending 27% Static Code Coverage to 70%"
+        type: lecture
+        video: KOHb0y_Oiko
+        slides: 1Da3GXF5fJjJdF5JhO6VDYcNbz3wCSXOLJPKueyCdEBw
+
+      - name: "Submitting your fuzz driver to Google"
+        type: lecture
+        slides: 1wY-6xqYhhzf4uf272UMjHPh8KZ4sc1fjgcKuGrsa4ks
+
+    challenges:
+
+      - id: 1-locate
+        name: Locate Harnesses
+        description: Locate the fuzz harnesses in a project.  Run /challenge/training in Terminal to start.
+
+      - id: 2-change
+        name: Modify a Fuzzing Harness
+        description: Make a change to a fuzzing harness.  Run /challenge/training in Terminal to start.
+
+      - id: 3-broken
+        name: Fix Broken Fuzzing Harness
+        description: Repair a broken fuzzing harness.  Run /challenge/training in Terminal to start.
+
+      - id: 4-parameters
+        name: Initial Parameters
+        description: Increase code coverage by selecting better initial parameters.  Run /challenge/training in Terminal to start.
+
+      - id: 5-calltree
+        name: Improve Coverage Using the Call Tree
+        description: Find a function higher in the call tree that calls this function and fuzz it instead.  Run /challenge/training in Terminal to start.
+
+      - id: 6-seedcorpus
+        name: Implement Seed Corpus
+        description: Implement a seed corpus.  Run /challenge/training in Terminal to start.
+
+      - id: 7-newdriver
+        name: Create New Fuzz Driver
+        description: Search for unreached code within a project and create a simple fuzz driver to increase total project code coverage.  Run /challenge/training in Terminal to start.
+
+      - id: 8-oss-build
+        name: OSS-Fuzz - Build a Project
+        description: OSS-Fuzz challenges simulate a clean linux setup with only the OSS-Fuzz library available. Learn how to compile a project using only OSS-Fuzz.
+
+      - id: 9-oss-loc
+        name: OSS-Fuzz - Code Coverage
+        description: Run a code coverage report in this challenge
+
+      - id: 10-oss-fi
+        name: OSS-Fuzz - Fuzz Introspector
+        description: Run a Fuzz Introspector report
+
+      - id: 11-add-newfuzzer
+        name: OSS-Fuzz - Add new_fuzzer
+        description: Go through the steps to add a new fuzz driver to an existing OSS-Fuzz project aspell-fuzz
+
+  - id: exercises
+    name: Real World Fuzzing
+    description: Challenges in this module MUST be completed in order.  Challenges are locked unless the previous challenge is completed.
+
+    challenges:
+
+      - id: level-1-0
+        name: Level 1.0 Practice
+
+      - id: level-1-1
+        name: Level 1.1 Practice
+
+      - id: level-2-0
+        progression_locked: true
+        name: Level 2.0 Project
+
+      - id: level-2-1
+        progression_locked: true
+        name: Level 2.1 Project

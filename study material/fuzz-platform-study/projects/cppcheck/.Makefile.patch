@@ -1,0 +1,25 @@
+@@ -106,11 +106,14 @@
+ no-fuzz: $(EXTOBJ) $(LIBOBJ) main_nofuzz.o type2.o
+ 	${CXX} $(CPPFLAGS) ${CXXFLAGS} -o $@ $^
+ 
++newfuzzer:  $(EXTOBJ) $(LIBOBJ) newfuzzer.o type2.o
++	${CXX} $(CPPFLAGS) ${CXXFLAGS} -o $@ $^ ${LIB_FUZZING_ENGINE}
++
+ translate: translate.o type2.o
+ 	${CXX} -std=c++11 -g ${CXXFLAGS} -o $@ type2.cpp translate.cpp
+ 
+ clean:
+-	rm -f *.o build/*.o oss-fuzz-client no-fuzz translate
++	rm -f *.o build/*.o oss-fuzz-client no-fuzz translate newfuzzer
+ 
+ preprare-samples:
+ 	rm -rf samples
+@@ -338,5 +341,8 @@
+ main.o: main.cpp type2.h
+ 	$(CXX) ${LIB_FUZZING_ENGINE} $(CPPFLAGS) $(CXXFLAGS) -c -o $@ main.cpp
+ 
++newfuzzer.o: newfuzzer.cpp type2.h
++	$(CXX) ${LIB_FUZZING_ENGINE} $(CPPFLAGS) $(CXXFLAGS) -c -o $@ newfuzzer.cpp
++
+ main_nofuzz.o: main.cpp type2.h
+ 	$(CXX) ${LIB_FUZZING_ENGINE} $(CPPFLAGS) $(CXXFLAGS) -DNO_FUZZ -c -o $@ main.cpp

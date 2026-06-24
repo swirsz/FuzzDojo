@@ -1,0 +1,10 @@
+--- build.sh	2023-09-12 02:34:35.642703117 +0000
++++ build.sh	2023-09-12 02:35:37.050973386 +0000
+@@ -36,3 +36,7 @@
+ $CXX $CXXFLAGS -I $SRC/trunk/xvidcore/src/ \
+     $SRC/oss-fuzz-fuzzers/xvid/fuzzer.cpp ./libxvidcore.a \
+     $LIB_FUZZING_ENGINE -o $OUT/fuzzer-decoder
++
++$CXX $CXXFLAGS -I $SRC/trunk/xvidcore/src/ \
++    $SRC/oss-fuzz-fuzzers/xvid/newfuzzer.cpp ./libxvidcore.a \
++    $LIB_FUZZING_ENGINE -o $OUT/newfuzzer

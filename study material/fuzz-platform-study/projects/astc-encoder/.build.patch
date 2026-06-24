@@ -1,0 +1,10 @@
+--- build.sho	2025-05-21 22:37:45.433348734 +0000
++++ build.sh	2025-05-21 22:38:03.822012474 +0000
+@@ -54,5 +54,5 @@
+ done
+ 
+ # Cleanup temporary build files
+-rm *.o
+-rm *.a
++#rm *.o
++#rm *.a

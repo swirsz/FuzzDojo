@@ -1,0 +1,12 @@
+--- /opt/oss-fuzz/infra/base-images/base-builder/compile_afl	2024-03-24 15:41:51.852237309 -0700
++++ base-builder/compile_afl	2024-05-09 19:33:35.248609958 -0700
+@@ -23,6 +23,9 @@
+ 
+ # Copy AFL++ tools necessary for fuzzing.
+ pushd $SRC/aflplusplus > /dev/null
++export CFLAGS="-O1 -fno-omit-frame-pointer -gline-tables-only -DFUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION"
++export CXXFLAGS_EXTRA="-stdlib=libc++"
++export CXXFLAGS="$CFLAGS $CXXFLAGS_EXTRA"
+ 
+ cp -f libAFLDriver.a $LIB_FUZZING_ENGINE
+ 

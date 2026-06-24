@@ -1,0 +1,10 @@
+#!/usr/local/bin/python3
+import os
+from pathlib import Path
+import random
+import shutil
+import subprocess
+import re  
+
+with open("/etc/bash.bashrc", "a") as f:
+    f.write("source /usr/local/sbin/ossfuzz\n")

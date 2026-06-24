@@ -1,0 +1,11 @@
+--- build.sho	2024-05-24 20:18:13.131661810 +0000
++++ build.sh	2024-05-24 20:18:37.616538005 +0000
+@@ -17,7 +17,7 @@
+ 
+ if [ "$SANITIZER" == "introspector" ]; then
+   cd $SRC/
+-  python3 -m pip install Brotli
++#  python3 -m pip install Brotli
+   cd $SRC/woff2
+ fi
+ 

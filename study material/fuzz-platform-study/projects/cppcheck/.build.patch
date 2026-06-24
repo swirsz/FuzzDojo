@@ -1,0 +1,11 @@
+--- build.sho	2025-02-20 21:52:27.088387112 +0000
++++ build.sh	2025-02-20 22:20:55.719946232 +0000
+@@ -19,6 +19,6 @@
+ 
+ cd $SRC/cppcheck/oss-fuzz
+ make -j$(nproc) oss-fuzz-client
+-cp oss-fuzz-client $OUT/
+-
++make -j$(nproc) newfuzzer
++cp oss-fuzz-client newfuzzer $OUT/
+ 

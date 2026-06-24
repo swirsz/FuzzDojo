@@ -1,0 +1,46 @@
+#!/bin/bash
+. /usr/local/sbin/e
+export LABEL=$1
+export PROJECT_NAME=example
+export SANITIZER=$1
+if [ -z "$SANITIZER" ]; then
+    export SANITIZER='none'
+    export LABEL='none'$LABEL
+fi
+
+if [ ! -d "/src-orig" ]; then
+#----------------------------------------------------------------------
+    #apt-get update && apt-get install -y make cmake pkg-config libssl-dev:i386
+    #git clone https://github.com/google/oss-fuzz.git example
+    mkdir -p $SRC/projects
+    cp -r /downloads/example/projects/example $SRC/projects
+    cp /opt/oss-fuzz/projects/$PROJECT_NAME/build.sh $SRC/
+    
+    cp /challenge/do_stuff_unittest.cpp $SRC/projects/example/my-api-repo
+    cp /challenge/do_stuff_fuzzer.cpp $SRC/projects/example/my-api-repo
+    cp /challenge/my_api.cpp $SRC/projects/example/my-api-repo
+
+    cp /opt/oss-fuzz/projects/$PROJECT_NAME/build.sh $SRC/
+#----------------------------------------------------------------------
+    build-cleanup
+fi
+build-srcfolders
+mv /src-$LABEL /src
+
+cd $SRC
+#----------------------------------------------------------------------
+if [ ! -d "/home/hacker/fuzz-platform/training-fix-broken" ]; then
+   mkdir -p /home/hacker/fuzz-platform/training-fix-broken
+   
+   cp -r $SRC/projects/example/my-api-repo/* /home/hacker/fuzz-platform/training-fix-broken
+   cp $SRC/build.sh /home/hacker/fuzz-platform/training-fix-broken
+else
+   cp /home/hacker/fuzz-platform/training-fix-broken/* $SRC/projects/example/my-api-repo
+   cp /home/hacker/fuzz-platform/training-fix-broken/build.sh $SRC
+fi
+export PROJECT_NAME=training-fix-broken
+#----------------------------------------------------------------------
+fuzzlog
+compile
+drivers
+mv /src /src-$LABEL

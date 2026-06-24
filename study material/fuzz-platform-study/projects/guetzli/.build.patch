@@ -1,0 +1,11 @@
+--- build.sho	2024-05-28 03:25:27.862034662 +0000
++++ build.sh	2024-05-28 03:29:48.627182818 +0000
+@@ -20,3 +20,8 @@
+   -o $OUT/guetzli_fuzzer bin/Release/libguetzli_static.a
+ 
+ cp $SRC/guetzli_fuzzer_seed_corpus.zip $OUT/
++
++$CXX $CXXFLAGS -std=c++11 -I. fuzz_newfuzzer.cc $LIB_FUZZING_ENGINE \
++  -o $OUT/fuzz_newfuzzer bin/Release/libguetzli_static.a
++
++cp $SRC/guetzli_fuzzer_seed_corpus.zip $OUT/fuzz_newfuzzer_seed_corpus.zip

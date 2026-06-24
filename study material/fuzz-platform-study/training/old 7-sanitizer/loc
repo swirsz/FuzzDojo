@@ -1,0 +1,7 @@
+#!/bin/bash
+INITIAL=71
+TARGET=999
+/usr/local/sbin/loc_count $INITIAL $TARGET $@
+echo
+echo Note: You will need to run /challenge/loc2 to win this challenge
+echo

@@ -1,0 +1,17 @@
+--- CMakeLists.txt.o	2023-09-12 18:04:41.811055045 +0000
++++ CMakeLists.txt	2023-09-12 18:10:00.596971153 +0000
+@@ -25,6 +25,14 @@
+ 	ArduinoJson
+ )
+ 
++add_executable(json_reproducer
++        new_fuzzer.cpp
++        reproducer.cpp
++)
++target_link_libraries(json_reproducer
++        ArduinoJson
++)
++
+ macro(add_fuzzer name)
+ 	set(FUZZER "${name}_fuzzer")
+ 	set(CORPUS_DIR "${CMAKE_CURRENT_SOURCE_DIR}/${name}_corpus")

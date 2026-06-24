@@ -1,0 +1,12 @@
+--- ossfuzz.sho	2025-05-16 21:55:48.550966647 +0000
++++ ossfuzz.sh	2025-05-20 21:35:03.653665881 +0000
+@@ -67,7 +70,8 @@
+     LANG=$1
+     DICT=$2
+     pushd /tmp
+-    wget -O- https://ftp.gnu.org/gnu/aspell/dict/${LANG}/$DICT.tar.bz2 | tar xfj -
++    #wget -O- https://ftp.gnu.org/gnu/aspell/dict/${LANG}/$DICT.tar.bz2 | tar xfj -
++    tar xfj $DICT.tar.bz2
+     pushd $DICT
+     ./configure
+     make install

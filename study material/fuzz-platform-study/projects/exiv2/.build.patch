@@ -1,0 +1,13 @@
+--- build.sho	2024-05-27 21:22:13.680138977 +0000
++++ build.sh	2024-05-27 21:23:59.212088850 +0000
+@@ -28,6 +28,10 @@
+ cp ./bin/fuzz-read-print-write $OUT
+ cp ../fuzz/exiv2.dict $OUT/fuzz-read-print-write.dict
+ 
++# Copy binary and dictionary to $OUT
++cp ./bin/fuzz-newfuzzer $OUT
++cp ../fuzz/exiv2.dict $OUT/fuzz-newfuzzer.dict
++
+ # Initialize the corpus, using the files in test/data
+ mkdir corpus
+ for f in $(find ../test/data -type f -size -20k); do

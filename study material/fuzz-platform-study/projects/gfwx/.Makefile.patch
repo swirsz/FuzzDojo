@@ -1,0 +1,11 @@
+@@ -1,6 +1,9 @@
+-all : fuzzer-encoder fuzzer-decoder
++all : fuzzer-encoder fuzzer-decoder newfuzzer
+ 
+ fuzzer-encoder : encoder.cpp
+ 	$(CXX) $(CXXFLAGS) -std=c++17 -D_GLIBCXX_DEBUG -Wall -Wextra -I fuzzing-headers/include encoder.cpp $(LIB_FUZZING_ENGINE) -o fuzzer-encoder
+ fuzzer-decoder : decoder.cpp
+ 	$(CXX) $(CXXFLAGS) -std=c++17 -D_GLIBCXX_DEBUG -Wall -Wextra -I fuzzing-headers/include decoder.cpp $(LIB_FUZZING_ENGINE) -o fuzzer-decoder
++newfuzzer : newfuzzer.cpp
++	$(CXX) $(CXXFLAGS) -std=c++17 -D_GLIBCXX_DEBUG -Wall -Wextra -I fuzzing-headers/include newfuzzer.cpp $(LIB_FUZZING_ENGINE) -o newfuzzer
++

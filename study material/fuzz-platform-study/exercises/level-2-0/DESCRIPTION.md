@@ -1,0 +1,3 @@
+Your goal for this challenge is to create a new fuzz driver to improve the project's code coverage.  A flag is awarded when the code coverage is improved by 5%.  To receive the flag after code coverage has been improved, either run /challenge/loc (for Fuzz Platform Challenges) or follow the instructions in the training 'OSS-Fuzz - Code Coverage.'  The challenge is chosen randomly from a pool of possible projects.  If you run into any problems, contact @Dradis on Discord.
+
+See /challenge/DESCRIPTION.md for details

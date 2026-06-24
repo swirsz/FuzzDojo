@@ -1,0 +1,10 @@
+--- CMakeLists.txt.o	2023-09-11 01:18:13.804748583 +0000
++++ CMakeLists.txt	2023-09-11 01:10:54.323075373 +0000
+@@ -25,6 +25,6 @@
+   target_compile_features(${name} PRIVATE cxx_std_14)
+ endfunction()
+ 
+-foreach (source chrono-duration.cc chrono-timepoint.cc float.cc named-arg.cc one-arg.cc two-args.cc)
++foreach (source chrono-duration.cc chrono-timepoint.cc float.cc named-arg.cc one-arg.cc two-args.cc newfuzzer.cc)
+   add_fuzzer(${source})
+ endforeach ()

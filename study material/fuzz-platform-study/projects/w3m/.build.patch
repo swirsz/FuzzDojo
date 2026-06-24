@@ -1,0 +1,12 @@
+--- build.sho	2024-05-30 00:49:14.722043416 +0000
++++ build.sh	2024-05-30 00:52:16.960984405 +0000
+@@ -30,3 +30,9 @@
+ static_libgc=($(find /usr/lib -name "libgc.a"))
+ $CXX $CXXFLAGS $LIB_FUZZING_ENGINE fuzz_conv.o -o $OUT/fuzz_conv \
+     -I./libwc  -DUSE_UNICODE -I. -I./.. -DHAVE_CONFIG_H ../Str.o ../myctype.o libwc.a ${static_libgc}
++
++$CC $CFLAGS -c ../fuzz/fuzz-newfuzzer.c -o fuzz-newfuzzer.o -I../ -I./
++static_libgc=($(find /usr/lib -name "libgc.a"))
++$CXX $CXXFLAGS $LIB_FUZZING_ENGINE fuzz-newfuzzer.o -o $OUT/fuzz-newfuzzer \
++    -I./libwc  -DUSE_UNICODE -I. -I./.. -DHAVE_CONFIG_H ../Str.o ../myctype.o libwc.a ${static_libgc}
++

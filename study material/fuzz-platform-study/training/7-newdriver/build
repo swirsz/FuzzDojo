@@ -1,0 +1,46 @@
+#!/bin/bash
+if [ "$?" -gt 0 ]; then
+    exit 1
+fi
+. /usr/local/sbin/e
+export LABEL=$1
+export PROJECT_NAME=avahi
+export SANITIZER=$1
+if [ -z "$SANITIZER" ]; then
+    export SANITIZER='none'
+    export LABEL='none'$LABEL
+fi
+
+if [ ! -d "/src-orig" ]; then
+#----------------------------------------------------------------------
+    #apt-get update && \
+    #   apt-get install -y autoconf gettext libtool m4 automake pkg-config libexpat-dev libexpat-dev:i386
+    #git clone --depth 1 https://github.com/lathiat/avahi
+    #git clone --depth 1 https://github.com/anon/avahi
+    #git clone --depth 1 https://github.com/avahi/avahi
+    cp -r /downloads/swavahi $SRC/avahi
+
+    cp /opt/oss-fuzz/projects/$PROJECT_NAME/build.sh $SRC/
+    #cp /challenge/.fuzz-packet_seed_corpus.zip $OUT/fuzz-packet_seed_corpus.zip
+    cp $SRC/$PROJECT_NAME/fuzz/fuzz-consume-record.c $SRC/$PROJECT_NAME/fuzz/fuzz-newfuzzer.c
+    patch -tuN $SRC/avahi/fuzz/oss-fuzz.sh -i /challenge/.oss-fuzz.patch -r -
+#----------------------------------------------------------------------
+    build-cleanup
+fi
+build-srcfolders
+mv /src-$LABEL /src
+
+cd $SRC/$PROJECT_NAME
+#----------------------------------------------------------------------
+if [ ! -d "/home/hacker/fuzz-platform/training-create-newdriver" ]; then
+   mkdir -p /home/hacker/fuzz-platform/training-create-newdriver
+   cp $SRC/$PROJECT_NAME/fuzz/*.c /home/hacker/fuzz-platform/training-create-newdriver
+else
+   cp /home/hacker/fuzz-platform/training-create-newdriver/*.c $SRC/$PROJECT_NAME/fuzz
+fi
+export PROJECT_NAME=training-create-newdriver
+#----------------------------------------------------------------------
+fuzzlog
+compile
+drivers
+mv /src /src-$LABEL

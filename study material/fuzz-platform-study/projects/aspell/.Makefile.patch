@@ -1,0 +1,21 @@
+--- Makefile.amo	2025-05-20 21:15:40.186854918 +0000
++++ Makefile.am	2025-05-20 21:18:55.543831955 +0000
+@@ -17,7 +17,7 @@
+ endif
+ 
+ noinst_PROGRAMS = \
+-	aspell_fuzzer
++	aspell_fuzzer new_fuzzer
+ noinst_LIBRARIES = \
+ 	libstandaloneengine.a
+ 
+@@ -25,5 +25,9 @@
+ aspell_fuzzer_CXXFLAGS = $(AM_CXXFLAGS) $(FUZZ_FLAG)
+ aspell_fuzzer_LDFLAGS = $(AM_LDFLAGS) -static
+ 
++new_fuzzer_SOURCES = new_fuzzer.cpp
++new_fuzzer_CXXFLAGS = $(AM_CXXFLAGS) $(FUZZ_FLAG)
++new_fuzzer_LDFLAGS = $(AM_LDFLAGS) -static
++
+ libstandaloneengine_a_SOURCES = standaloneengine.cpp testinput.hpp
+ libstandaloneengine_a_CXXFLAGS = $(AM_CXXFLAGS)

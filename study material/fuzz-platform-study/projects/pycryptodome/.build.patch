@@ -1,0 +1,9 @@
+@@ -52,3 +52,8 @@
+ $CXX $CXXFLAGS ${PCD_FLAGS[@]} \
+     $SRC/pcd_aes_fuzzer.cc -o $OUT/aes_fuzzer \
+     $LIB_FUZZING_ENGINE $WORK/libpycryptodome.a
++
++$CXX $CXXFLAGS ${PCD_FLAGS[@]} \
++    $SRC/newfuzzer.cc -o $OUT/newfuzzer \
++    $LIB_FUZZING_ENGINE $WORK/libpycryptodome.a
++

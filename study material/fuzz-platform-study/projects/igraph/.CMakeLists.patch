@@ -1,0 +1,7 @@
+--- CMakeLists.txto	2025-10-13 16:38:21.548798227 +0000
++++ CMakeLists.txt	2025-10-13 03:50:29.071809208 +0000
+@@ -29,3 +29,4 @@
+ add_fuzzer(vertex_separators)
+ add_fuzzer(write_all_gml)
+ add_fuzzer(write_all_graphml)
++add_fuzzer(newfuzzer)

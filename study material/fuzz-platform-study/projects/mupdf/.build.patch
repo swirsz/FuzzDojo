@@ -1,0 +1,15 @@
+--- build.sho	2024-05-29 18:51:05.932858478 +0000
++++ build.sh	2024-05-29 18:51:58.182693789 +0000
+@@ -26,6 +26,12 @@
+     $SRC/pdf_fuzzer.cc -o $OUT/$fuzz_target \
+     $LIB_FUZZING_ENGINE $WORK/libmupdf.a $WORK/libmupdf-third.a
+ 
++fuzz_target=new_fuzzer
++
++$CXX $CXXFLAGS -std=c++11 -Iinclude \
++    $SRC/new_fuzzer.cc -o $OUT/$fuzz_target \
++    $LIB_FUZZING_ENGINE $WORK/libmupdf.a $WORK/libmupdf-third.a
++
+ mv $SRC/{*.zip,*.dict,*.options} $OUT
+ 
+ if [ ! -f "${OUT}/${fuzz_target}_seed_corpus.zip" ]; then

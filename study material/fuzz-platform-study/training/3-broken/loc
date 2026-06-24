@@ -1,0 +1,8 @@
+#!/bin/bash
+INITIAL=76
+TARGET=95
+/usr/local/sbin/loc_count $INITIAL $TARGET $@
+echo
+echo If you do not reach 100% code coverage, then run either loc then report, or
+echo fuzz-introspector to see what lines of code are not being executed.
+echo

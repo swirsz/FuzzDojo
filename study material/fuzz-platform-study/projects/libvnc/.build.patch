@@ -1,0 +1,11 @@
+--- build.sho	2023-09-16 16:03:23.505909056 +0000
++++ build.sh	2023-09-16 16:04:41.454603416 +0000
+@@ -26,3 +26,8 @@
+ echo "RFB 003.008" > rfb_corpus
+ zip -r $OUT/fuzz_server_seed_corpus.zip rfb_corpus
+ echo "\"RFB \"" > $OUT/fuzz_server.dict
++
++# Adds simple corpus and dictionary
++echo "RFB 003.008" > rfb_corpus
++zip -r $OUT/fuzz_new_seed_corpus.zip rfb_corpus
++echo "\"RFB \"" > $OUT/fuzz_new.dict

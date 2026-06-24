@@ -1,0 +1,19 @@
+--- ossfuzz.sho	2025-03-26 19:50:44.504234794 +0000
++++ ossfuzz.sh	2025-03-26 19:56:33.804829290 +0000
+@@ -10,9 +10,15 @@
+ 
+ $CXX $CXXFLAGS $SRC/cjson/fuzzing/cjson_read_fuzzer.c -I. \
+     -o $OUT/cjson_read_fuzzer \
+-    $LIB_FUZZING_ENGINE $SRC/cjson/build/libcjson.a
++    $LIB_FUZZING_ENGINE $SRC/cjson/build/libcjson.a -pthreads
++
++$CXX $CXXFLAGS $SRC/cjson/fuzzing/newfuzzer.c -I. \
++    -o $OUT/newfuzzer \
++    $LIB_FUZZING_ENGINE $SRC/cjson/build/libcjson.a -pthreads
+ 
+ find $SRC/cjson/fuzzing/inputs -name "*" | \
+      xargs zip $OUT/cjson_read_fuzzer_seed_corpus.zip
+ 
+ cp $SRC/cjson/fuzzing/json.dict $OUT/cjson_read_fuzzer.dict
++
++cp $SRC/cjson/fuzzing/json.dict $OUT/newfuzzer.dict

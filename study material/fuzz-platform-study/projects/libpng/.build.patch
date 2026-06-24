@@ -1,0 +1,17 @@
+--- build.sho	2024-05-29 01:45:33.355974316 +0000
++++ build.sh	2024-05-29 01:47:22.730009301 +0000
+@@ -48,3 +48,14 @@
+ 
+ cp $SRC/libpng/contrib/oss-fuzz/*.dict \
+      $SRC/libpng/contrib/oss-fuzz/*.options $OUT/
++
++# build libpng_read_fuzzer.
++$CXX $CXXFLAGS -std=c++11 -I. \
++     $SRC/libpng/contrib/oss-fuzz/libpng_new_fuzzer.cc \
++     -o $OUT/libpng_new_fuzzer \
++     -lFuzzingEngine .libs/libpng16.a -lz
++
++# add seed corpus.
++find $SRC/libpng -name "*.png" | grep -v crashers | \
++     xargs zip $OUT/libpng_new_fuzzer_seed_corpus.zip
++

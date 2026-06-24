@@ -1,0 +1,4 @@
+#!/bin/bash
+INITIAL=78
+TARGET=83
+/usr/local/sbin/loc_count_oss $INITIAL $TARGET $@

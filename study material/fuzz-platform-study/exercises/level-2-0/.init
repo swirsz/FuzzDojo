@@ -1,0 +1,70 @@
+#!/usr/local/bin/python3
+import os
+from pathlib import Path
+import random
+import shutil
+import subprocess
+import re  
+
+result = subprocess.run(["findmnt", "-n", "--raw", "-o", "SOURCE", "/home/hacker"], capture_output=True, text=True)
+brackets = re.findall(r'\[([^\]]*)\]', result.stdout)
+digits = re.findall(r'\d+', brackets[0]) if brackets else []
+Platform_User_Id = int(digits[0]) if digits else None
+
+random.seed(Platform_User_Id)
+unused_random_float = random.random()
+study = 'fd' if random.randint(0,1) == 1 else 'oss'
+#difficulty = random.randint(1, 3)
+
+#testing
+#study = 'fd'
+
+#C 0
+#G 1
+#O 2
+#S 3
+#U 4
+filename = f"/tmp/{Platform_User_Id}.txt"
+with open(filename, "w") as f:
+    f.write("File created successfully.")
+    
+
+path = Path(f'/challenge/study-{study}')
+count = sum(1 for item in os.listdir(path) if item.isdigit() and (path / item).is_dir())
+
+exclude = random.randint(0, count-1)
+
+#testing
+#exclude = 4
+
+#no more snappy oss=only fd
+#no more unrar oss=only fd
+#no more openjpeg fd-only oss
+
+
+
+if exclude in [3]:
+    exclude = 4
+
+if exclude in [3, 2]:
+    study = 'oss'
+elif exclude in [0, 1, 4]:
+    study = 'fd'
+
+#path = Path(f'/challenge/study-{study}-{difficulty}')
+path = Path(f'/challenge/study-{study}')
+
+if study == 'oss':
+    #random.seed(Platform_User_Id*7331)
+    with open("/etc/bash.bashrc", "a") as f:
+        f.write("source /usr/local/sbin/ossfuzz\n")
+
+
+subdir = path / str(exclude)
+
+for file in subdir.iterdir():
+    shutil.move(str(file), f"/challenge/{file.name}")
+
+Path(__file__).unlink()
+shutil.rmtree(f'/challenge/study-fd', ignore_errors=True)
+shutil.rmtree(f'/challenge/study-oss', ignore_errors=True)

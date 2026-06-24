@@ -1,0 +1,14 @@
+--- oss-fuzz.sho	2025-03-19 20:59:22.758382151 +0000
++++ oss-fuzz.sh	2025-03-19 21:41:09.175115325 +0000
+@@ -42,7 +42,7 @@
+         "avahi-core/.libs/libavahi-core.a" "avahi-common/.libs/libavahi-common.a"
+ done
+ 
+-for t in consume-{key,record}; do
+-    wget -O "$OUT/fuzz-${t}_seed_corpus.zip" \
+-        "https://storage.googleapis.com/avahi-backup.clusterfuzz-external.appspot.com/corpus/libFuzzer/avahi_packet_${t//-/_}_fuzzer/public.zip"
+-done
++#for t in consume-{key,record}; do
++#    wget -O "$OUT/fuzz-${t}_seed_corpus.zip" \
++#        "https://storage.googleapis.com/avahi-backup.clusterfuzz-external.appspot.com/corpus/libFuzzer/avahi_packet_${t//-/_}_fuzzer/public.zip"
++#done

@@ -1,0 +1,9 @@
+@@ -7,7 +7,7 @@
+     exit 1
+ fi
+ 
++SRC_DIR=/src
+-SRC_DIR=$(dirname $0)/../..
+ 
+ cd $SRC_DIR/data/input/conformance
+ rm -f $OUT/opj_decompress_fuzzer_seed_corpus.zip

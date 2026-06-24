@@ -1,0 +1,13 @@
+--- /opt/oss-fuzz/infra/base-images/base-builder/precompile_afl	2024-03-24 15:41:51.856236814 -0700
++++ base-builder/precompile_afl	2024-05-04 19:20:03.890024710 -0700
+@@ -21,8 +21,8 @@
+ make clean
+ # Unset CFLAGS and CXXFLAGS while building AFL since we don't want to slow it
+ # down with sanitizers.
+-SAVE_CXXFLAGS=$CXXFLAGS
+-SAVE_CFLAGS=$CFLAGS
++# SAVE_CXXFLAGS=$CXXFLAGS
++# SAVE_CFLAGS=$CFLAGS
+ unset CXXFLAGS
+ unset CFLAGS
+ export AFL_IGNORE_UNKNOWN_ENVS=1

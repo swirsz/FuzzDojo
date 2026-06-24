@@ -1,0 +1,10 @@
+--- build.sh	2023-11-01 19:55:51.004204368 +0000
++++ build.sh	2023-11-01 19:56:51.479886612 +0000
+@@ -1,6 +1,6 @@
+ #!/bin/bash -eu
+ 
+-git submodule update --init --depth 1 thirdparty
++#git submodule update --init --depth 1 thirdparty
+ 
+ # This line causes an abort which breaks fuzzing:
+ sed -i '27d' include/valijson/utils/rapidjson_utils.hpp

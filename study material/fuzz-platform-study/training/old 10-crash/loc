@@ -1,0 +1,15 @@
+#!/bin/bash
+INITIAL=78
+TARGET=999
+/usr/local/sbin/loc_count2 $INITIAL $TARGET $@
+
+if compgen -G "/out/crash-*" > /dev/null
+then
+    echo
+    echo "Crashes detected within the /out directory!"
+    echo
+else
+    echo
+    echo Congratulations!  No crashes detected.
+    cat /flag
+fi

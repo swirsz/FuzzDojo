@@ -1,0 +1,28 @@
+#!/usr/local/bin/python3
+import os
+from pathlib import Path
+import random
+import shutil
+import subprocess
+import re  
+
+result = subprocess.run(["findmnt", "-n", "--raw", "-o", "SOURCE", "/home/hacker"], capture_output=True, text=True)
+brackets = re.findall(r'\[([^\]]*)\]', result.stdout)
+digits = re.findall(r'\d+', brackets[0]) if brackets else []
+Platform_User_Id = int(digits[0]) if digits else None
+
+random.seed(Platform_User_Id)
+study = 'fd' if Platform_User_Id * random.randint(0, 99) % 2 == 1 else 'oss'
+
+if study == 'oss':
+    with open("/etc/bash.bashrc", "a") as f:
+        f.write("source /usr/local/sbin/ossfuzz\n")
+    
+path = Path(f'/challenge/study-{study}')
+
+for file in path.iterdir():
+    shutil.move(str(file), f"/challenge/{file.name}")
+
+Path(__file__).unlink()
+shutil.rmtree(f'/challenge/study-fd')
+shutil.rmtree(f'/challenge/study-oss')

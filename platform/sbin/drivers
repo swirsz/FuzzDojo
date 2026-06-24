@@ -1,0 +1,8 @@
+#!/bin/bash
+echo
+echo First set environment with '. e' or '. eafl'
+echo Test with: run_fuzzer \<driver\>
+echo
+echo $(ls -p -I '*.*' -I 'afl*' -I 'llvm-symbolizer' -I "crash-*" -I "timeout-*" -I "TEMP*" /out | grep -v /)
+echo
+

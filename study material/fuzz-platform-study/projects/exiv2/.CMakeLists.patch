@@ -1,0 +1,7 @@
+--- CMakeLists.txt.o	2025-08-22 20:23:59.390822179 +0000
++++ CMakeLists.txt	2025-08-22 20:25:12.144911717 +0000
+@@ -14,3 +14,4 @@
+ 
+ FUZZER(fuzz-read-print-write)
+ FUZZER(fuzz-read-write)
++FUZZER(fuzz-newfuzzer)
