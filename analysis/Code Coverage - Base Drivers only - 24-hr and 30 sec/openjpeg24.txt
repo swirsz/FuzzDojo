@@ -43,7 +43,6 @@ _________________________________________________________
 
 
 Congratulations! Additional code coverage detected!
-pwn.college{practice}
 
 hacker@practice~projects~openjpeg-complex-22939-loc-5-4-2-min:/out$ ll /out
 bash: ll: command not found

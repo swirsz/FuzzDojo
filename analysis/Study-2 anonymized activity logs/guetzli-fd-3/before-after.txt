@@ -64,4 +64,4 @@ _________________________________________________________
 
 
 Congratulations! Additional code coverage detected!
-pwn.college{g
+anon.college{g

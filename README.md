@@ -1,1 +1,1 @@
-# FuzzDojo
+# Fuzz Platform open science materials

@@ -1,0 +1,4 @@
+#!/bin/bash
+INITIAL=20
+TARGET=25
+/usr/local/sbin/loc_count $INITIAL $TARGET $@

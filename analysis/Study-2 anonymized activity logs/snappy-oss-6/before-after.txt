@@ -80,4 +80,4 @@ _________________________________________________________
 
 
 Congratulations! Additional code coverage detected!
-pwn.college{E
+anon.college{E

@@ -137,7 +137,7 @@ _________________________________________________________
 
 
 Congratulations! Additional code coverage detected!
-pwn.college{
+anon.college{
 
 
 INFO: Running with entropic power schedule (0xFF, 100).
