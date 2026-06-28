@@ -8,7 +8,7 @@ image: anon/fuzz-base:latest
 
 description: |
 
-        Forum link: https://discord.com/channels/750635557666816031/1409993436328759328
+        Forum link: https://discord.com/anon
 
         Fuzzing is a powerful technique used in both academia and industry to automate software testing.  It has also become the standard approach for discovering zero-day vulnerabilities.  Google considers fuzzing to be their first line of defense, and has built an open source version of their fuzzing platform, known as OSS-Fuzz, to continually test popular open source software.  OSS-Fuzz has been used successfully in over a thousand projects.  However, due to its limitations, only about 30% of the code typically gets tested, leaving 70% unevaluated.
 
