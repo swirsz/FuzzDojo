@@ -1,0 +1,1814 @@
+Do a time calculation.  The timestamp of the last occurrence subtracted by the first occurrence.  Use military time and provide the total number of hours in a fractional form. If there is 90 minutes or greater between the two observances, this is a break and do not add this to the time.  If there is a single timestamp surrounded by 90+ minute breaks, do not count it.
+
+AB:
+
+-rwxrwxrwx 1 AW AW 57627 Sep 25  2025 2025-09-25--21-32-55-snappy.zip*
+-rwxrwxrwx 1 AW AW   600 Sep 25  2025 2025-09-25--21-35-56-loc.txt*
+-rwxrwxrwx 1 AW AW   619 Sep 25  2025 2025-09-25--21-38-25-loc.txt*
+
+-rwxrwxrwx 1 AW AW 57627 Oct  7  2025 2025-10-07--11-16-33-snappy.zip*
+-rwxrwxrwx 1 AW AW 61903 Oct 11  2025 2025-10-11--13-43-15-snappy.zip*
+-rwxrwxrwx 1 AW AW   643 Oct 11  2025 2025-10-11--14-00-31-loc.txt*
+-rwxrwxrwx 1 AW AW 61903 Oct 11  2025 2025-10-11--14-03-09-snappy.zip*
+-rwxrwxrwx 1 AW AW   766 Oct 11  2025 2025-10-11--14-21-05-loc.txt*
+
+| Date | First | Last | Duration | Fractional hours |
+|---|---:|---:|---:|---:|
+| Sep 25 | 21:32:55 | 21:38:25 | 00:05:30 | 0.0917 h |
+| Oct 7 | 11:16:33 | 11:16:33 | Single isolated timestamp | **0 h** |
+| Oct 11 | 13:43:15 | 14:21:05 | 00:37:50 | 0.6306 h |
+
+The Oct. 7 timestamp is excluded because it is a single timestamp surrounded by breaks exceeding 90 minutes.
+
+Total counted time:
+\[
+0.0917 + 0.6306 = \boxed{0.7222\text{ hours}}
+\]
+So the total is 0.72 hours, or 43 minutes 20 seconds.
+
+________________________________________________________________
+
+-rwxrwxrwx 1 AW AW  2254 Oct 27  2025 2025-10-27--09-24-27-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW  2254 Oct 27  2025 2025-10-27--10-29-19-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW  3367 Oct 27  2025 2025-10-27--10-34-22-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW  3367 Oct 27  2025 2025-10-27--10-35-58-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW  3367 Oct 27  2025 2025-10-27--10-46-15-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW  2924 Oct 27  2025 2025-10-27--10-57-38-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW  2924 Oct 27  2025 2025-10-27--10-59-41-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW  2614 Oct 27  2025 2025-10-27--11-00-38-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW  2614 Oct 27  2025 2025-10-27--11-01-50-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   601 Oct 27  2025 2025-10-27--11-04-15-loc.txt*
+
+There are no gaps ≥90 minutes, so this is one continuous session.
+
+First: 09:24:27
+Last: 11:04:15
+
+Elapsed: 1:39:48
+
+Fractional hours: 1.6633 hours (≈ 1.66 hours)
+
+________________________________________________________________
+
+AC:
+
+
+
+-rwxrwxrwx 1 AW AW 57971 Nov  2  2025 2025-11-02--00-12-00-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW   619 Nov  2  2025 2025-11-02--00-20-49-loc.txt*
+-rwxrwxrwx 1 AW AW   481 Nov  2  2025 2025-11-02--01-25-18-loc.txt*
+-rwxrwxrwx 1 AW AW   600 Nov  2  2025 2025-11-02--01-25-22-loc.txt*
+-rwxrwxrwx 1 AW AW 57971 Nov  2  2025 2025-11-02--01-25-36-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 57971 Nov  2  2025 2025-11-02--01-26-36-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 57971 Nov  2  2025 2025-11-02--02-05-48-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW   619 Nov  2  2025 2025-11-02--02-07-31-loc.txt*
+-rwxrwxrwx 1 AW AW 57971 Nov  2  2025 2025-11-02--02-09-51-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW   619 Nov  2  2025 2025-11-02--02-15-19-loc.txt*
+-rwxrwxrwx 1 AW AW 57971 Nov  2  2025 2025-11-02--02-22-07-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 57971 Nov  2  2025 2025-11-02--02-26-07-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 57971 Nov  2  2025 2025-11-02--02-29-39-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW   619 Nov  2  2025 2025-11-02--02-34-37-loc.txt*
+-rwxrwxrwx 1 AW AW   600 Nov  2  2025 2025-11-02--02-37-24-loc.txt*
+-rwxrwxrwx 1 AW AW 57971 Nov  2  2025 2025-11-02--02-37-54-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 57971 Nov  2  2025 2025-11-02--02-39-12-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 58143 Nov  2  2025 2025-11-02--02-44-47-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 58149 Nov  2  2025 2025-11-02--02-48-11-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 58159 Nov  2  2025 2025-11-02--02-50-53-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW   620 Nov  2  2025 2025-11-02--02-52-53-loc.txt*
+-rwxrwxrwx 1 AW AW 58355 Nov  2  2025 2025-11-02--03-05-55-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 58337 Nov  2  2025 2025-11-02--03-12-43-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 58335 Nov  2  2025 2025-11-02--03-15-07-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 58165 Nov  2  2025 2025-11-02--03-19-17-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 57971 Nov  2  2025 2025-11-02--16-20-27-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 58165 Nov  2  2025 2025-11-02--16-30-32-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW   620 Nov  2  2025 2025-11-02--16-35-33-loc.txt*
+
+There is one ≥90-minute break: **03:19:17 → 16:20:27**, so that interval is excluded. The **00:12:00 → 01:25:18 gap is only 73:18**, so it remains part of the first session.
+
+| Session | First | Last | Duration | Fractional hours |
+|---|---:|---:|---:|---:|
+| 1 | 00:12:00 | 03:19:17 | 3:07:17 | 3.1214 |
+| 2 | 16:20:27 | 16:35:33 | 0:15:06 | 0.2517 |
+
+**Total counted time: 3:22:23**
+
+**Fractional hours: \(\boxed{3.3731}\)** ≈ **3.37 hours**
+
+
+
+________________________________________________________________
+
+-rwxrwxrwx 1 AW AW  8755 Oct  1  2025 2025-10-01--23-12-28-openjpeg.zip*
+-rwxrwxrwx 1 AW AW   753 Oct  1  2025 2025-10-01--23-14-12-loc.txt*
+-rwxrwxrwx 1 AW AW  8865 Oct  1  2025 2025-10-01--23-33-53-openjpeg.zip*
+-rwxrwxrwx 1 AW AW  8870 Oct  1  2025 2025-10-01--23-36-38-openjpeg.zip*
+-rwxrwxrwx 1 AW AW  8870 Oct  1  2025 2025-10-01--23-38-55-openjpeg.zip*
+-rwxrwxrwx 1 AW AW  8870 Oct  1  2025 2025-10-01--23-40-04-openjpeg.zip*
+-rwxrwxrwx 1 AW AW   266 Oct  1  2025 2025-10-01--23-41-08-loc.txt*
+-rwxrwxrwx 1 AW AW  8877 Oct  1  2025 2025-10-01--23-41-45-openjpeg.zip*
+-rwxrwxrwx 1 AW AW   753 Oct  1  2025 2025-10-01--23-43-29-loc.txt*
+-rwxrwxrwx 1 AW AW  8892 Oct  1  2025 2025-10-01--23-49-14-openjpeg.zip*
+-rwxrwxrwx 1 AW AW  8892 Oct  1  2025 2025-10-01--23-50-49-openjpeg.zip*
+-rwxrwxrwx 1 AW AW   753 Oct  1  2025 2025-10-01--23-52-35-loc.txt*
+-rwxrwxrwx 1 AW AW  8892 Oct  2  2025 2025-10-02--00-00-28-openjpeg.zip*
+-rwxrwxrwx 1 AW AW   753 Oct  2  2025 2025-10-02--00-02-17-loc.txt*
+-rwxrwxrwx 1 AW AW  8905 Oct  2  2025 2025-10-02--00-06-02-openjpeg.zip*
+-rwxrwxrwx 1 AW AW   754 Oct  2  2025 2025-10-02--00-07-50-loc.txt*
+-rwxrwxrwx 1 AW AW  8913 Oct  2  2025 2025-10-02--00-11-36-openjpeg.zip*
+-rwxrwxrwx 1 AW AW   754 Oct  2  2025 2025-10-02--00-13-24-loc.txt*
+-rwxrwxrwx 1 AW AW  8913 Oct  2  2025 2025-10-02--00-19-28-openjpeg.zip*
+-rwxrwxrwx 1 AW AW  8913 Oct  2  2025 2025-10-02--00-20-55-openjpeg.zip*
+-rwxrwxrwx 1 AW AW   754 Oct  2  2025 2025-10-02--00-22-43-loc.txt*
+-rwxrwxrwx 1 AW AW  8913 Oct  2  2025 2025-10-02--11-04-26-openjpeg.zip*
+-rwxrwxrwx 1 AW AW  8745 Oct  2  2025 2025-10-02--11-35-17-openjpeg.zip*
+-rwxrwxrwx 1 AW AW   630 Oct  2  2025 2025-10-02--11-36-57-loc.txt*
+-rwxrwxrwx 1 AW AW  8745 Oct  2  2025 2025-10-02--11-38-37-openjpeg.zip*
+-rwxrwxrwx 1 AW AW  8751 Oct  2  2025 2025-10-02--11-39-18-openjpeg.zip*
+-rwxrwxrwx 1 AW AW  8759 Oct  2  2025 2025-10-02--11-41-00-openjpeg.zip*
+-rwxrwxrwx 1 AW AW  8759 Oct  2  2025 2025-10-02--11-41-39-openjpeg.zip*
+-rwxrwxrwx 1 AW AW   759 Oct  2  2025 2025-10-02--11-43-27-loc.txt*
+
+There is one break ≥90 minutes, from 00:22:43 to 11:04:26, so that interval is excluded.
+Session	First	Last	Duration	Fractional hours
+Oct 1–2	23:12:28	00:22:43	1:10:15	1.1708
+Oct 2	11:04:26	11:43:27	0:39:01	0.6503
+
+
+Total counted time: 1:49:16
+
+Fractional hours: \(\boxed{1.8211}\) ≈ 1.82 hours
+
+________________________________________________________________
+
+AI
+
+
+-rwxrwxrwx 1 AW AW    571 Oct 18  2025 2025-10-18--23-59-22-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    445 Oct 18  2025 2025-10-18--23-59-46-loc.txt*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--00-00-51-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    445 Oct 19  2025 2025-10-19--00-08-00-loc.txt*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--00-09-38-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--00-12-47-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    445 Oct 19  2025 2025-10-19--00-14-20-loc.txt*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--00-17-31-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    445 Oct 19  2025 2025-10-19--00-20-32-loc.txt*
+-rwxrwxrwx 1 AW AW    445 Oct 19  2025 2025-10-19--00-20-56-loc.txt*
+-rwxrwxrwx 1 AW AW    445 Oct 19  2025 2025-10-19--00-37-23-loc.txt*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--00-39-13-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--00-39-40-casync-oss.zip*
+-rwxrwxrwx 1 AW AW   7240 Oct 19  2025 2025-10-19--00-43-59-fi.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--00-46-14-casync-oss.zip*
+-rwxrwxrwx 1 AW AW   7243 Oct 19  2025 2025-10-19--00-50-13-fi.zip*
+-rwxrwxrwx 1 AW AW    374 Oct 19  2025 2025-10-19--00-51-13-loc.txt*
+-rwxrwxrwx 1 AW AW    374 Oct 19  2025 2025-10-19--00-52-50-loc.txt*
+-rwxrwxrwx 1 AW AW    374 Oct 19  2025 2025-10-19--00-53-49-loc.txt*
+-rwxrwxrwx 1 AW AW    374 Oct 19  2025 2025-10-19--00-54-57-loc.txt*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--00-57-35-casync-oss.zip*
+-rwxrwxrwx 1 AW AW   7236 Oct 19  2025 2025-10-19--01-01-52-fi.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--01-06-40-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--01-08-35-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--01-10-50-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--01-11-20-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--01-13-58-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--01-14-26-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--01-15-11-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--01-15-59-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--01-16-37-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--01-17-08-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--01-17-45-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--01-18-22-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--01-18-51-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--01-19-02-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    445 Oct 19  2025 2025-10-19--01-22-35-loc.txt*
+-rwxrwxrwx 1 AW AW    445 Oct 19  2025 2025-10-19--01-23-00-loc.txt*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--01-24-59-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    445 Oct 19  2025 2025-10-19--01-26-34-loc.txt*
+-rwxrwxrwx 1 AW AW    445 Oct 19  2025 2025-10-19--01-27-24-loc.txt*
+-rwxrwxrwx 1 AW AW    445 Oct 19  2025 2025-10-19--01-29-07-loc.txt*
+-rwxrwxrwx 1 AW AW    445 Oct 19  2025 2025-10-19--14-29-03-loc.txt*
+-rwxrwxrwx 1 AW AW    445 Oct 19  2025 2025-10-19--14-31-40-loc.txt*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--14-32-03-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    451 Oct 19  2025 2025-10-19--14-34-15-loc.txt*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--14-35-16-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--14-37-37-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    451 Oct 19  2025 2025-10-19--14-39-25-loc.txt*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--14-42-18-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    451 Oct 19  2025 2025-10-19--14-44-01-loc.txt*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--14-53-29-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    451 Oct 19  2025 2025-10-19--14-56-02-loc.txt*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--14-57-07-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--14-57-50-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--14-59-27-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--15-01-07-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--15-02-05-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--15-04-31-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--15-06-08-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--15-07-06-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--15-08-59-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    451 Oct 19  2025 2025-10-19--15-10-41-loc.txt*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--15-14-00-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    451 Oct 19  2025 2025-10-19--15-17-15-loc.txt*
+-rwxrwxrwx 1 AW AW    445 Oct 19  2025 2025-10-19--15-17-28-loc.txt*
+-rwxrwxrwx 1 AW AW    445 Oct 19  2025 2025-10-19--15-17-38-loc.txt*
+-rwxrwxrwx 1 AW AW    445 Oct 19  2025 2025-10-19--15-17-49-loc.txt*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--15-18-42-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    451 Oct 19  2025 2025-10-19--15-23-55-loc.txt*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--15-25-02-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--15-25-40-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    451 Oct 19  2025 2025-10-19--15-30-16-loc.txt*
+-rwxrwxrwx 1 AW AW    445 Oct 19  2025 2025-10-19--15-30-33-loc.txt*
+-rwxrwxrwx 1 AW AW    445 Oct 19  2025 2025-10-19--15-32-27-loc.txt*
+-rwxrwxrwx 1 AW AW    445 Oct 19  2025 2025-10-19--15-32-40-loc.txt*
+-rwxrwxrwx 1 AW AW    445 Oct 19  2025 2025-10-19--15-42-09-loc.txt*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--15-42-40-casync-oss.zip*
+-rwxrwxrwx 1 AW AW   7237 Oct 19  2025 2025-10-19--15-47-11-fi.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--15-48-13-casync-oss.zip*
+-rwxrwxrwx 1 AW AW   7238 Oct 19  2025 2025-10-19--15-52-16-fi.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 19  2025 2025-10-19--15-55-54-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    445 Oct 20  2025 2025-10-20--14-52-24-loc.txt*
+-rwxrwxrwx 1 AW AW    571 Oct 20  2025 2025-10-20--14-58-12-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 20  2025 2025-10-20--14-59-52-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 20  2025 2025-10-20--15-03-35-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 20  2025 2025-10-20--15-05-25-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 20  2025 2025-10-20--15-07-44-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 20  2025 2025-10-20--15-08-57-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    588 Oct 20  2025 2025-10-20--15-11-36-loc.txt*
+-rwxrwxrwx 1 AW AW    582 Oct 20  2025 2025-10-20--15-12-22-loc.txt*
+-rwxrwxrwx 1 AW AW    582 Oct 20  2025 2025-10-20--15-14-36-loc.txt*
+-rwxrwxrwx 1 AW AW    571 Oct 20  2025 2025-10-20--15-16-28-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    588 Oct 20  2025 2025-10-20--15-18-12-loc.txt*
+-rwxrwxrwx 1 AW AW    571 Oct 20  2025 2025-10-20--15-22-33-casync-oss.zip*
+-rwxrwxrwx 1 AW AW   9692 Oct 20  2025 2025-10-20--15-27-31-fi.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 20  2025 2025-10-20--15-28-20-casync-oss.zip*
+-rwxrwxrwx 1 AW AW   9713 Oct 20  2025 2025-10-20--15-33-03-fi.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 20  2025 2025-10-20--15-35-57-casync-oss.zip*
+-rwxrwxrwx 1 AW AW   9707 Oct 20  2025 2025-10-20--15-40-40-fi.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 20  2025 2025-10-20--15-42-21-casync-oss.zip*
+-rwxrwxrwx 1 AW AW   9716 Oct 20  2025 2025-10-20--15-47-29-fi.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 20  2025 2025-10-20--16-05-43-casync-oss.zip*
+-rwxrwxrwx 1 AW AW   9720 Oct 20  2025 2025-10-20--16-10-27-fi.zip*
+-rwxrwxrwx 1 AW AW    571 Oct 20  2025 2025-10-20--16-18-17-casync-oss.zip*
+-rwxrwxrwx 1 AW AW    594 Oct 20  2025 2025-10-20--16-19-50-loc.txt*
+
+Using the 90-minute break rule, there are three counted sessions:
+Session	First timestamp	Last timestamp	Duration	Fractional hours
+Oct. 18–19	23:59:22	01:29:07	1:29:45	1.4958
+Oct. 19	14:29:03	15:55:54	1:26:51	1.4475
+Oct. 20	14:52:24	16:19:50	1:27:26	1.4561
+
+
+The excluded breaks are 01:29:07 → 14:29:03 on Oct. 19 and 15:55:54 Oct. 19 → 14:52:24 Oct. 20.
+
+Total counted time: 4:24:02
+
+Fractional hours: \(\boxed{4.4006}\) ≈ 4.40 hours.
+
+________________________________________________________________
+
+
+-rwxrwxrwx 1 AW AW   8755 Oct 20  2025 2025-10-20--16-55-52-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   8755 Oct 21  2025 2025-10-21--13-54-19-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   8755 Oct 21  2025 2025-10-21--17-17-02-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW    753 Oct 21  2025 2025-10-21--17-18-51-loc.txt*
+-rwxrwxrwx 1 AW AW   9869 Oct 21  2025 2025-10-21--17-28-04-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  10152 Oct 21  2025 2025-10-21--17-34-59-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  10152 Oct 21  2025 2025-10-21--17-38-23-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW    898 Oct 21  2025 2025-10-21--17-40-20-loc.txt*
+
+Using the **90-minute break rule**:
+
+- **Oct. 20, 16:55:52** is an isolated timestamp, so **excluded**.
+- **Oct. 21, 13:54:19** is also isolated by gaps >90 minutes, so **excluded**.
+- The continuous session begins at **17:17:02** and ends at **17:40:20**.
+
+**Counted session:** 17:17:02 → 17:40:20  
+**Duration:** 00:23:18  
+**Fractional hours: \(\boxed{0.3883}\)** ≈ **0.39 hours**
+
+________________________________________________________________
+
+AJ
+
+-rwxrwxrwx 1 AW AW  2254 Dec  8  2025 2025-12-08--14-01-13-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW  2254 Dec  8  2025 2025-12-08--14-04-05-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   604 Dec  8  2025 2025-12-08--14-06-13-loc.txt*
+-rwxrwxrwx 1 AW AW  2354 Dec  8  2025 2025-12-08--14-24-55-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   604 Dec  8  2025 2025-12-08--14-26-03-loc.txt*
+-rwxrwxrwx 1 AW AW  3054 Dec  8  2025 2025-12-08--14-27-40-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   604 Dec  8  2025 2025-12-08--14-28-30-loc.txt*
+-rwxrwxrwx 1 AW AW  2950 Dec  8  2025 2025-12-08--14-38-05-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW  2950 Dec  8  2025 2025-12-08--14-40-04-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   267 Dec  8  2025 2025-12-08--14-42-03-loc.txt*
+-rwxrwxrwx 1 AW AW  3037 Dec  8  2025 2025-12-08--14-42-53-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   267 Dec  8  2025 2025-12-08--14-42-58-loc.txt*
+-rwxrwxrwx 1 AW AW  3045 Dec  8  2025 2025-12-08--14-43-16-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW  3045 Dec  8  2025 2025-12-08--14-47-29-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW  3045 Dec  8  2025 2025-12-08--14-47-56-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW  2114 Dec  8  2025 2025-12-08--14-51-20-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW  2114 Dec  8  2025 2025-12-08--14-52-44-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   595 Dec  8  2025 2025-12-08--14-54-35-loc.txt*
+-rwxrwxrwx 1 AW AW  2114 Dec  8  2025 2025-12-08--15-02-40-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   595 Dec  8  2025 2025-12-08--15-03-32-loc.txt*
+-rwxrwxrwx 1 AW AW  2114 Dec  8  2025 2025-12-08--15-03-50-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   604 Dec  8  2025 2025-12-08--15-04-45-loc.txt*
+-rwxrwxrwx 1 AW AW  2415 Dec  8  2025 2025-12-08--15-11-01-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW  2413 Dec  8  2025 2025-12-08--15-14-17-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW  2414 Dec  8  2025 2025-12-08--15-16-35-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   601 Dec  8  2025 2025-12-08--15-17-29-loc.txt*
+-rwxrwxrwx 1 AW AW  2436 Dec  8  2025 2025-12-08--15-20-16-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   601 Dec  8  2025 2025-12-08--15-21-08-loc.txt*
+-rwxrwxrwx 1 AW AW  2434 Dec  8  2025 2025-12-08--15-21-11-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   600 Dec  8  2025 2025-12-08--15-22-08-loc.txt*
+-rwxrwxrwx 1 AW AW  2434 Dec  8  2025 2025-12-08--15-22-11-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   601 Dec  8  2025 2025-12-08--15-23-06-loc.txt*
+-rwxrwxrwx 1 AW AW  2434 Dec  8  2025 2025-12-08--15-24-37-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   601 Dec  8  2025 2025-12-08--15-25-30-loc.txt*
+-rwxrwxrwx 1 AW AW  2444 Dec  8  2025 2025-12-08--15-27-21-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   604 Dec  8  2025 2025-12-08--15-28-14-loc.txt*
+-rwxrwxrwx 1 AW AW  2495 Dec  8  2025 2025-12-08--15-34-11-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   604 Dec  8  2025 2025-12-08--15-35-02-loc.txt*
+-rwxrwxrwx 1 AW AW   267 Dec  8  2025 2025-12-08--15-39-42-loc.txt*
+
+There are **no gaps ≥90 minutes**, so this is one continuous session.
+
+**First:** 14:01:13  
+**Last:** 15:39:42  
+**Duration:** 1:38:29  
+**Fractional hours:** **\(\boxed{1.6414}\)** ≈ **1.64 hours**
+
+________________________________________________________________
+
+
+-rwxrwxrwx 1 AW AW 57971 Dec  8  2025 2025-12-08--15-40-00-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 57971 Dec  8  2025 2025-12-08--15-42-01-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW   613 Dec  8  2025 2025-12-08--15-47-37-loc.txt*
+-rwxrwxrwx 1 AW AW   613 Dec  8  2025 2025-12-08--15-52-25-loc.txt*
+-rwxrwxrwx 1 AW AW   600 Dec  8  2025 2025-12-08--15-58-09-loc.txt*
+-rwxrwxrwx 1 AW AW   600 Dec  8  2025 2025-12-08--15-58-18-loc.txt*
+-rwxrwxrwx 1 AW AW   613 Dec  8  2025 2025-12-08--15-59-44-loc.txt*
+-rwxrwxrwx 1 AW AW   611 Dec  8  2025 2025-12-08--16-02-02-loc.txt*
+-rwxrwxrwx 1 AW AW   600 Dec  8  2025 2025-12-08--16-02-54-loc.txt*
+-rwxrwxrwx 1 AW AW   619 Dec  8  2025 2025-12-08--16-04-50-loc.txt*
+-rwxrwxrwx 1 AW AW   611 Dec  8  2025 2025-12-08--16-34-25-loc.txt*
+-rwxrwxrwx 1 AW AW   619 Dec  8  2025 2025-12-08--16-36-22-loc.txt*
+-rwxrwxrwx 1 AW AW   619 Dec  8  2025 2025-12-08--16-59-01-loc.txt*
+-rwxrwxrwx 1 AW AW   600 Dec  8  2025 2025-12-08--17-08-44-loc.txt*
+-rwxrwxrwx 1 AW AW   611 Dec  8  2025 2025-12-08--17-10-09-loc.txt*
+-rwxrwxrwx 1 AW AW   619 Dec  8  2025 2025-12-08--17-11-53-loc.txt*
+-rwxrwxrwx 1 AW AW   613 Dec  8  2025 2025-12-08--17-20-35-loc.txt*
+-rwxrwxrwx 1 AW AW   619 Dec  8  2025 2025-12-08--17-21-54-loc.txt*
+
+There are **no gaps ≥90 minutes**, so this is one continuous session.
+
+**First:** 15:40:00  
+**Last:** 17:21:54  
+**Duration:** 1:41:54  
+**Fractional hours:** **\(\boxed{1.6983}\)** ≈ **1.70 hours**
+
+________________________________________________________________
+
+AL
+
+
+-rwxrwxrwx 1 AW AW  8755 Oct 22  2025 2025-10-22--13-32-17-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  7594 Oct 22  2025 2025-10-22--13-39-03-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  7590 Oct 22  2025 2025-10-22--13-40-53-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  7596 Oct 22  2025 2025-10-22--13-44-12-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  7608 Oct 22  2025 2025-10-22--13-47-50-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  7593 Oct 22  2025 2025-10-22--13-52-32-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  7593 Oct 22  2025 2025-10-22--13-53-09-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   749 Oct 22  2025 2025-10-22--13-54-58-loc.txt*
+-rwxrwxrwx 1 AW AW  7609 Oct 22  2025 2025-10-22--13-55-39-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   749 Oct 22  2025 2025-10-22--13-57-25-loc.txt*
+-rwxrwxrwx 1 AW AW  7101 Oct 22  2025 2025-10-22--14-06-37-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   752 Oct 22  2025 2025-10-22--14-08-24-loc.txt*
+-rwxrwxrwx 1 AW AW  7020 Oct 22  2025 2025-10-22--17-03-44-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  7385 Oct 22  2025 2025-10-22--17-17-08-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   749 Oct 22  2025 2025-10-22--17-18-55-loc.txt*
+-rwxrwxrwx 1 AW AW  7444 Oct 22  2025 2025-10-22--17-23-27-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   752 Oct 22  2025 2025-10-22--17-25-15-loc.txt*
+-rwxrwxrwx 1 AW AW  7560 Oct 22  2025 2025-10-22--17-30-39-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   752 Oct 22  2025 2025-10-22--17-32-26-loc.txt*
+-rwxrwxrwx 1 AW AW  8946 Oct 22  2025 2025-10-22--17-43-06-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   755 Oct 22  2025 2025-10-22--17-44-54-loc.txt*
+-rwxrwxrwx 1 AW AW  8365 Oct 22  2025 2025-10-22--19-32-30-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  8365 Oct 22  2025 2025-10-22--19-33-20-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  8415 Oct 22  2025 2025-10-22--19-35-47-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  8415 Oct 22  2025 2025-10-22--19-36-50-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  8416 Oct 22  2025 2025-10-22--19-38-15-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   630 Oct 22  2025 2025-10-22--19-39-53-loc.txt*
+-rwxrwxrwx 1 AW AW  8405 Oct 22  2025 2025-10-22--19-40-52-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   755 Oct 22  2025 2025-10-22--19-42-36-loc.txt*
+-rwxrwxrwx 1 AW AW  8486 Oct 22  2025 2025-10-22--19-50-31-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   754 Oct 22  2025 2025-10-22--19-52-20-loc.txt*
+-rwxrwxrwx 1 AW AW  9264 Oct 22  2025 2025-10-22--19-54-02-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   755 Oct 22  2025 2025-10-22--19-55-49-loc.txt*
+-rwxrwxrwx 1 AW AW  9284 Oct 22  2025 2025-10-22--19-57-23-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   753 Oct 22  2025 2025-10-22--19-59-10-loc.txt*
+-rwxrwxrwx 1 AW AW  9286 Oct 22  2025 2025-10-22--20-01-36-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   755 Oct 22  2025 2025-10-22--20-03-22-loc.txt*
+-rwxrwxrwx 1 AW AW  9291 Oct 22  2025 2025-10-22--20-04-25-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   755 Oct 22  2025 2025-10-22--20-06-13-loc.txt*
+-rwxrwxrwx 1 AW AW  8380 Oct 22  2025 2025-10-22--20-15-04-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   755 Oct 22  2025 2025-10-22--20-16-50-loc.txt*
+-rwxrwxrwx 1 AW AW 10030 Oct 22  2025 2025-10-22--20-21-56-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   749 Oct 22  2025 2025-10-22--20-23-42-loc.txt*
+-rwxrwxrwx 1 AW AW 10070 Oct 22  2025 2025-10-22--20-29-34-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   759 Oct 22  2025 2025-10-22--20-31-33-loc.txt*
+
+Using the **90-minute break rule**, there are three sessions:
+
+| Session | First | Last | Duration | Fractional hours |
+|---|---:|---:|---:|---:|
+| 1 | 13:32:17 | 14:08:24 | 0:36:07 | 0.6019 |
+| 2 | 17:03:44 | 17:44:54 | 0:41:10 | 0.6861 |
+| 3 | 19:32:30 | 20:31:33 | 0:59:03 | 0.9842 |
+
+The gaps **14:08:24 → 17:03:44** and **17:44:54 → 19:32:30** exceed 90 minutes and are excluded.
+
+**Total counted time: 2:16:20**
+
+**Fractional hours: \(\boxed{2.2722}\)** ≈ **2.27 hours**
+
+________________________________________________________________
+
+
+-rwxrwxrwx 1 AW AW  2006 Oct 22  2025 2025-10-22--20-51-55-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  2884 Oct 22  2025 2025-10-22--20-55-44-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  2884 Oct 22  2025 2025-10-22--20-56-50-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  2884 Oct 22  2025 2025-10-22--21-00-19-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  2884 Oct 22  2025 2025-10-22--21-00-52-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  2884 Oct 22  2025 2025-10-22--21-02-20-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  2884 Oct 22  2025 2025-10-22--21-03-24-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  2884 Oct 22  2025 2025-10-22--21-05-05-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  2884 Oct 22  2025 2025-10-22--21-17-29-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  2884 Oct 22  2025 2025-10-22--21-19-06-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  2884 Oct 22  2025 2025-10-22--21-22-01-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  2884 Oct 22  2025 2025-10-22--21-28-30-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  2006 Oct 23  2025 2025-10-23--12-16-08-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  2006 Oct 23  2025 2025-10-23--12-18-04-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  2020 Oct 23  2025 2025-10-23--12-18-58-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  2898 Oct 23  2025 2025-10-23--12-20-10-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  2898 Oct 23  2025 2025-10-23--12-34-07-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  2911 Oct 23  2025 2025-10-23--12-37-00-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  2911 Oct 23  2025 2025-10-23--12-37-56-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW   592 Oct 23  2025 2025-10-23--12-40-52-loc.txt*
+-rwxrwxrwx 1 AW AW  2911 Oct 23  2025 2025-10-23--12-42-32-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW 14266 Oct 23  2025 2025-10-23--12-49-59-fi.zip*
+-rwxrwxrwx 1 AW AW  3099 Oct 23  2025 2025-10-23--12-59-37-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  2006 Oct 23  2025 2025-10-23--13-05-18-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  2899 Oct 23  2025 2025-10-23--13-07-39-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW   590 Oct 23  2025 2025-10-23--13-10-05-loc.txt*
+-rwxrwxrwx 1 AW AW  2913 Oct 23  2025 2025-10-23--13-12-30-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW   590 Oct 23  2025 2025-10-23--13-15-53-loc.txt*
+-rwxrwxrwx 1 AW AW  2913 Oct 23  2025 2025-10-23--13-19-26-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW   580 Oct 23  2025 2025-10-23--13-30-58-loc.txt*
+-rwxrwxrwx 1 AW AW  2913 Oct 23  2025 2025-10-23--13-41-43-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW   586 Oct 23  2025 2025-10-23--13-44-56-loc.txt*
+-rwxrwxrwx 1 AW AW  2913 Oct 23  2025 2025-10-23--13-47-54-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW 14645 Oct 23  2025 2025-10-23--13-55-38-fi.zip*
+-rwxrwxrwx 1 AW AW  4222 Oct 23  2025 2025-10-23--14-15-19-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  3420 Oct 23  2025 2025-10-23--14-22-07-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW   586 Oct 23  2025 2025-10-23--14-27-36-loc.txt*
+-rwxrwxrwx 1 AW AW  2006 Oct 23  2025 2025-10-23--14-43-00-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  2912 Oct 23  2025 2025-10-23--14-45-13-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  2912 Oct 23  2025 2025-10-23--14-46-19-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  2912 Oct 23  2025 2025-10-23--14-47-52-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW   593 Oct 23  2025 2025-10-23--14-51-52-loc.txt*
+-rwxrwxrwx 1 AW AW  3059 Oct 23  2025 2025-10-23--14-56-34-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  3059 Oct 23  2025 2025-10-23--14-58-35-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  3059 Oct 23  2025 2025-10-23--15-12-29-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  3114 Oct 23  2025 2025-10-23--15-13-25-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  3114 Oct 23  2025 2025-10-23--15-15-05-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  3144 Oct 23  2025 2025-10-23--15-15-48-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  2006 Oct 23  2025 2025-10-23--17-15-54-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  3144 Oct 23  2025 2025-10-23--17-19-13-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  3496 Oct 23  2025 2025-10-23--17-22-24-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  3505 Oct 23  2025 2025-10-23--17-23-40-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  3501 Oct 23  2025 2025-10-23--17-24-39-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  2006 Oct 23  2025 2025-10-23--17-29-04-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  2887 Oct 23  2025 2025-10-23--17-34-05-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  2924 Oct 23  2025 2025-10-23--17-35-16-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  2924 Oct 23  2025 2025-10-23--17-36-16-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  2006 Oct 23  2025 2025-10-23--17-37-01-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  2956 Oct 23  2025 2025-10-23--17-38-23-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  3330 Oct 23  2025 2025-10-23--17-40-38-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  3334 Oct 23  2025 2025-10-23--17-41-46-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  3346 Oct 23  2025 2025-10-23--17-43-38-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW   593 Oct 23  2025 2025-10-23--17-47-27-loc.txt*
+
+Using the **90-minute break rule**, there are three counted sessions:
+
+| Session | First | Last | Duration | Fractional hours |
+|---|---:|---:|---:|---:|
+| Oct. 22 | 20:51:55 | 21:28:30 | 0:36:35 | 0.6097 |
+| Oct. 23 | 12:16:08 | 15:15:48 | 2:59:40 | 2.9944 |
+| Oct. 23 | 17:15:54 | 17:47:27 | 0:31:33 | 0.5258 |
+
+The breaks **21:28:30 → 12:16:08** and **15:15:48 → 17:15:54** exceed 90 minutes and are excluded.
+
+**Total counted time: 4:07:48**
+
+**Fractional hours: \(\boxed{4.1300}\)** ≈ **4.13 hours**.
+
+________________________________________________________________
+
+AM
+
+-rwxrwxrwx 1 AW AW 57627 Oct 19  2025 2025-10-19--12-54-53-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 59074 Oct 19  2025 2025-10-19--12-56-57-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 59066 Oct 19  2025 2025-10-19--13-02-54-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 57627 Oct 19  2025 2025-10-19--13-05-15-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 57627 Oct 19  2025 2025-10-19--13-09-54-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW   619 Oct 19  2025 2025-10-19--13-46-18-loc.txt*
+-rwxrwxrwx 1 AW AW   619 Oct 19  2025 2025-10-19--13-52-54-loc.txt*
+-rwxrwxrwx 1 AW AW 57729 Oct 19  2025 2025-10-19--14-01-55-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW   600 Oct 19  2025 2025-10-19--14-04-32-loc.txt*
+-rwxrwxrwx 1 AW AW   619 Oct 19  2025 2025-10-19--14-09-54-loc.txt*
+-rwxrwxrwx 1 AW AW   619 Oct 19  2025 2025-10-19--14-15-28-loc.txt*
+-rwxrwxrwx 1 AW AW   619 Oct 19  2025 2025-10-19--14-34-01-loc.txt*
+-rwxrwxrwx 1 AW AW   619 Oct 19  2025 2025-10-19--14-36-53-loc.txt*
+-rwxrwxrwx 1 AW AW   619 Oct 19  2025 2025-10-19--14-39-36-loc.txt*
+-rwxrwxrwx 1 AW AW 57807 Oct 19  2025 2025-10-19--14-40-31-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW   619 Oct 19  2025 2025-10-19--14-43-46-loc.txt*
+-rwxrwxrwx 1 AW AW 57826 Oct 19  2025 2025-10-19--14-45-38-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW   619 Oct 19  2025 2025-10-19--14-48-52-loc.txt*
+-rwxrwxrwx 1 AW AW 57826 Oct 19  2025 2025-10-19--14-49-26-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW   619 Oct 19  2025 2025-10-19--14-52-43-loc.txt*
+-rwxrwxrwx 1 AW AW 57850 Oct 19  2025 2025-10-19--14-54-38-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 57850 Oct 19  2025 2025-10-19--14-56-15-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 57851 Oct 19  2025 2025-10-19--14-58-39-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 58550 Oct 19  2025 2025-10-19--15-16-42-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW   762 Oct 19  2025 2025-10-19--15-20-48-loc.txt*
+-rwxrwxrwx 1 AW AW 60562 Oct 19  2025 2025-10-19--15-29-57-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW   757 Oct 19  2025 2025-10-19--15-34-02-loc.txt*
+-rwxrwxrwx 1 AW AW 59738 Oct 19  2025 2025-10-19--15-40-25-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW   762 Oct 19  2025 2025-10-19--15-44-27-loc.txt*
+-rwxrwxrwx 1 AW AW 59949 Oct 19  2025 2025-10-19--15-48-30-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 59998 Oct 19  2025 2025-10-19--15-53-23-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW   764 Oct 19  2025 2025-10-19--15-57-28-loc.txt*
+-rwxrwxrwx 1 AW AW 60373 Oct 19  2025 2025-10-19--16-07-23-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 60525 Oct 19  2025 2025-10-19--16-13-34-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 60496 Oct 19  2025 2025-10-19--16-22-01-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 60475 Oct 19  2025 2025-10-19--16-24-10-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 60478 Oct 19  2025 2025-10-19--16-25-53-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW   753 Oct 19  2025 2025-10-19--16-28-49-loc.txt*
+-rwxrwxrwx 1 AW AW 60773 Oct 19  2025 2025-10-19--16-31-20-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW   753 Oct 19  2025 2025-10-19--16-34-06-loc.txt*
+-rwxrwxrwx 1 AW AW 59998 Oct 19  2025 2025-10-19--16-35-55-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW   753 Oct 19  2025 2025-10-19--16-38-51-loc.txt*
+-rwxrwxrwx 1 AW AW 57627 Oct 20  2025 2025-10-20--15-29-03-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 57627 Oct 20  2025 2025-10-20--15-35-10-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 59024 Oct 20  2025 2025-10-20--15-36-48-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 59024 Oct 20  2025 2025-10-20--15-38-39-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 59024 Oct 20  2025 2025-10-20--15-41-43-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW   619 Oct 20  2025 2025-10-20--15-45-16-loc.txt*
+-rwxrwxrwx 1 AW AW 59180 Oct 20  2025 2025-10-20--15-54-34-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 59182 Oct 20  2025 2025-10-20--15-56-34-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 59235 Oct 20  2025 2025-10-20--15-58-08-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 59236 Oct 20  2025 2025-10-20--15-59-31-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 59236 Oct 20  2025 2025-10-20--16-00-50-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 59223 Oct 20  2025 2025-10-20--16-05-09-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 59234 Oct 20  2025 2025-10-20--16-20-35-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 59241 Oct 20  2025 2025-10-20--16-22-07-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 59242 Oct 20  2025 2025-10-20--16-23-32-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 59250 Oct 20  2025 2025-10-20--16-25-27-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 59251 Oct 20  2025 2025-10-20--16-27-27-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW   762 Oct 20  2025 2025-10-20--16-32-21-loc.txt*
+-rwxrwxrwx 1 AW AW 59253 Oct 20  2025 2025-10-20--16-33-55-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 59218 Oct 20  2025 2025-10-20--16-49-43-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW   762 Oct 20  2025 2025-10-20--16-53-43-loc.txt*
+
+Using the **90-minute break rule**, there are two counted sessions:
+
+| Session | First | Last | Duration | Fractional hours |
+|---|---:|---:|---:|---:|
+| Oct. 19 | 12:54:53 | 16:38:51 | 3:43:58 | 3.7328 |
+| Oct. 20 | 15:29:03 | 16:53:43 | 1:24:40 | 1.4111 |
+
+The overnight gap is excluded.
+
+**Total counted time: 5:08:38**
+
+**Fractional hours: \(\boxed{5.1439}\)** ≈ **5.14 hours**.
+________________________________________________________________
+
+AM
+
+-rwxrwxrwx 1 AW AW  2254 Oct 19  2025 2025-10-19--16-43-41-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW  2881 Oct 19  2025 2025-10-19--17-01-16-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW  2881 Oct 19  2025 2025-10-19--17-04-47-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW  5577 Oct 19  2025 2025-10-19--17-13-53-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW  2254 Oct 19  2025 2025-10-19--17-14-33-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW  2874 Oct 19  2025 2025-10-19--17-15-48-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   603 Oct 19  2025 2025-10-19--17-17-56-loc.txt*
+-rwxrwxrwx 1 AW AW  2874 Oct 19  2025 2025-10-19--17-19-58-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   603 Oct 19  2025 2025-10-19--17-21-06-loc.txt*
+-rwxrwxrwx 1 AW AW 11377 Oct 19  2025 2025-10-19--17-26-03-fi.zip*
+-rwxrwxrwx 1 AW AW  3552 Oct 19  2025 2025-10-19--17-31-10-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   572 Oct 19  2025 2025-10-19--17-32-14-loc.txt*
+-rwxrwxrwx 1 AW AW  3538 Oct 19  2025 2025-10-19--17-33-06-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   603 Oct 19  2025 2025-10-19--17-34-13-loc.txt*
+-rwxrwxrwx 1 AW AW  5838 Oct 19  2025 2025-10-19--17-38-34-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   603 Oct 19  2025 2025-10-19--17-39-43-loc.txt*
+-rwxrwxrwx 1 AW AW  5865 Oct 19  2025 2025-10-19--17-41-12-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   603 Oct 19  2025 2025-10-19--17-42-17-loc.txt*
+-rwxrwxrwx 1 AW AW  3737 Oct 19  2025 2025-10-19--17-44-05-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   604 Oct 19  2025 2025-10-19--17-45-06-loc.txt*
+-rwxrwxrwx 1 AW AW  3739 Oct 19  2025 2025-10-19--17-45-14-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   604 Oct 19  2025 2025-10-19--17-46-23-loc.txt*
+-rwxrwxrwx 1 AW AW  3739 Oct 19  2025 2025-10-19--17-47-14-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   604 Oct 19  2025 2025-10-19--17-48-20-loc.txt*
+-rwxrwxrwx 1 AW AW  3739 Oct 19  2025 2025-10-19--17-52-34-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   604 Oct 19  2025 2025-10-19--17-53-43-loc.txt*
+-rwxrwxrwx 1 AW AW  3739 Oct 19  2025 2025-10-19--17-56-39-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   604 Oct 19  2025 2025-10-19--17-57-48-loc.txt*
+-rwxrwxrwx 1 AW AW 11575 Oct 19  2025 2025-10-19--18-02-46-fi.zip*
+
+There are **no gaps ≥90 minutes**, so this is one continuous session.
+
+**First:** 16:43:41  
+**Last:** 18:02:46  
+**Duration:** 1:19:05  
+**Fractional hours:** **\(\boxed{1.3181}\)** ≈ **1.32 hours**
+
+________________________________________________________________
+
+AN
+
+-rwxrwxrwx 1 AW AW  7398 Nov 29  2025 2025-11-29--16-05-07-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Nov 29  2025 2025-11-29--16-07-23-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Nov 29  2025 2025-11-29--16-11-51-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7404 Nov 29  2025 2025-11-29--16-12-56-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7404 Nov 29  2025 2025-11-29--16-18-52-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7404 Nov 29  2025 2025-11-29--16-20-11-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7404 Nov 29  2025 2025-11-29--16-20-38-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7404 Nov 29  2025 2025-11-29--16-21-16-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7663 Nov 29  2025 2025-11-29--16-24-35-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7663 Nov 29  2025 2025-11-29--16-24-44-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7663 Nov 29  2025 2025-11-29--16-27-39-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7663 Nov 29  2025 2025-11-29--16-27-55-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7663 Nov 29  2025 2025-11-29--16-31-10-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7663 Nov 29  2025 2025-11-29--16-31-17-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7663 Nov 29  2025 2025-11-29--16-34-05-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7663 Nov 29  2025 2025-11-29--16-39-50-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7663 Nov 29  2025 2025-11-29--16-41-37-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7663 Nov 29  2025 2025-11-29--16-43-11-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7663 Nov 29  2025 2025-11-29--16-44-37-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  6897 Nov 29  2025 2025-11-29--16-45-11-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  6897 Nov 29  2025 2025-11-29--16-47-19-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  6897 Nov 29  2025 2025-11-29--16-47-45-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Nov 29  2025 2025-11-29--16-51-11-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7663 Nov 29  2025 2025-11-29--16-51-49-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7663 Nov 29  2025 2025-11-29--16-52-01-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7663 Nov 29  2025 2025-11-29--16-52-58-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7663 Nov 29  2025 2025-11-29--16-54-35-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7663 Nov 29  2025 2025-11-29--17-01-27-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Nov 29  2025 2025-11-29--17-12-18-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Nov 29  2025 2025-11-29--17-14-34-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Nov 29  2025 2025-11-29--17-15-21-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Nov 29  2025 2025-11-29--17-15-55-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7663 Nov 29  2025 2025-11-29--17-17-59-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7663 Nov 29  2025 2025-11-29--17-21-22-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7663 Nov 29  2025 2025-11-29--17-42-40-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7663 Nov 29  2025 2025-11-29--17-44-13-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7691 Nov 29  2025 2025-11-29--17-45-37-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7691 Nov 29  2025 2025-11-29--17-46-38-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Nov 29  2025 2025-11-29--18-23-53-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Nov 29  2025 2025-11-29--18-26-47-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  6829 Nov 29  2025 2025-11-29--18-28-10-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  6830 Nov 29  2025 2025-11-29--18-29-47-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  6830 Nov 29  2025 2025-11-29--18-30-24-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7095 Nov 29  2025 2025-11-29--18-34-16-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   757 Nov 29  2025 2025-11-29--18-49-42-loc.txt*
+-rwxrwxrwx 1 AW AW  7398 Nov 29  2025 2025-11-29--22-43-31-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7095 Nov 29  2025 2025-11-29--22-44-29-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7095 Nov 29  2025 2025-11-29--22-54-04-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   769 Nov 29  2025 2025-11-29--22-58-37-loc.txt*
+
+Using the **90-minute break rule**, there are two counted sessions:
+
+| Session | First | Last | Duration | Fractional hours |
+|---|---:|---:|---:|---:|
+| 1 | 16:05:07 | 18:49:42 | 2:44:35 | 2.7431 |
+| 2 | 22:43:31 | 22:58:37 | 0:15:06 | 0.2517 |
+
+The gap **18:49:42 → 22:43:31** exceeds 90 minutes and is excluded.
+
+**Total counted time: 2:59:41**
+
+**Fractional hours: \(\boxed{2.9947}\)** ≈ **2.99 hours**.
+
+________________________________________________________________
+
+AN
+
+-rwxrwxrwx 1 AW AW  3205 Nov 29  2025 2025-11-29--23-02-19-unrar-fd.zip*
+-rwxrwxrwx 1 AW AW   596 Nov 29  2025 2025-11-29--23-03-53-loc.txt*
+-rwxrwxrwx 1 AW AW  4262 Nov 29  2025 2025-11-29--23-09-08-unrar-fd.zip*
+-rwxrwxrwx 1 AW AW  4260 Nov 29  2025 2025-11-29--23-18-42-unrar-fd.zip*
+-rwxrwxrwx 1 AW AW  3055 Nov 29  2025 2025-11-29--23-21-01-unrar-fd.zip*
+-rwxrwxrwx 1 AW AW  3061 Nov 29  2025 2025-11-29--23-22-33-unrar-fd.zip*
+-rwxrwxrwx 1 AW AW  3061 Nov 29  2025 2025-11-29--23-29-16-unrar-fd.zip*
+-rwxrwxrwx 1 AW AW  2044 Nov 29  2025 2025-11-29--23-29-55-unrar-fd.zip*
+-rwxrwxrwx 1 AW AW   700 Nov 29  2025 2025-11-29--23-31-34-loc.txt*
+-rwxrwxrwx 1 AW AW  3061 Nov 29  2025 2025-11-29--23-35-17-unrar-fd.zip*
+-rwxrwxrwx 1 AW AW  3061 Nov 29  2025 2025-11-29--23-36-35-unrar-fd.zip*
+-rwxrwxrwx 1 AW AW  2044 Nov 29  2025 2025-11-29--23-37-34-unrar-fd.zip*
+-rwxrwxrwx 1 AW AW   700 Nov 29  2025 2025-11-29--23-39-16-loc.txt*
+-rwxrwxrwx 1 AW AW  3061 Nov 29  2025 2025-11-29--23-40-11-unrar-fd.zip*
+-rwxrwxrwx 1 AW AW  2044 Nov 29  2025 2025-11-29--23-40-58-unrar-fd.zip*
+-rwxrwxrwx 1 AW AW   807 Nov 29  2025 2025-11-29--23-42-41-loc.txt*
+-rwxrwxrwx 1 AW AW  3061 Nov 29  2025 2025-11-29--23-50-16-unrar-fd.zip*
+-rwxrwxrwx 1 AW AW   812 Nov 29  2025 2025-11-29--23-51-59-loc.txt*
+-rwxrwxrwx 1 AW AW  3061 Nov 29  2025 2025-11-29--23-54-07-unrar-fd.zip*
+-rwxrwxrwx 1 AW AW  2044 Nov 29  2025 2025-11-29--23-56-07-unrar-fd.zip*
+-rwxrwxrwx 1 AW AW   812 Nov 29  2025 2025-11-29--23-57-51-loc.txt*
+-rwxrwxrwx 1 AW AW  2044 Nov 30  2025 2025-11-30--00-31-19-unrar-fd.zip*
+-rwxrwxrwx 1 AW AW   873 Nov 30  2025 2025-11-30--00-33-11-loc.txt*
+
+
+There are **no gaps ≥90 minutes**, so this is one continuous session across midnight.
+
+**First:** 23:02:19  
+**Last:** 00:33:11  
+**Duration:** 1:30:52  
+**Fractional hours:** **\(\boxed{1.5144}\)** ≈ **1.51 hours**
+________________________________________________________________
+
+AP
+
+-rwxrwxrwx 1 AW AW   4726 Dec 16  2025 2025-12-16--06-09-26-casync-fd.zip*
+-rwxrwxrwx 1 AW AW    585 Dec 16  2025 2025-12-16--06-10-22-loc.txt*
+-rwxrwxrwx 1 AW AW   4726 Dec 16  2025 2025-12-16--06-10-32-casync-fd.zip*
+-rwxrwxrwx 1 AW AW    585 Dec 16  2025 2025-12-16--06-11-30-loc.txt*
+-rwxrwxrwx 1 AW AW   6114 Dec 16  2025 2025-12-16--06-47-00-casync-fd.zip*
+-rwxrwxrwx 1 AW AW   6113 Dec 16  2025 2025-12-16--06-47-43-casync-fd.zip*
+-rwxrwxrwx 1 AW AW   6113 Dec 16  2025 2025-12-16--06-48-03-casync-fd.zip*
+-rwxrwxrwx 1 AW AW    582 Dec 16  2025 2025-12-16--06-48-59-loc.txt*
+-rwxrwxrwx 1 AW AW   6287 Dec 16  2025 2025-12-16--06-56-29-casync-fd.zip*
+-rwxrwxrwx 1 AW AW   6304 Dec 16  2025 2025-12-16--06-57-37-casync-fd.zip*
+-rwxrwxrwx 1 AW AW   6308 Dec 16  2025 2025-12-16--06-58-17-casync-fd.zip*
+-rwxrwxrwx 1 AW AW   6329 Dec 16  2025 2025-12-16--07-00-11-casync-fd.zip*
+-rwxrwxrwx 1 AW AW   6340 Dec 16  2025 2025-12-16--07-01-31-casync-fd.zip*
+-rwxrwxrwx 1 AW AW   6341 Dec 16  2025 2025-12-16--07-01-50-casync-fd.zip*
+-rwxrwxrwx 1 AW AW    588 Dec 16  2025 2025-12-16--07-02-46-loc.txt*
+-rwxrwxrwx 1 AW AW   6349 Dec 16  2025 2025-12-16--07-14-00-casync-fd.zip*
+
+There are **no gaps ≥90 minutes**, so this is one continuous session.
+
+**First:** 06:09:26  
+**Last:** 07:14:00  
+**Duration:** 1:04:34  
+**Fractional hours:** **\(\boxed{1.0761}\)** ≈ **1.08 hours**
+________________________________________________________________
+
+AP
+
+-rwxrwxrwx 1 AW AW   7398 Dec 16  2025 2025-12-16--10-31-24-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec 16  2025 2025-12-16--10-39-22-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec 16  2025 2025-12-16--10-40-03-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec 16  2025 2025-12-16--10-40-10-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec 16  2025 2025-12-16--10-40-44-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec 16  2025 2025-12-16--10-46-04-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec 16  2025 2025-12-16--10-46-37-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec 16  2025 2025-12-16--11-24-34-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec 16  2025 2025-12-16--11-25-00-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec 16  2025 2025-12-16--11-29-38-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec 16  2025 2025-12-16--11-29-43-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec 16  2025 2025-12-16--11-32-09-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9949 Dec 17  2025 2025-12-17--01-53-10-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  12502 Dec 17  2025 2025-12-17--01-56-27-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  15045 Dec 17  2025 2025-12-17--01-57-58-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  15045 Dec 17  2025 2025-12-17--01-58-25-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9941 Dec 17  2025 2025-12-17--02-00-45-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    753 Dec 17  2025 2025-12-17--02-15-47-loc.txt*
+-rwxrwxrwx 1 AW AW    737 Dec 17  2025 2025-12-17--02-17-53-loc.txt*
+-rwxrwxrwx 1 AW AW   9941 Dec 17  2025 2025-12-17--02-26-01-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  14644 Dec 17  2025 2025-12-17--02-37-41-fi.zip*
+-rwxrwxrwx 1 AW AW   9971 Dec 17  2025 2025-12-17--02-42-38-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9971 Dec 17  2025 2025-12-17--02-42-52-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9970 Dec 17  2025 2025-12-17--02-43-50-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9970 Dec 17  2025 2025-12-17--06-54-12-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec 17  2025 2025-12-17--07-13-52-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9971 Dec 17  2025 2025-12-17--07-14-45-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9971 Dec 17  2025 2025-12-17--07-17-38-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9205 Dec 17  2025 2025-12-17--07-18-46-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9972 Dec 17  2025 2025-12-17--07-21-54-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9972 Dec 17  2025 2025-12-17--07-22-30-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    746 Dec 17  2025 2025-12-17--07-24-45-loc.txt*
+-rwxrwxrwx 1 AW AW   9123 Dec 17  2025 2025-12-17--07-30-29-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    746 Dec 17  2025 2025-12-17--07-33-01-loc.txt*
+-rwxrwxrwx 1 AW AW   9121 Dec 17  2025 2025-12-17--07-38-18-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9269 Dec 17  2025 2025-12-17--07-46-30-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    747 Dec 17  2025 2025-12-17--07-48-49-loc.txt*
+-rwxrwxrwx 1 AW AW  11151 Dec 17  2025 2025-12-17--07-59-47-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  11149 Dec 17  2025 2025-12-17--08-01-02-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10853 Dec 17  2025 2025-12-17--08-02-00-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10903 Dec 17  2025 2025-12-17--08-10-01-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10902 Dec 17  2025 2025-12-17--08-10-49-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10901 Dec 17  2025 2025-12-17--08-13-14-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    745 Dec 17  2025 2025-12-17--08-18-50-loc.txt*
+-rwxrwxrwx 1 AW AW  11021 Dec 17  2025 2025-12-17--08-26-12-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  11021 Dec 17  2025 2025-12-17--08-26-52-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  11022 Dec 17  2025 2025-12-17--08-27-29-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  11221 Dec 17  2025 2025-12-17--08-31-23-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  11238 Dec 17  2025 2025-12-17--08-32-45-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  11238 Dec 17  2025 2025-12-17--08-33-30-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  11218 Dec 17  2025 2025-12-17--08-34-58-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    746 Dec 17  2025 2025-12-17--08-42-00-loc.txt*
+-rwxrwxrwx 1 AW AW  15068 Dec 17  2025 2025-12-17--09-08-12-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  15067 Dec 17  2025 2025-12-17--09-10-06-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  15065 Dec 17  2025 2025-12-17--09-11-36-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  15068 Dec 17  2025 2025-12-17--09-13-15-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  15059 Dec 17  2025 2025-12-17--09-15-00-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  11240 Dec 17  2025 2025-12-17--09-17-03-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  11240 Dec 17  2025 2025-12-17--09-21-58-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7399 Dec 17  2025 2025-12-17--09-23-25-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   8425 Dec 17  2025 2025-12-17--09-35-19-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   8430 Dec 17  2025 2025-12-17--09-38-31-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   8419 Dec 17  2025 2025-12-17--09-39-33-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   8420 Dec 17  2025 2025-12-17--09-41-12-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   8411 Dec 17  2025 2025-12-17--09-49-06-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   8410 Dec 17  2025 2025-12-17--09-50-38-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9942 Dec 17  2025 2025-12-17--09-52-47-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10130 Dec 17  2025 2025-12-17--10-02-35-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10135 Dec 17  2025 2025-12-17--10-03-39-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10241 Dec 17  2025 2025-12-17--10-05-17-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10455 Dec 17  2025 2025-12-17--10-06-48-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10447 Dec 17  2025 2025-12-17--10-08-14-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10453 Dec 17  2025 2025-12-17--10-09-24-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10452 Dec 17  2025 2025-12-17--10-10-35-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10452 Dec 17  2025 2025-12-17--10-11-53-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10458 Dec 17  2025 2025-12-17--10-13-32-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9603 Dec 17  2025 2025-12-17--13-51-17-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9602 Dec 17  2025 2025-12-17--13-55-54-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9612 Dec 17  2025 2025-12-17--14-01-18-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9640 Dec 17  2025 2025-12-17--14-03-43-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9665 Dec 17  2025 2025-12-17--14-04-36-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9663 Dec 17  2025 2025-12-17--14-05-16-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9673 Dec 18  2025 2025-12-18--02-21-13-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9687 Dec 18  2025 2025-12-18--02-28-07-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9700 Dec 18  2025 2025-12-18--02-32-55-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9530 Dec 18  2025 2025-12-18--03-21-41-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9551 Dec 18  2025 2025-12-18--03-23-40-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9567 Dec 18  2025 2025-12-18--03-24-33-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9578 Dec 18  2025 2025-12-18--03-40-31-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9578 Dec 18  2025 2025-12-18--03-43-19-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9597 Dec 18  2025 2025-12-18--03-48-00-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9242 Dec 18  2025 2025-12-18--05-49-41-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9139 Dec 18  2025 2025-12-18--06-09-12-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9145 Dec 18  2025 2025-12-18--06-11-40-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9166 Dec 18  2025 2025-12-18--06-13-53-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10610 Dec 18  2025 2025-12-18--06-18-25-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10642 Dec 18  2025 2025-12-18--07-03-28-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10640 Dec 18  2025 2025-12-18--07-07-38-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10646 Dec 18  2025 2025-12-18--07-10-21-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10651 Dec 18  2025 2025-12-18--07-26-06-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10653 Dec 18  2025 2025-12-18--07-30-26-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    877 Dec 18  2025 2025-12-18--07-33-23-loc.txt*
+-rwxrwxrwx 1 AW AW  10678 Dec 18  2025 2025-12-18--07-41-04-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10678 Dec 18  2025 2025-12-18--07-41-39-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    870 Dec 18  2025 2025-12-18--07-47-34-loc.txt*
+-rwxrwxrwx 1 AW AW  10719 Dec 18  2025 2025-12-18--08-00-14-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10729 Dec 18  2025 2025-12-18--08-05-04-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10695 Dec 18  2025 2025-12-18--08-22-59-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    886 Dec 18  2025 2025-12-18--08-39-09-loc.txt*
+-rwxrwxrwx 1 AW AW  10695 Dec 18  2025 2025-12-18--09-38-47-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10695 Dec 18  2025 2025-12-18--09-43-10-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   8843 Dec 18  2025 2025-12-18--09-45-22-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    745 Dec 18  2025 2025-12-18--09-49-07-loc.txt*
+-rwxrwxrwx 1 AW AW    628 Dec 18  2025 2025-12-18--09-53-58-loc.txt*
+
+
+Using the **90-minute break rule**, there are six counted sessions:
+
+| Session | First | Last | Duration | Fractional hours |
+|---|---:|---:|---:|---:|
+| Dec. 16 | 10:31:24 | 11:32:09 | 1:00:45 | 1.0125 |
+| Dec. 17 | 01:53:10 | 02:43:50 | 0:50:40 | 0.8444 |
+| Dec. 17 | 06:54:12 | 10:13:32 | 3:19:20 | 3.3222 |
+| Dec. 17 | 13:51:17 | 14:05:16 | 0:13:59 | 0.2331 |
+| Dec. 18 | 02:21:13 | 03:48:00 | 1:26:47 | 1.4464 |
+| Dec. 18 | 05:49:41 | 09:53:58 | 4:04:17 | 4.0714 |
+
+All intervening gaps of **90 minutes or greater** are excluded.
+
+**Total counted time: 10:55:48**
+
+**Fractional hours: \(\boxed{10.9300}\)** ≈ **10.93 hours**.
+________________________________________________________________
+
+AH
+
+-rwxrwxrwx 1 AW AW   7398 Dec  2  2025 2025-12-02--11-56-58-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec  2  2025 2025-12-02--12-04-13-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec  2  2025 2025-12-02--12-04-28-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec  2  2025 2025-12-02--12-05-03-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec  2  2025 2025-12-02--12-08-30-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec  2  2025 2025-12-02--12-13-04-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec  2  2025 2025-12-02--12-14-29-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7399 Dec  2  2025 2025-12-02--12-15-00-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7399 Dec  2  2025 2025-12-02--12-18-35-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7399 Dec  2  2025 2025-12-02--12-20-36-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7399 Dec  2  2025 2025-12-02--13-46-38-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec  2  2025 2025-12-02--13-51-45-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec  2  2025 2025-12-02--13-52-29-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec  2  2025 2025-12-02--13-54-39-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec  2  2025 2025-12-02--13-56-24-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec  2  2025 2025-12-02--13-57-14-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec  2  2025 2025-12-02--14-01-35-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec  2  2025 2025-12-02--14-02-43-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec  2  2025 2025-12-02--14-10-25-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7399 Dec  2  2025 2025-12-02--14-11-08-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9944 Dec  2  2025 2025-12-02--14-12-38-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9944 Dec  2  2025 2025-12-02--14-20-15-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9944 Dec  2  2025 2025-12-02--14-23-46-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   9944 Dec  2  2025 2025-12-02--14-28-38-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    632 Dec  2  2025 2025-12-02--14-30-14-loc.txt*
+-rwxrwxrwx 1 AW AW   9944 Dec  2  2025 2025-12-02--14-32-55-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  11761 Dec  2  2025 2025-12-02--14-44-11-fi.zip*
+-rwxrwxrwx 1 AW AW  10071 Dec  2  2025 2025-12-02--15-58-30-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10073 Dec  2  2025 2025-12-02--16-01-37-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10080 Dec  2  2025 2025-12-02--16-02-39-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10080 Dec  2  2025 2025-12-02--16-06-01-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10083 Dec  2  2025 2025-12-02--16-08-42-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10165 Dec  2  2025 2025-12-02--16-16-39-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10164 Dec  2  2025 2025-12-02--16-17-40-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10164 Dec  2  2025 2025-12-02--16-19-27-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10169 Dec  2  2025 2025-12-02--16-21-32-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10169 Dec  2  2025 2025-12-02--16-23-01-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    632 Dec  2  2025 2025-12-02--16-25-05-loc.txt*
+-rwxrwxrwx 1 AW AW  10169 Dec  2  2025 2025-12-02--16-44-57-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10169 Dec  2  2025 2025-12-02--16-45-57-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10169 Dec  2  2025 2025-12-02--16-49-02-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10169 Dec  2  2025 2025-12-02--16-52-38-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10169 Dec  2  2025 2025-12-02--17-00-06-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    754 Dec  2  2025 2025-12-02--17-02-51-loc.txt*
+-rwxrwxrwx 1 AW AW  10169 Dec  2  2025 2025-12-02--17-06-42-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    754 Dec  2  2025 2025-12-02--17-09-27-loc.txt*
+-rwxrwxrwx 1 AW AW  10190 Dec  2  2025 2025-12-02--17-10-33-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    754 Dec  2  2025 2025-12-02--17-13-13-loc.txt*
+-rwxrwxrwx 1 AW AW  10197 Dec  2  2025 2025-12-02--17-16-01-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10188 Dec  2  2025 2025-12-02--17-16-55-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  10188 Dec  2  2025 2025-12-02--17-22-56-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    754 Dec  2  2025 2025-12-02--17-25-39-loc.txt*
+-rwxrwxrwx 1 AW AW  10188 Dec  2  2025 2025-12-02--17-29-07-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  11765 Dec  2  2025 2025-12-02--17-40-20-fi.zip*
+-rwxrwxrwx 1 AW AW  10187 Dec  3  2025 2025-12-03--11-42-28-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    760 Dec  3  2025 2025-12-03--11-45-21-loc.txt*
+-rwxrwxrwx 1 AW AW   7398 Dec  3  2025 2025-12-03--15-17-09-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    750 Dec  3  2025 2025-12-03--15-19-26-loc.txt*
+-rwxrwxrwx 1 AW AW  10187 Dec  3  2025 2025-12-03--15-20-11-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    759 Dec  3  2025 2025-12-03--15-21-52-loc.txt*
+
+Using the **90-minute break rule**, there are two counted sessions. The **Dec. 3 11:42:28–11:45:21 pair** is separated from the next activity by more than 90 minutes, but it contains two timestamps, so it is a valid short session under your stated rule.
+
+| Session | First | Last | Duration | Fractional hours |
+|---|---:|---:|---:|---:|
+| Dec. 2 | 11:56:58 | 17:40:20 | 5:43:22 | 5.7228 |
+| Dec. 3 | 11:42:28 | 11:45:21 | 0:02:53 | 0.0481 |
+| Dec. 3 | 15:17:09 | 15:21:52 | 0:04:43 | 0.0786 |
+
+**Total counted time: 5:50:58**
+
+**Fractional hours: \(\boxed{5.8494}\)** ≈ **5.85 hours**.
+
+________________________________________________________________
+
+AH
+
+-rwxrwxrwx 1 AW AW   4726 Dec 14  2025 2025-12-14--12-18-50-casync-fd.zip*
+-rwxrwxrwx 1 AW AW   4726 Dec 14  2025 2025-12-14--12-19-19-casync-fd.zip*
+-rwxrwxrwx 1 AW AW    585 Dec 14  2025 2025-12-14--12-20-18-loc.txt*
+-rwxrwxrwx 1 AW AW   4726 Dec 14  2025 2025-12-14--12-21-35-casync-fd.zip*
+-rwxrwxrwx 1 AW AW    585 Dec 14  2025 2025-12-14--12-22-34-loc.txt*
+-rwxrwxrwx 1 AW AW   9560 Dec 14  2025 2025-12-14--12-26-23-fi.zip*
+-rwxrwxrwx 1 AW AW   4726 Dec 14  2025 2025-12-14--14-23-17-casync-fd.zip*
+-rwxrwxrwx 1 AW AW    585 Dec 14  2025 2025-12-14--14-24-14-loc.txt*
+-rwxrwxrwx 1 AW AW   9556 Dec 14  2025 2025-12-14--14-27-32-fi.zip*
+-rwxrwxrwx 1 AW AW   5683 Dec 14  2025 2025-12-14--15-07-10-casync-fd.zip*
+-rwxrwxrwx 1 AW AW   4492 Dec 14  2025 2025-12-14--15-09-48-casync-fd.zip*
+-rwxrwxrwx 1 AW AW   5543 Dec 14  2025 2025-12-14--15-10-46-casync-fd.zip*
+-rwxrwxrwx 1 AW AW   4945 Dec 14  2025 2025-12-14--15-15-05-casync-fd.zip*
+-rwxrwxrwx 1 AW AW   5770 Dec 14  2025 2025-12-14--15-15-41-casync-fd.zip*
+-rwxrwxrwx 1 AW AW   4717 Dec 14  2025 2025-12-14--15-26-58-casync-fd.zip*
+-rwxrwxrwx 1 AW AW   4715 Dec 14  2025 2025-12-14--15-27-32-casync-fd.zip*
+-rwxrwxrwx 1 AW AW   4715 Dec 14  2025 2025-12-14--15-27-53-casync-fd.zip*
+-rwxrwxrwx 1 AW AW    586 Dec 14  2025 2025-12-14--15-28-52-loc.txt*
+-rwxrwxrwx 1 AW AW   4715 Dec 14  2025 2025-12-14--15-51-26-casync-fd.zip*
+-rwxrwxrwx 1 AW AW    586 Dec 14  2025 2025-12-14--15-52-25-loc.txt*
+
+Using the **90-minute break rule**, there are two counted sessions:
+
+| Session | First | Last | Duration | Fractional hours |
+|---|---:|---:|---:|---:|
+| 1 | 12:18:50 | 12:26:23 | 0:07:33 | 0.1258 |
+| 2 | 14:23:17 | 15:52:25 | 1:29:08 | 1.4856 |
+
+The gap **12:26:23 → 14:23:17** is **1:56:54**, so it is excluded.
+
+**Total counted time: 1:36:41**
+
+**Fractional hours: \(\boxed{1.6114}\)** ≈ **1.61 hours**.
+________________________________________________________________
+
+AQ
+
+
+-rwxrwxrwx 1 AW AW  60072 Nov 29  2025 2025-11-29--18-05-53-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW  60072 Nov 29  2025 2025-11-29--23-47-27-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW    756 Nov 29  2025 2025-11-29--23-49-55-loc.txt*
+-rwxrwxrwx 1 AW AW  60080 Nov 29  2025 2025-11-29--23-58-34-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW  60114 Nov 30  2025 2025-11-30--00-02-07-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW  60119 Nov 30  2025 2025-11-30--00-03-19-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW  60119 Nov 30  2025 2025-11-30--00-04-33-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW    757 Nov 30  2025 2025-11-30--00-07-01-loc.txt*
+-rwxrwxrwx 1 AW AW  60119 Nov 30  2025 2025-11-30--00-07-20-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW    757 Nov 30  2025 2025-11-30--00-08-55-loc.txt*
+-rwxrwxrwx 1 AW AW  60139 Nov 30  2025 2025-11-30--00-22-15-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW  60154 Nov 30  2025 2025-11-30--00-27-50-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW  60154 Nov 30  2025 2025-11-30--00-28-42-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW  60158 Nov 30  2025 2025-11-30--00-30-11-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW  60158 Nov 30  2025 2025-11-30--00-30-53-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW    750 Nov 30  2025 2025-11-30--00-33-20-loc.txt*
+-rwxrwxrwx 1 AW AW  60147 Nov 30  2025 2025-11-30--00-34-03-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW    750 Nov 30  2025 2025-11-30--00-35-23-loc.txt*
+-rwxrwxrwx 1 AW AW  60124 Nov 30  2025 2025-11-30--00-41-00-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW    750 Nov 30  2025 2025-11-30--00-42-30-loc.txt*
+-rwxrwxrwx 1 AW AW  60124 Nov 30  2025 2025-11-30--00-42-48-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW  60120 Nov 30  2025 2025-11-30--00-43-43-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW  60120 Nov 30  2025 2025-11-30--00-44-29-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW    750 Nov 30  2025 2025-11-30--00-46-05-loc.txt*
+-rwxrwxrwx 1 AW AW  60120 Nov 30  2025 2025-11-30--00-46-50-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW  60145 Nov 30  2025 2025-11-30--00-49-24-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW  60145 Nov 30  2025 2025-11-30--00-50-43-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW    750 Nov 30  2025 2025-11-30--00-53-13-loc.txt*
+-rwxrwxrwx 1 AW AW  60121 Nov 30  2025 2025-11-30--00-53-49-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW    757 Nov 30  2025 2025-11-30--00-55-31-loc.txt*
+-rwxrwxrwx 1 AW AW  61577 Nov 30  2025 2025-11-30--01-06-39-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW  61577 Nov 30  2025 2025-11-30--01-13-53-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW    757 Nov 30  2025 2025-11-30--01-15-27-loc.txt*
+-rwxrwxrwx 1 AW AW  11643 Nov 30  2025 2025-11-30--01-27-17-fi.zip*
+-rwxrwxrwx 1 AW AW  60154 Nov 30  2025 2025-11-30--01-41-48-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW  60154 Nov 30  2025 2025-11-30--01-42-20-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW    757 Nov 30  2025 2025-11-30--01-43-56-loc.txt*
+-rwxrwxrwx 1 AW AW  60168 Nov 30  2025 2025-11-30--01-48-24-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW    757 Nov 30  2025 2025-11-30--01-50-00-loc.txt*
+-rwxrwxrwx 1 AW AW  60186 Nov 30  2025 2025-11-30--01-59-48-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW  60186 Nov 30  2025 2025-11-30--02-00-32-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW    757 Nov 30  2025 2025-11-30--02-02-07-loc.txt*
+
+The **18:05:53 timestamp is isolated** by a break greater than 90 minutes, so it is excluded.
+
+The counted session runs continuously across midnight:
+
+**First:** 23:47:27  
+**Last:** 02:02:07  
+**Duration:** 2:14:40  
+**Fractional hours:** **\(\boxed{2.2444}\)** ≈ **2.24 hours**
+________________________________________________________________
+
+AQ
+
+
+-rwxrwxrwx 1 AW AW   1297 Nov 30  2025 2025-11-30--02-09-46-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW   1914 Nov 30  2025 2025-11-30--02-12-48-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW   1914 Nov 30  2025 2025-11-30--02-15-07-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW   1914 Nov 30  2025 2025-11-30--02-20-06-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW    447 Nov 30  2025 2025-11-30--02-29-38-loc.txt*
+-rwxrwxrwx 1 AW AW   1914 Nov 30  2025 2025-11-30--02-30-30-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW    462 Nov 30  2025 2025-11-30--02-35-01-loc.txt*
+-rwxrwxrwx 1 AW AW   1939 Nov 30  2025 2025-11-30--02-51-25-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW   1947 Nov 30  2025 2025-11-30--02-54-19-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW    462 Nov 30  2025 2025-11-30--02-59-39-loc.txt*
+-rwxrwxrwx 1 AW AW    462 Nov 30  2025 2025-11-30--03-19-44-loc.txt*
+-rwxrwxrwx 1 AW AW   1407 Nov 30  2025 2025-11-30--11-27-47-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW   1408 Nov 30  2025 2025-11-30--11-29-32-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW   1437 Nov 30  2025 2025-11-30--11-34-14-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW   1437 Nov 30  2025 2025-11-30--11-36-36-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW   1434 Nov 30  2025 2025-11-30--11-38-06-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW   1517 Nov 30  2025 2025-11-30--12-02-54-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW   1517 Nov 30  2025 2025-11-30--12-04-36-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW   1601 Nov 30  2025 2025-11-30--12-17-22-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW   1599 Nov 30  2025 2025-11-30--12-19-08-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW   1601 Nov 30  2025 2025-11-30--12-20-40-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW   1610 Nov 30  2025 2025-11-30--12-23-28-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW   1624 Nov 30  2025 2025-11-30--12-29-48-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW   1638 Nov 30  2025 2025-11-30--12-33-22-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW   1638 Nov 30  2025 2025-11-30--12-38-31-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW   1620 Nov 30  2025 2025-11-30--12-42-21-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW   1622 Nov 30  2025 2025-11-30--12-54-46-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW   1622 Nov 30  2025 2025-11-30--13-06-21-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW   1622 Nov 30  2025 2025-11-30--13-07-52-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW    377 Nov 30  2025 2025-11-30--13-15-00-loc.txt*
+-rwxrwxrwx 1 AW AW   1622 Nov 30  2025 2025-11-30--13-18-19-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW   1622 Nov 30  2025 2025-11-30--13-22-15-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW    377 Nov 30  2025 2025-11-30--13-24-08-loc.txt*
+-rwxrwxrwx 1 AW AW   1622 Nov 30  2025 2025-11-30--13-25-22-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW    462 Nov 30  2025 2025-11-30--13-31-13-loc.txt*
+
+Using the **90-minute break rule**, there are two counted sessions:
+
+| Session | First | Last | Duration | Fractional hours |
+|---|---:|---:|---:|---:|
+| 1 | 02:09:46 | 03:19:44 | 1:09:58 | 1.1661 |
+| 2 | 11:27:47 | 13:31:13 | 2:03:26 | 2.0572 |
+
+The gap **03:19:44 → 11:27:47** exceeds 90 minutes and is excluded.
+
+**Total counted time: 3:13:24**
+
+**Fractional hours: \(\boxed{3.2233}\)** ≈ **3.22 hours**.
+________________________________________________________________
+
+AR
+
+
+-rwxrwxrwx 1 AW AW    1297 Sep 25  2025 2025-09-25--09-40-13-guetzli.zip*
+-rwxrwxrwx 1 AW AW    9482 Sep 25  2025 2025-09-25--09-47-15-fi.zip*
+-rwxrwxrwx 1 AW AW    1912 Sep 25  2025 2025-09-25--10-31-03-guetzli.zip*
+-rwxrwxrwx 1 AW AW    1912 Sep 25  2025 2025-09-25--10-31-33-guetzli.zip*
+-rwxrwxrwx 1 AW AW    1912 Sep 25  2025 2025-09-25--10-33-00-guetzli.zip*
+-rwxrwxrwx 1 AW AW    1912 Sep 25  2025 2025-09-25--10-34-58-guetzli.zip*
+-rwxrwxrwx 1 AW AW    1424 Sep 25  2025 2025-09-25--10-37-31-guetzli.zip*
+-rwxrwxrwx 1 AW AW    1424 Sep 25  2025 2025-09-25--10-38-22-guetzli.zip*
+-rwxrwxrwx 1 AW AW    1424 Sep 25  2025 2025-09-25--10-38-53-guetzli.zip*
+-rwxrwxrwx 1 AW AW    1425 Sep 25  2025 2025-09-25--10-46-02-guetzli.zip*
+-rwxrwxrwx 1 AW AW    1424 Sep 25  2025 2025-09-25--10-46-48-guetzli.zip*
+-rwxrwxrwx 1 AW AW    1424 Sep 25  2025 2025-09-25--10-47-55-guetzli.zip*
+-rwxrwxrwx 1 AW AW    1449 Sep 25  2025 2025-09-25--11-33-50-guetzli.zip*
+-rwxrwxrwx 1 AW AW    1451 Sep 25  2025 2025-09-25--11-34-15-guetzli.zip*
+-rwxrwxrwx 1 AW AW    1467 Sep 25  2025 2025-09-25--11-36-41-guetzli.zip*
+-rwxrwxrwx 1 AW AW    1556 Sep 25  2025 2025-09-25--11-49-08-guetzli.zip*
+-rwxrwxrwx 1 AW AW    1555 Sep 25  2025 2025-09-25--11-50-06-guetzli.zip*
+-rwxrwxrwx 1 AW AW    1555 Sep 25  2025 2025-09-25--11-53-15-guetzli.zip*
+-rwxrwxrwx 1 AW AW    1555 Sep 25  2025 2025-09-25--11-53-34-guetzli.zip*
+-rwxrwxrwx 1 AW AW    1569 Sep 25  2025 2025-09-25--11-55-14-guetzli.zip*
+-rwxrwxrwx 1 AW AW    1570 Sep 25  2025 2025-09-25--11-57-51-guetzli.zip*
+-rwxrwxrwx 1 AW AW    1576 Sep 25  2025 2025-09-25--11-58-34-guetzli.zip*
+-rwxrwxrwx 1 AW AW    1582 Sep 25  2025 2025-09-25--12-00-37-guetzli.zip*
+-rwxrwxrwx 1 AW AW    1580 Sep 25  2025 2025-09-25--12-03-00-guetzli.zip*
+-rwxrwxrwx 1 AW AW     565 Sep 25  2025 2025-09-25--12-07-12-loc.txt*
+-rwxrwxrwx 1 AW AW     585 Sep 25  2025 2025-09-25--12-11-20-loc.txt*
+-rwxrwxrwx 1 AW AW    1580 Sep 25  2025 2025-09-25--12-13-15-guetzli.zip*
+-rwxrwxrwx 1 AW AW     605 Sep 25  2025 2025-09-25--12-17-18-loc.txt*
+-rwxrwxrwx 1 AW AW     594 Sep 25  2025 2025-09-25--12-22-42-loc.txt*
+-rwxrwxrwx 1 AW AW     600 Sep 25  2025 2025-09-25--12-25-04-loc.txt*
+-rwxrwxrwx 1 AW AW     594 Sep 25  2025 2025-09-25--12-28-22-loc.txt*
+-rwxrwxrwx 1 AW AW    1580 Sep 25  2025 2025-09-25--12-32-13-guetzli.zip*
+-rwxrwxrwx 1 AW AW    9487 Sep 25  2025 2025-09-25--12-37-53-fi.zip*
+-rwxrwxrwx 1 AW AW    1580 Sep 25  2025 2025-09-25--12-42-01-guetzli.zip*
+-rwxrwxrwx 1 AW AW    7582 Sep 25  2025 2025-09-25--12-44-42-fi.zip*
+-rwxrwxrwx 1 AW AW    1580 Sep 25  2025 2025-09-25--12-47-53-guetzli.zip*
+-rwxrwxrwx 1 AW AW   11469 Sep 25  2025 2025-09-25--12-53-44-fi.zip*
+-rwxrwxrwx 1 AW AW    1623 Sep 25  2025 2025-09-25--13-03-50-guetzli.zip*
+-rwxrwxrwx 1 AW AW   11468 Sep 25  2025 2025-09-25--13-09-48-fi.zip*
+-rwxrwxrwx 1 AW AW     495 Sep 25  2025 2025-09-25--13-15-22-loc.txt*
+-rwxrwxrwx 1 AW AW    1623 Sep 25  2025 2025-09-25--13-15-41-guetzli.zip*
+-rwxrwxrwx 1 AW AW     605 Sep 25  2025 2025-09-25--13-18-56-loc.txt*
+
+There are **no gaps ≥90 minutes**, so this is one continuous session.
+
+**First:** 09:40:13  
+**Last:** 13:18:56  
+**Duration:** 3:38:43  
+**Fractional hours:** **\(\boxed{3.6453}\)** ≈ **3.65 hours**
+________________________________________________________________
+
+AR
+
+
+-rwxrwxrwx 1 AW AW    4726 Sep 25  2025 2025-09-25--13-25-23-casync.zip*
+-rwxrwxrwx 1 AW AW     586 Sep 25  2025 2025-09-25--13-26-25-loc.txt*
+-rwxrwxrwx 1 AW AW    9558 Sep 25  2025 2025-09-25--13-29-25-fi.zip*
+-rwxrwxrwx 1 AW AW    4435 Sep 25  2025 2025-09-25--13-59-23-casync.zip*
+-rwxrwxrwx 1 AW AW     585 Sep 25  2025 2025-09-25--14-00-23-loc.txt*
+-rwxrwxrwx 1 AW AW    4447 Sep 25  2025 2025-09-25--14-10-53-casync.zip*
+-rwxrwxrwx 1 AW AW    4447 Sep 25  2025 2025-09-25--14-13-13-casync.zip*
+-rwxrwxrwx 1 AW AW     585 Sep 25  2025 2025-09-25--14-14-13-loc.txt*
+-rwxrwxrwx 1 AW AW   10101 Sep 25  2025 2025-09-25--14-17-04-fi.zip*
+-rwxrwxrwx 1 AW AW    4628 Sep 25  2025 2025-09-25--14-28-17-casync.zip*
+-rwxrwxrwx 1 AW AW    4633 Sep 25  2025 2025-09-25--14-34-40-casync.zip*
+-rwxrwxrwx 1 AW AW     267 Sep 25  2025 2025-09-25--14-35-04-loc.txt*
+-rwxrwxrwx 1 AW AW    6435 Sep 25  2025 2025-09-25--14-35-35-fi.zip*
+-rwxrwxrwx 1 AW AW    4648 Sep 25  2025 2025-09-25--14-37-53-casync.zip*
+-rwxrwxrwx 1 AW AW     589 Sep 25  2025 2025-09-25--14-38-52-loc.txt*
+-rwxrwxrwx 1 AW AW   10205 Sep 25  2025 2025-09-25--14-41-58-fi.zip*
+-rwxrwxrwx 1 AW AW    4648 Sep 25  2025 2025-09-25--14-43-10-casync.zip*
+-rwxrwxrwx 1 AW AW     589 Sep 25  2025 2025-09-25--14-44-11-loc.txt*
+
+There are **no gaps ≥90 minutes**, so this is one continuous session.
+
+**First:** 13:25:23  
+**Last:** 14:44:11  
+**Duration:** 1:18:48  
+**Fractional hours:** **\(\boxed{1.3133}\)** ≈ **1.31 hours**
+________________________________________________________________
+
+AS
+
+-rwxrwxrwx 1 AW AW   4726 Dec  5  2025 2025-12-05--15-31-51-casync-fd.zip*
+-rwxrwxrwx 1 AW AW    585 Dec  5  2025 2025-12-05--15-32-54-loc.txt*
+-rwxrwxrwx 1 AW AW   6090 Dec  5  2025 2025-12-05--15-36-50-casync-fd.zip*
+-rwxrwxrwx 1 AW AW    585 Dec  5  2025 2025-12-05--15-37-49-loc.txt*
+-rwxrwxrwx 1 AW AW   6090 Dec  5  2025 2025-12-05--15-42-28-casync-fd.zip*
+-rwxrwxrwx 1 AW AW    585 Dec  5  2025 2025-12-05--15-43-26-loc.txt*
+-rwxrwxrwx 1 AW AW   6090 Dec  5  2025 2025-12-05--15-44-27-casync-fd.zip*
+-rwxrwxrwx 1 AW AW    585 Dec  5  2025 2025-12-05--15-45-25-loc.txt*
+-rwxrwxrwx 1 AW AW   7482 Dec  6  2025 2025-12-06--05-08-31-casync-fd.zip*
+-rwxrwxrwx 1 AW AW    587 Dec  6  2025 2025-12-06--05-09-25-loc.txt*
+-rwxrwxrwx 1 AW AW   7641 Dec  6  2025 2025-12-06--05-12-46-casync-fd.zip*
+-rwxrwxrwx 1 AW AW    588 Dec  6  2025 2025-12-06--05-13-40-loc.txt*
+-rwxrwxrwx 1 AW AW   6325 Dec  6  2025 2025-12-06--05-16-32-casync-fd.zip*
+-rwxrwxrwx 1 AW AW    588 Dec  6  2025 2025-12-06--05-17-27-loc.txt*
+
+Using the **90-minute break rule**, there are two counted sessions:
+
+| Session | First | Last | Duration | Fractional hours |
+|---|---:|---:|---:|---:|
+| Dec. 5 | 15:31:51 | 15:45:25 | 0:13:34 | 0.2261 |
+| Dec. 6 | 05:08:31 | 05:17:27 | 0:08:56 | 0.1489 |
+
+The overnight gap is excluded.
+
+**Total counted time: 0:22:30**
+
+**Fractional hours: \(\boxed{0.3750}\)** ≈ **0.38 hours**.
+________________________________________________________________
+
+AS
+
+
+-rwxrwxrwx 1 AW AW   7398 Dec  6  2025 2025-12-06--05-21-00-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec  6  2025 2025-12-06--05-22-16-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec  6  2025 2025-12-06--05-25-19-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec  6  2025 2025-12-06--05-26-53-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec  6  2025 2025-12-06--05-27-13-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec  6  2025 2025-12-06--05-27-15-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec  6  2025 2025-12-06--05-28-13-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec  6  2025 2025-12-06--05-28-15-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec  6  2025 2025-12-06--05-28-16-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec  6  2025 2025-12-06--05-28-17-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec  6  2025 2025-12-06--05-28-18-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec  6  2025 2025-12-06--05-28-19-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7399 Dec  6  2025 2025-12-06--05-28-56-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7399 Dec  6  2025 2025-12-06--05-30-52-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7399 Dec  6  2025 2025-12-06--05-32-25-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7399 Dec  6  2025 2025-12-06--05-34-20-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7399 Dec  6  2025 2025-12-06--05-35-04-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    618 Dec  6  2025 2025-12-06--05-40-43-loc.txt*
+-rwxrwxrwx 1 AW AW    606 Dec  6  2025 2025-12-06--05-41-40-loc.txt*
+-rwxrwxrwx 1 AW AW    606 Dec  6  2025 2025-12-06--05-41-54-loc.txt*
+-rwxrwxrwx 1 AW AW    606 Dec  6  2025 2025-12-06--05-42-23-loc.txt*
+-rwxrwxrwx 1 AW AW    266 Dec  6  2025 2025-12-06--05-44-55-loc.txt*
+-rwxrwxrwx 1 AW AW   7398 Dec  6  2025 2025-12-06--05-45-32-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7398 Dec  6  2025 2025-12-06--05-46-14-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7399 Dec  6  2025 2025-12-06--05-46-37-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    618 Dec  6  2025 2025-12-06--05-49-25-loc.txt*
+-rwxrwxrwx 1 AW AW   7406 Dec  6  2025 2025-12-06--06-17-05-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    530 Dec  6  2025 2025-12-06--06-18-43-loc.txt*
+-rwxrwxrwx 1 AW AW    530 Dec  6  2025 2025-12-06--06-21-19-loc.txt*
+-rwxrwxrwx 1 AW AW   7406 Dec  6  2025 2025-12-06--06-24-25-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    530 Dec  6  2025 2025-12-06--06-26-01-loc.txt*
+-rwxrwxrwx 1 AW AW    530 Dec  6  2025 2025-12-06--06-30-19-loc.txt*
+-rwxrwxrwx 1 AW AW   7410 Dec  6  2025 2025-12-06--06-30-27-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    530 Dec  6  2025 2025-12-06--06-32-02-loc.txt*
+-rwxrwxrwx 1 AW AW    530 Dec  6  2025 2025-12-06--06-34-04-loc.txt*
+-rwxrwxrwx 1 AW AW    530 Dec  6  2025 2025-12-06--06-34-36-loc.txt*
+-rwxrwxrwx 1 AW AW    530 Dec  6  2025 2025-12-06--06-35-06-loc.txt*
+-rwxrwxrwx 1 AW AW    606 Dec  6  2025 2025-12-06--06-36-24-loc.txt*
+-rwxrwxrwx 1 AW AW   7406 Dec  6  2025 2025-12-06--06-37-43-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    618 Dec  6  2025 2025-12-06--06-39-58-loc.txt*
+-rwxrwxrwx 1 AW AW   7417 Dec  6  2025 2025-12-06--06-44-41-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    618 Dec  6  2025 2025-12-06--06-46-47-loc.txt*
+-rwxrwxrwx 1 AW AW   7441 Dec  6  2025 2025-12-06--06-48-51-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    618 Dec  6  2025 2025-12-06--06-50-59-loc.txt*
+-rwxrwxrwx 1 AW AW   7539 Dec  6  2025 2025-12-06--07-00-08-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    618 Dec  6  2025 2025-12-06--07-02-16-loc.txt*
+-rwxrwxrwx 1 AW AW   7539 Dec  6  2025 2025-12-06--07-04-22-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    606 Dec  6  2025 2025-12-06--07-05-32-loc.txt*
+-rwxrwxrwx 1 AW AW   7539 Dec  6  2025 2025-12-06--07-06-51-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    618 Dec  6  2025 2025-12-06--07-08-59-loc.txt*
+-rwxrwxrwx 1 AW AW   7539 Dec  6  2025 2025-12-06--07-12-02-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    618 Dec  6  2025 2025-12-06--07-14-13-loc.txt*
+-rwxrwxrwx 1 AW AW   7539 Dec  6  2025 2025-12-06--07-14-33-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    618 Dec  6  2025 2025-12-06--07-16-41-loc.txt*
+-rwxrwxrwx 1 AW AW   7541 Dec  6  2025 2025-12-06--07-29-02-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    618 Dec  6  2025 2025-12-06--07-31-11-loc.txt*
+-rwxrwxrwx 1 AW AW   7541 Dec  6  2025 2025-12-06--07-32-56-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    606 Dec  6  2025 2025-12-06--07-34-06-loc.txt*
+-rwxrwxrwx 1 AW AW   7541 Dec  6  2025 2025-12-06--07-36-39-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    606 Dec  6  2025 2025-12-06--07-37-47-loc.txt*
+-rwxrwxrwx 1 AW AW   7504 Dec  6  2025 2025-12-06--07-39-06-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    618 Dec  6  2025 2025-12-06--07-41-15-loc.txt*
+-rwxrwxrwx 1 AW AW   7536 Dec  6  2025 2025-12-06--07-46-25-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    617 Dec  6  2025 2025-12-06--07-48-11-loc.txt*
+-rwxrwxrwx 1 AW AW   7544 Dec  6  2025 2025-12-06--07-50-11-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    609 Dec  6  2025 2025-12-06--07-51-22-loc.txt*
+-rwxrwxrwx 1 AW AW   7524 Dec  6  2025 2025-12-06--08-18-48-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    615 Dec  6  2025 2025-12-06--08-20-00-loc.txt*
+-rwxrwxrwx 1 AW AW   7524 Dec  6  2025 2025-12-06--08-36-43-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    617 Dec  6  2025 2025-12-06--08-38-30-loc.txt*
+-rwxrwxrwx 1 AW AW   7399 Dec  6  2025 2025-12-06--08-39-14-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    619 Dec  6  2025 2025-12-06--08-41-27-loc.txt*
+-rwxrwxrwx 1 AW AW   7399 Dec  6  2025 2025-12-06--08-42-50-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    618 Dec  6  2025 2025-12-06--08-44-34-loc.txt*
+-rwxrwxrwx 1 AW AW   7399 Dec  6  2025 2025-12-06--08-44-49-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    620 Dec  6  2025 2025-12-06--08-46-59-loc.txt*
+-rwxrwxrwx 1 AW AW   7399 Dec  6  2025 2025-12-06--08-53-45-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    619 Dec  6  2025 2025-12-06--08-56-02-loc.txt*
+-rwxrwxrwx 1 AW AW   7399 Dec  6  2025 2025-12-06--08-57-45-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   7399 Dec  6  2025 2025-12-06--09-01-08-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW    620 Dec  6  2025 2025-12-06--09-03-20-loc.txt*
+
+There are **no gaps ≥90 minutes**, so this is one continuous session.
+
+**First:** 05:21:00  
+**Last:** 09:03:20  
+**Duration:** 3:42:20  
+**Fractional hours:** **\(\boxed{3.7056}\)** ≈ **3.71 hours**
+________________________________________________________________
+
+AT / AT
+
+
+-rwxrwxrwx 1 AW AW  3205 Dec  7  2025 2025-12-07--16-12-28-unrar-fd.zip*
+-rwxrwxrwx 1 AW AW   591 Dec  7  2025 2025-12-07--16-14-08-loc.txt*
+-rwxrwxrwx 1 AW AW  4519 Dec  7  2025 2025-12-07--16-46-25-unrar-fd.zip*
+-rwxrwxrwx 1 AW AW   596 Dec  7  2025 2025-12-07--16-48-00-loc.txt*
+-rwxrwxrwx 1 AW AW 14684 Dec  7  2025 2025-12-07--16-52-54-fi.zip*
+-rwxrwxrwx 1 AW AW  3205 Dec  7  2025 2025-12-07--17-01-56-unrar-fd.zip*
+-rwxrwxrwx 1 AW AW   596 Dec  7  2025 2025-12-07--17-03-37-loc.txt*
+-rwxrwxrwx 1 AW AW 14947 Dec  7  2025 2025-12-07--17-08-09-fi.zip*
+-rwxrwxrwx 1 AW AW  3205 Dec  7  2025 2025-12-07--17-08-44-unrar-fd.zip*
+-rwxrwxrwx 1 AW AW   596 Dec  7  2025 2025-12-07--17-10-17-loc.txt*
+-rwxrwxrwx 1 AW AW  4965 Dec  7  2025 2025-12-07--17-19-36-unrar-fd.zip*
+-rwxrwxrwx 1 AW AW  5859 Dec  7  2025 2025-12-07--17-28-30-unrar-fd.zip*
+-rwxrwxrwx 1 AW AW   596 Dec  7  2025 2025-12-07--17-30-06-loc.txt*
+-rwxrwxrwx 1 AW AW  5860 Dec  7  2025 2025-12-07--17-31-53-unrar-fd.zip*
+-rwxrwxrwx 1 AW AW  6164 Dec  7  2025 2025-12-07--17-40-26-unrar-fd.zip*
+-rwxrwxrwx 1 AW AW  6281 Dec  7  2025 2025-12-07--17-42-30-unrar-fd.zip*
+-rwxrwxrwx 1 AW AW   596 Dec  7  2025 2025-12-07--17-44-01-loc.txt*
+-rwxrwxrwx 1 AW AW  6281 Dec  7  2025 2025-12-07--17-50-06-unrar-fd.zip*
+-rwxrwxrwx 1 AW AW   596 Dec  7  2025 2025-12-07--17-51-39-loc.txt*
+-rwxrwxrwx 1 AW AW  8095 Dec  7  2025 2025-12-07--17-52-11-unrar-fd.zip*
+-rwxrwxrwx 1 AW AW  9350 Dec  7  2025 2025-12-07--18-00-27-unrar-fd.zip*
+-rwxrwxrwx 1 AW AW   560 Dec  7  2025 2025-12-07--18-01-58-loc.txt*
+-rwxrwxrwx 1 AW AW  9261 Dec  7  2025 2025-12-07--18-07-09-unrar-fd.zip*
+-rwxrwxrwx 1 AW AW  8798 Dec  7  2025 2025-12-07--18-09-46-unrar-fd.zip*
+-rwxrwxrwx 1 AW AW  8797 Dec  7  2025 2025-12-07--18-11-31-unrar-fd.zip*
+-rwxrwxrwx 1 AW AW   599 Dec  7  2025 2025-12-07--18-13-08-loc.txt*
+
+There are **no gaps ≥90 minutes**, so this is one continuous session.
+
+**First:** 16:12:28  
+**Last:** 18:13:08  
+**Duration:** 2:00:40  
+**Fractional hours:** **\(\boxed{2.0111}\)** ≈ **2.01 hours**
+________________________________________________________________
+
+AT / AT
+
+
+-rwxrwxrwx 1 AW AW  7398 Dec  7  2025 2025-12-07--18-29-08-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9844 Dec  7  2025 2025-12-07--18-37-49-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9844 Dec  7  2025 2025-12-07--18-37-53-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9844 Dec  7  2025 2025-12-07--18-39-13-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9844 Dec  7  2025 2025-12-07--18-39-32-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9844 Dec  7  2025 2025-12-07--18-40-20-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9844 Dec  7  2025 2025-12-07--18-40-43-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9844 Dec  7  2025 2025-12-07--18-46-18-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9844 Dec  7  2025 2025-12-07--18-46-26-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9844 Dec  7  2025 2025-12-07--22-44-54-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  8664 Dec  7  2025 2025-12-07--22-50-57-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  8664 Dec  7  2025 2025-12-07--22-53-35-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9314 Dec  7  2025 2025-12-07--22-57-54-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9314 Dec  7  2025 2025-12-07--22-58-36-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   683 Dec  7  2025 2025-12-07--23-02-52-loc.txt*
+-rwxrwxrwx 1 AW AW   678 Dec  7  2025 2025-12-07--23-03-16-loc.txt*
+-rwxrwxrwx 1 AW AW   678 Dec  7  2025 2025-12-07--23-03-42-loc.txt*
+-rwxrwxrwx 1 AW AW   678 Dec  7  2025 2025-12-07--23-04-07-loc.txt*
+-rwxrwxrwx 1 AW AW  9314 Dec  8  2025 2025-12-08--21-32-57-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   684 Dec  8  2025 2025-12-08--22-05-22-loc.txt*
+-rwxrwxrwx 1 AW AW  7398 Dec  8  2025 2025-12-08--22-08-08-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9314 Dec  8  2025 2025-12-08--22-09-16-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9314 Dec  8  2025 2025-12-08--22-11-40-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   683 Dec  8  2025 2025-12-08--22-15-52-loc.txt*
+-rwxrwxrwx 1 AW AW  9314 Dec  8  2025 2025-12-08--22-17-05-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW 12367 Dec  8  2025 2025-12-08--22-24-06-fi.zip*
+-rwxrwxrwx 1 AW AW  9314 Dec  9  2025 2025-12-09--19-24-25-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9314 Dec  9  2025 2025-12-09--19-39-55-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9314 Dec  9  2025 2025-12-09--20-03-18-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9314 Dec  9  2025 2025-12-09--20-03-25-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9314 Dec  9  2025 2025-12-09--20-04-17-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9314 Dec  9  2025 2025-12-09--20-05-43-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9314 Dec  9  2025 2025-12-09--20-05-47-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9314 Dec  9  2025 2025-12-09--20-07-13-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9314 Dec  9  2025 2025-12-09--20-08-49-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9314 Dec  9  2025 2025-12-09--20-10-26-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9314 Dec 10  2025 2025-12-10--18-39-46-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9314 Dec 10  2025 2025-12-10--20-37-44-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Dec 10  2025 2025-12-10--20-38-46-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Dec 10  2025 2025-12-10--20-43-02-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Dec 10  2025 2025-12-10--20-43-51-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9314 Dec 10  2025 2025-12-10--20-49-38-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9314 Dec 10  2025 2025-12-10--20-53-37-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9314 Dec 10  2025 2025-12-10--20-54-56-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9314 Dec 10  2025 2025-12-10--20-59-22-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   748 Dec 10  2025 2025-12-10--21-09-03-loc.txt*
+-rwxrwxrwx 1 AW AW   738 Dec 10  2025 2025-12-10--21-10-21-loc.txt*
+-rwxrwxrwx 1 AW AW  9314 Dec 10  2025 2025-12-10--22-00-58-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Dec 10  2025 2025-12-10--22-02-05-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Dec 10  2025 2025-12-10--22-16-14-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Dec 10  2025 2025-12-10--22-17-55-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Dec 10  2025 2025-12-10--22-20-56-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Dec 11  2025 2025-12-11--18-22-20-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Dec 11  2025 2025-12-11--18-23-53-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Dec 11  2025 2025-12-11--18-24-10-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9314 Dec 11  2025 2025-12-11--18-25-24-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9314 Dec 11  2025 2025-12-11--18-25-33-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9314 Dec 11  2025 2025-12-11--18-29-11-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9314 Dec 11  2025 2025-12-11--18-29-23-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   748 Dec 11  2025 2025-12-11--18-35-20-loc.txt*
+-rwxrwxrwx 1 AW AW  9314 Dec 11  2025 2025-12-11--18-37-38-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9314 Dec 11  2025 2025-12-11--18-39-01-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW 14948 Dec 11  2025 2025-12-11--18-50-13-fi.zip*
+-rwxrwxrwx 1 AW AW   632 Dec 11  2025 2025-12-11--18-53-16-loc.txt*
+-rwxrwxrwx 1 AW AW   632 Dec 11  2025 2025-12-11--18-56-38-loc.txt*
+-rwxrwxrwx 1 AW AW   738 Dec 13  2025 2025-12-13--11-24-57-loc.txt*
+-rwxrwxrwx 1 AW AW  7398 Dec 13  2025 2025-12-13--11-28-59-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Dec 13  2025 2025-12-13--11-29-55-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Dec 13  2025 2025-12-13--11-30-10-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Dec 13  2025 2025-12-13--11-35-24-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Dec 13  2025 2025-12-13--11-37-09-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Dec 13  2025 2025-12-13--11-41-31-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Dec 13  2025 2025-12-13--11-44-21-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Dec 13  2025 2025-12-13--11-54-52-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Dec 13  2025 2025-12-13--11-59-00-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Dec 13  2025 2025-12-13--11-59-15-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Dec 13  2025 2025-12-13--12-01-10-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Dec 13  2025 2025-12-13--12-01-16-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Dec 13  2025 2025-12-13--12-04-07-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Dec 13  2025 2025-12-13--12-06-28-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9943 Dec 13  2025 2025-12-13--12-07-33-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9314 Dec 13  2025 2025-12-13--12-11-10-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  7398 Dec 13  2025 2025-12-13--12-34-40-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9314 Dec 13  2025 2025-12-13--12-38-48-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9314 Dec 13  2025 2025-12-13--12-38-58-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9637 Dec 13  2025 2025-12-13--12-59-16-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9637 Dec 13  2025 2025-12-13--12-59-33-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9708 Dec 13  2025 2025-12-13--13-08-58-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW  9708 Dec 13  2025 2025-12-13--13-09-04-openjpeg-oss.zip*
+-rwxrwxrwx 1 AW AW   753 Dec 13  2025 2025-12-13--13-15-28-loc.txt*
+
+Using the **90-minute break rule**, and excluding the isolated **Dec. 10 18:39:46** timestamp because it is surrounded by ≥90-minute breaks:
+
+| Session | First | Last | Duration | Fractional hours |
+|---|---:|---:|---:|---:|
+| Dec. 7 | 18:29:08 | 18:46:26 | 0:17:18 | 0.2883 |
+| Dec. 7 | 22:44:54 | 23:04:07 | 0:19:13 | 0.3203 |
+| Dec. 8 | 21:32:57 | 22:24:06 | 0:51:09 | 0.8525 |
+| Dec. 9 | 19:24:25 | 20:10:26 | 0:46:01 | 0.7669 |
+| Dec. 10 | 20:37:44 | 22:20:56 | 1:43:12 | 1.7200 |
+| Dec. 11 | 18:22:20 | 18:56:38 | 0:34:18 | 0.5717 |
+| Dec. 13 | 11:24:57 | 13:15:28 | 1:50:31 | 1.8419 |
+
+**Total counted time: 6:21:42**
+
+**Fractional hours: \(\boxed{6.3617}\)** ≈ **6.36 hours**.
+________________________________________________________________
+
+AU
+
+
+
+-rwxrwxrwx 1 AW AW    1914 Dec  2  2025 2025-12-02--07-20-42-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW    1914 Dec  2  2025 2025-12-02--07-25-41-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW    1914 Dec  2  2025 2025-12-02--07-37-49-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW    1914 Dec  2  2025 2025-12-02--07-43-14-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW    1928 Dec  2  2025 2025-12-02--07-46-33-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW     593 Dec  2  2025 2025-12-02--07-52-31-loc.txt*
+-rwxrwxrwx 1 AW AW    1770 Dec  2  2025 2025-12-02--08-04-48-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW    1764 Dec  2  2025 2025-12-02--08-06-13-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW    1776 Dec  2  2025 2025-12-02--08-09-13-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW    1793 Dec  2  2025 2025-12-02--08-12-30-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW    1790 Dec  2  2025 2025-12-02--08-13-54-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW     596 Dec  2  2025 2025-12-02--08-18-52-loc.txt*
+-rwxrwxrwx 1 AW AW     576 Dec  2  2025 2025-12-02--08-20-56-loc.txt*
+-rwxrwxrwx 1 AW AW     596 Dec  2  2025 2025-12-02--08-24-51-loc.txt*
+-rwxrwxrwx 1 AW AW    1790 Dec  2  2025 2025-12-02--08-30-14-guetzli-oss.zip*
+-rwxrwxrwx 1 AW AW     596 Dec  2  2025 2025-12-02--08-34-24-loc.txt*
+
+There are **no gaps ≥90 minutes**, so this is one continuous session.
+
+**First:** 07:20:42  
+**Last:** 08:34:24  
+**Duration:** 1:13:42  
+**Fractional hours:** **\(\boxed{1.2283}\)** ≈ **1.23 hours**
+________________________________________________________________
+
+AU
+
+
+-rwxrwxrwx 1 AW AW   60072 Dec  2  2025 2025-12-02--08-35-29-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW   66875 Dec  2  2025 2025-12-02--08-54-36-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW   66883 Dec  2  2025 2025-12-02--08-56-23-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW   66529 Dec  2  2025 2025-12-02--09-03-54-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW   72042 Dec  2  2025 2025-12-02--09-13-04-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW   72054 Dec  2  2025 2025-12-02--09-15-29-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW     748 Dec  2  2025 2025-12-02--09-19-13-loc.txt*
+-rwxrwxrwx 1 AW AW   72056 Dec  2  2025 2025-12-02--09-22-29-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW   72063 Dec  2  2025 2025-12-02--09-24-31-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW   72063 Dec  2  2025 2025-12-02--09-29-49-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW   72040 Dec  2  2025 2025-12-02--09-33-06-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW   72040 Dec  2  2025 2025-12-02--09-35-18-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW     748 Dec  2  2025 2025-12-02--09-38-53-loc.txt*
+-rwxrwxrwx 1 AW AW   72044 Dec  2  2025 2025-12-02--10-13-39-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW   72041 Dec  2  2025 2025-12-02--10-14-39-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW   72041 Dec  2  2025 2025-12-02--10-15-17-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW   72022 Dec  2  2025 2025-12-02--10-16-30-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW   72030 Dec  2  2025 2025-12-02--10-17-12-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW   72058 Dec  2  2025 2025-12-02--10-19-49-snappy-fd.zip*
+-rwxrwxrwx 1 AW AW     755 Dec  2  2025 2025-12-02--10-23-27-loc.txt*
+
+There are **no gaps ≥90 minutes**, so this is one continuous session.
+
+**First:** 08:35:29  
+**Last:** 10:23:27  
+**Duration:** 1:47:58  
+**Fractional hours:** **\(\boxed{1.7994}\)** ≈ **1.80 hours**
+________________________________________________________________
+
+AD
+
+
+-rwxrwxrwx 1 AW AW  57971 Dec 28  2025 2025-12-28--16-38-59-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW    613 Dec 28  2025 2025-12-28--16-54-25-loc.txt*
+-rwxrwxrwx 1 AW AW    611 Dec 28  2025 2025-12-28--16-56-57-loc.txt*
+-rwxrwxrwx 1 AW AW  57971 Dec 28  2025 2025-12-28--16-57-34-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW   9813 Dec 28  2025 2025-12-28--17-13-11-fi.zip*
+-rwxrwxrwx 1 AW AW  57971 Dec 28  2025 2025-12-28--17-29-47-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW  57971 Dec 28  2025 2025-12-28--17-34-50-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW    613 Dec 28  2025 2025-12-28--17-38-10-loc.txt*
+-rwxrwxrwx 1 AW AW  57971 Dec 28  2025 2025-12-28--17-42-26-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW    619 Dec 28  2025 2025-12-28--17-46-03-loc.txt*
+-rwxrwxrwx 1 AW AW    600 Dec 28  2025 2025-12-28--17-56-48-loc.txt*
+-rwxrwxrwx 1 AW AW  57971 Dec 28  2025 2025-12-28--17-57-48-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW    619 Dec 28  2025 2025-12-28--18-01-12-loc.txt*
+-rwxrwxrwx 1 AW AW   2006 Dec 28  2025 2025-12-28--18-13-56-unrar-oss.zip*
+-rwxrwxrwx 1 AW AW  10567 Dec 28  2025 2025-12-28--18-19-44-fi.zip*
+-rwxrwxrwx 1 AW AW  57971 Dec 28  2025 2025-12-28--18-23-07-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW    611 Dec 28  2025 2025-12-28--18-26-18-loc.txt*
+-rwxrwxrwx 1 AW AW  57971 Dec 29  2025 2025-12-29--17-29-52-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW    523 Dec 29  2025 2025-12-29--17-42-46-loc.txt*
+-rwxrwxrwx 1 AW AW    523 Dec 29  2025 2025-12-29--17-43-05-loc.txt*
+-rwxrwxrwx 1 AW AW    523 Dec 29  2025 2025-12-29--17-43-54-loc.txt*
+-rwxrwxrwx 1 AW AW    600 Dec 29  2025 2025-12-29--17-50-16-loc.txt*
+-rwxrwxrwx 1 AW AW  57971 Dec 29  2025 2025-12-29--17-53-29-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW    619 Dec 29  2025 2025-12-29--18-02-16-loc.txt*
+-rwxrwxrwx 1 AW AW  57971 Dec 30  2025 2025-12-30--13-40-17-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW    758 Dec 30  2025 2025-12-30--13-46-32-loc.txt*
+-rwxrwxrwx 1 AW AW  57971 Dec 30  2025 2025-12-30--22-50-04-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW  58921 Dec 30  2025 2025-12-30--22-55-34-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW  58903 Dec 30  2025 2025-12-30--22-59-14-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW  58912 Dec 30  2025 2025-12-30--23-06-21-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW  58916 Dec 30  2025 2025-12-30--23-08-54-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW  58921 Dec 30  2025 2025-12-30--23-11-35-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW    763 Dec 30  2025 2025-12-30--23-16-49-loc.txt*
+-rwxrwxrwx 1 AW AW  59130 Dec 30  2025 2025-12-30--23-30-57-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW  59130 Dec 30  2025 2025-12-30--23-32-29-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW  59140 Dec 30  2025 2025-12-30--23-37-03-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW  59139 Dec 30  2025 2025-12-30--23-38-34-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW    758 Dec 30  2025 2025-12-30--23-41-50-loc.txt*
+-rwxrwxrwx 1 AW AW  59229 Dec 30  2025 2025-12-30--23-50-49-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW    763 Dec 30  2025 2025-12-30--23-53-54-loc.txt*
+-rwxrwxrwx 1 AW AW  59246 Dec 31  2025 2025-12-31--00-01-30-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW  59248 Dec 31  2025 2025-12-31--00-03-48-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW  59247 Dec 31  2025 2025-12-31--00-08-40-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW  59286 Dec 31  2025 2025-12-31--00-15-16-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW  59283 Dec 31  2025 2025-12-31--00-17-11-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW  59288 Dec 31  2025 2025-12-31--00-21-54-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW  59292 Dec 31  2025 2025-12-31--00-25-10-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW  59305 Dec 31  2025 2025-12-31--00-30-58-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW  59306 Dec 31  2025 2025-12-31--00-33-43-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW  59299 Dec 31  2025 2025-12-31--00-43-04-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW  59301 Dec 31  2025 2025-12-31--00-46-19-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW    763 Dec 31  2025 2025-12-31--00-49-31-loc.txt*
+-rwxrwxrwx 1 AW AW  59301 Dec 31  2025 2025-12-31--00-52-50-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW    763 Dec 31  2025 2025-12-31--00-56-25-loc.txt*
+-rwxrwxrwx 1 AW AW  59290 Dec 31  2025 2025-12-31--00-58-40-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW  59294 Dec 31  2025 2025-12-31--01-00-15-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW    750 Dec 31  2025 2025-12-31--01-03-37-loc.txt*
+-rwxrwxrwx 1 AW AW  59293 Dec 31  2025 2025-12-31--01-05-55-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW    750 Dec 31  2025 2025-12-31--01-09-05-loc.txt*
+-rwxrwxrwx 1 AW AW    758 Dec 31  2025 2025-12-31--01-11-22-loc.txt*
+-rwxrwxrwx 1 AW AW    763 Dec 31  2025 2025-12-31--01-13-56-loc.txt*
+-rwxrwxrwx 1 AW AW  59280 Dec 31  2025 2025-12-31--01-24-55-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW  59284 Dec 31  2025 2025-12-31--01-26-39-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW    763 Dec 31  2025 2025-12-31--01-32-03-loc.txt*
+-rwxrwxrwx 1 AW AW  59347 Dec 31  2025 2025-12-31--01-44-48-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW  59348 Dec 31  2025 2025-12-31--01-46-45-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW    765 Dec 31  2025 2025-12-31--01-50-12-loc.txt*
+
+Using the **90-minute break rule**, there are four counted sessions. The Dec. 30 **13:40:17–13:46:32** pair counts because it contains two timestamps.
+
+| Session | First | Last | Duration | Fractional hours |
+|---|---:|---:|---:|---:|
+| Dec. 28 | 16:38:59 | 18:26:18 | 1:47:19 | 1.7886 |
+| Dec. 29 | 17:29:52 | 18:02:16 | 0:32:24 | 0.5400 |
+| Dec. 30 | 13:40:17 | 13:46:32 | 0:06:15 | 0.1042 |
+| Dec. 30–31 | 22:50:04 | 01:50:12 | 3:00:08 | 3.0022 |
+
+All intervening gaps ≥90 minutes are excluded.
+
+**Total counted time: 5:26:06**
+
+**Fractional hours: \(\boxed{5.4350}\)** ≈ **5.44 hours**.
+
+________________________________________________________________
+
+AD
+
+
+-rwxrwxrwx 1 AW AW   2254 Dec 29  2025 2025-12-29--05-15-49-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   2254 Dec 29  2025 2025-12-29--05-19-14-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW    604 Dec 29  2025 2025-12-29--05-21-18-loc.txt*
+-rwxrwxrwx 1 AW AW   2254 Dec 29  2025 2025-12-29--05-22-57-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW    604 Dec 29  2025 2025-12-29--05-24-04-loc.txt*
+-rwxrwxrwx 1 AW AW  12182 Dec 29  2025 2025-12-29--05-29-16-fi.zip*
+-rwxrwxrwx 1 AW AW   2324 Dec 29  2025 2025-12-29--10-53-29-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   2524 Dec 29  2025 2025-12-29--12-57-57-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW    602 Dec 29  2025 2025-12-29--13-02-43-loc.txt*
+-rwxrwxrwx 1 AW AW   2528 Dec 29  2025 2025-12-29--13-06-52-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW    601 Dec 29  2025 2025-12-29--13-08-06-loc.txt*
+-rwxrwxrwx 1 AW AW   2524 Dec 29  2025 2025-12-29--13-09-33-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW    602 Dec 29  2025 2025-12-29--13-13-43-loc.txt*
+-rwxrwxrwx 1 AW AW   2521 Dec 29  2025 2025-12-29--13-15-12-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW    602 Dec 29  2025 2025-12-29--13-19-09-loc.txt*
+-rwxrwxrwx 1 AW AW   2633 Dec 30  2025 2025-12-30--00-49-42-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW    602 Dec 30  2025 2025-12-30--00-55-55-loc.txt*
+-rwxrwxrwx 1 AW AW   3136 Dec 30  2025 2025-12-30--01-12-24-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   3138 Dec 30  2025 2025-12-30--01-13-31-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   3143 Dec 30  2025 2025-12-30--01-14-47-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   3144 Dec 30  2025 2025-12-30--01-15-30-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   3146 Dec 30  2025 2025-12-30--01-16-06-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   3146 Dec 30  2025 2025-12-30--01-16-20-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW    735 Dec 30  2025 2025-12-30--01-21-27-loc.txt*
+-rwxrwxrwx 1 AW AW   3155 Dec 30  2025 2025-12-30--01-22-41-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   2254 Dec 30  2025 2025-12-30--08-45-04-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   2729 Dec 30  2025 2025-12-30--08-53-43-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   2729 Dec 30  2025 2025-12-30--08-53-55-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW    738 Dec 30  2025 2025-12-30--09-05-32-loc.txt*
+-rwxrwxrwx 1 AW AW   2705 Dec 30  2025 2025-12-30--09-06-51-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW    737 Dec 30  2025 2025-12-30--09-08-09-loc.txt*
+-rwxrwxrwx 1 AW AW   2737 Dec 30  2025 2025-12-30--09-19-03-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   2737 Dec 30  2025 2025-12-30--09-31-18-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   2738 Dec 30  2025 2025-12-30--09-38-20-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   2737 Dec 30  2025 2025-12-30--09-43-32-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   2757 Dec 30  2025 2025-12-30--09-45-34-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   2757 Dec 30  2025 2025-12-30--09-45-47-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   2403 Dec 30  2025 2025-12-30--09-58-37-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   2413 Dec 30  2025 2025-12-30--10-02-15-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   2418 Dec 30  2025 2025-12-30--10-02-49-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   2418 Dec 30  2025 2025-12-30--10-02-59-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW    597 Dec 30  2025 2025-12-30--10-05-00-loc.txt*
+-rwxrwxrwx 1 AW AW   2418 Dec 30  2025 2025-12-30--10-08-34-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   2418 Dec 30  2025 2025-12-30--10-09-33-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW    597 Dec 30  2025 2025-12-30--10-11-35-loc.txt*
+-rwxrwxrwx 1 AW AW   2418 Dec 30  2025 2025-12-30--11-36-35-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   3097 Dec 30  2025 2025-12-30--11-43-29-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   2802 Dec 30  2025 2025-12-30--11-44-21-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW   3194 Dec 30  2025 2025-12-30--13-02-42-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW    739 Dec 30  2025 2025-12-30--13-04-57-loc.txt*
+-rwxrwxrwx 1 AW AW   3203 Dec 30  2025 2025-12-30--13-07-02-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW    739 Dec 30  2025 2025-12-30--13-08-16-loc.txt*
+-rwxrwxrwx 1 AW AW   3123 Dec 30  2025 2025-12-30--13-13-19-guetzli-fd.zip*
+-rwxrwxrwx 1 AW AW    739 Dec 30  2025 2025-12-30--13-14-33-loc.txt*
+
+Using the **90-minute break rule**, the **10:53:29 timestamp on Dec. 29 is isolated** and is excluded.
+
+| Session | First | Last | Duration | Fractional hours |
+|---|---:|---:|---:|---:|
+| Dec. 29 | 05:15:49 | 05:29:16 | 0:13:27 | 0.2242 |
+| Dec. 29 | 12:57:57 | 13:19:09 | 0:21:12 | 0.3533 |
+| Dec. 30 | 00:49:42 | 01:22:41 | 0:32:59 | 0.5497 |
+| Dec. 30 | 08:45:04 | 13:14:33 | 4:29:29 | 4.4914 |
+
+The **10:11:35 → 11:36:35 gap is exactly 85 minutes**, so it does **not** meet the 90-minute break threshold and remains part of the final session.
+
+**Total counted time: 5:36:27**
+
+**Fractional hours: \(\boxed{5.6075}\)** ≈ **5.61 hours**.
+
+________________________________________________________________
+
+AV
+
+
+-rwxrwxrwx 1 AW AW 57971 Nov  8  2025 2025-11-08--15-03-46-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW   619 Nov  8  2025 2025-11-08--15-08-27-loc.txt*
+-rwxrwxrwx 1 AW AW 58983 Nov  8  2025 2025-11-08--15-14-10-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW  9817 Nov  8  2025 2025-11-08--15-28-03-fi.zip*
+-rwxrwxrwx 1 AW AW 59670 Nov  8  2025 2025-11-08--16-22-33-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 59669 Nov  8  2025 2025-11-08--16-24-13-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 59666 Nov  8  2025 2025-11-08--16-24-46-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 59720 Nov  8  2025 2025-11-08--16-34-56-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 59740 Nov  8  2025 2025-11-08--16-41-39-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW 59741 Nov  8  2025 2025-11-08--16-46-51-snappy-oss.zip*
+-rwxrwxrwx 1 AW AW   755 Nov  8  2025 2025-11-08--16-49-13-loc.txt*
+
+There are **no gaps ≥90 minutes**, so this is one continuous session.
+
+**First:** 15:03:46  
+**Last:** 16:49:13  
+**Duration:** 1:45:27  
+**Fractional hours:** **\(\boxed{1.7575}\)** ≈ **1.76 hours**
+________________________________________________________________
+
+AV
+
+-rwxrwxrwx 1 AW AW  8755 Nov  8  2025 2025-11-08--16-50-44-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  8755 Nov  9  2025 2025-11-09--03-28-36-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  8755 Nov  9  2025 2025-11-09--03-29-30-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   753 Nov  9  2025 2025-11-09--03-31-18-loc.txt*
+-rwxrwxrwx 1 AW AW  8755 Nov  9  2025 2025-11-09--03-32-00-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   753 Nov  9  2025 2025-11-09--03-33-47-loc.txt*
+-rwxrwxrwx 1 AW AW 15026 Nov  9  2025 2025-11-09--03-43-13-fi.zip*
+-rwxrwxrwx 1 AW AW  8755 Nov  9  2025 2025-11-09--04-10-26-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  8755 Nov  9  2025 2025-11-09--04-11-55-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  8755 Nov  9  2025 2025-11-09--04-13-05-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   753 Nov  9  2025 2025-11-09--04-14-54-loc.txt*
+-rwxrwxrwx 1 AW AW  8759 Nov  9  2025 2025-11-09--04-16-21-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  8759 Nov  9  2025 2025-11-09--04-20-15-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   755 Nov  9  2025 2025-11-09--04-22-03-loc.txt*
+-rwxrwxrwx 1 AW AW  8759 Nov  9  2025 2025-11-09--04-24-42-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   755 Nov  9  2025 2025-11-09--04-26-29-loc.txt*
+-rwxrwxrwx 1 AW AW 15102 Nov  9  2025 2025-11-09--04-35-26-fi.zip*
+-rwxrwxrwx 1 AW AW 10402 Nov  9  2025 2025-11-09--04-53-11-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW 10473 Nov  9  2025 2025-11-09--05-04-21-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW 10473 Nov  9  2025 2025-11-09--05-05-44-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   755 Nov  9  2025 2025-11-09--05-07-36-loc.txt*
+-rwxrwxrwx 1 AW AW 10473 Nov  9  2025 2025-11-09--05-08-08-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   755 Nov  9  2025 2025-11-09--05-09-57-loc.txt*
+-rwxrwxrwx 1 AW AW 14865 Nov  9  2025 2025-11-09--05-18-57-fi.zip*
+-rwxrwxrwx 1 AW AW  8755 Nov 11  2025 2025-11-11--13-18-34-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  8755 Nov 11  2025 2025-11-11--13-20-22-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   753 Nov 11  2025 2025-11-11--13-22-05-loc.txt*
+-rwxrwxrwx 1 AW AW  8755 Nov 11  2025 2025-11-11--13-23-27-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   753 Nov 11  2025 2025-11-11--13-25-11-loc.txt*
+-rwxrwxrwx 1 AW AW 15018 Nov 11  2025 2025-11-11--13-33-56-fi.zip*
+-rwxrwxrwx 1 AW AW  8764 Nov 11  2025 2025-11-11--14-04-53-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  8764 Nov 11  2025 2025-11-11--14-05-37-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   753 Nov 11  2025 2025-11-11--14-07-22-loc.txt*
+-rwxrwxrwx 1 AW AW  8781 Nov 11  2025 2025-11-11--14-11-53-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  8771 Nov 11  2025 2025-11-11--14-13-31-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  8771 Nov 11  2025 2025-11-11--14-15-09-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   753 Nov 11  2025 2025-11-11--14-16-53-loc.txt*
+-rwxrwxrwx 1 AW AW  8397 Nov 11  2025 2025-11-11--14-52-15-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  8397 Nov 11  2025 2025-11-11--14-54-58-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   752 Nov 11  2025 2025-11-11--14-56-42-loc.txt*
+-rwxrwxrwx 1 AW AW  8398 Nov 11  2025 2025-11-11--15-08-12-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  8406 Nov 11  2025 2025-11-11--15-11-14-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  7553 Nov 11  2025 2025-11-11--15-16-32-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  7553 Nov 11  2025 2025-11-11--15-17-23-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   752 Nov 11  2025 2025-11-11--15-19-11-loc.txt*
+-rwxrwxrwx 1 AW AW  7563 Nov 11  2025 2025-11-11--15-22-34-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   412 Nov 11  2025 2025-11-11--15-23-50-loc.txt*
+-rwxrwxrwx 1 AW AW  7563 Nov 11  2025 2025-11-11--15-24-43-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  7563 Nov 11  2025 2025-11-11--15-25-49-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   753 Nov 11  2025 2025-11-11--15-27-34-loc.txt*
+-rwxrwxrwx 1 AW AW  7662 Nov 11  2025 2025-11-11--15-32-52-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  7662 Nov 11  2025 2025-11-11--15-33-30-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   750 Nov 11  2025 2025-11-11--15-35-17-loc.txt*
+-rwxrwxrwx 1 AW AW  7660 Nov 11  2025 2025-11-11--15-36-00-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  7660 Nov 11  2025 2025-11-11--15-36-52-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   750 Nov 11  2025 2025-11-11--15-38-37-loc.txt*
+-rwxrwxrwx 1 AW AW  7659 Nov 11  2025 2025-11-11--15-41-49-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  7659 Nov 11  2025 2025-11-11--15-42-35-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   750 Nov 11  2025 2025-11-11--15-44-22-loc.txt*
+-rwxrwxrwx 1 AW AW  7656 Nov 11  2025 2025-11-11--15-52-29-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  7656 Nov 11  2025 2025-11-11--15-53-09-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   750 Nov 11  2025 2025-11-11--15-54-57-loc.txt*
+-rwxrwxrwx 1 AW AW  7609 Nov 11  2025 2025-11-11--15-58-50-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  7863 Nov 11  2025 2025-11-11--16-05-05-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW  7863 Nov 11  2025 2025-11-11--16-06-00-openjpeg-fd.zip*
+-rwxrwxrwx 1 AW AW   759 Nov 11  2025 2025-11-11--16-07-48-loc.txt*
+
+Using the **90-minute break rule**, the **Nov. 8 16:50:44 timestamp is isolated**, so it is excluded.
+
+| Session | First | Last | Duration | Fractional hours |
+|---|---:|---:|---:|---:|
+| Nov. 9 | 03:28:36 | 05:18:57 | 1:50:21 | 1.8392 |
+| Nov. 11 | 13:18:34 | 16:07:48 | 2:49:14 | 2.8206 |
+
+The gap between Nov. 9 and Nov. 11 is excluded.
+
+**Total counted time: 4:39:35**
+
+**Fractional hours: \(\boxed{4.6597}\)** ≈ **4.66 hours**.
+
+________________________________________________________________
+
+
+
