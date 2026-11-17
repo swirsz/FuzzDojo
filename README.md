@@ -11,7 +11,7 @@ The repository contains four main directories:
 
 ## Analysis
 
-The `Analysis/` directory contains anonymized study data, participant-created fuzz drivers, code coverage reports, survey responses, statistical analysis scripts, and data used to generate figures and tables in the paper.
+The `Analysis/` directory contains anonymized study data, participant-created fuzz drivers, code coverage reports, survey responses, statistical analysis scripts, and data used to generate figures and tables in the paper.  Codebooks and statistical decisions for both  the fuzz driver quality and feedback evaluations are also included.
 
 All participant-identifying information has been removed from the released artifacts.
 
